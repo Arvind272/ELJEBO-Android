@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <com.eljebo.common.utils.CustomEditText
+            android:id="@+id/nameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/edittext_drawbale"
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableStart="@mipmap/ic_name"
+            android:hint="@string/name"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/Black"
+            android:textColorHint="@color/Black"
+            android:textSize="@dimen/_14sp" />
+
+        <com.eljebo.common.utils.CustomEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/edittext_drawbale"
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableStart="@mipmap/ic_email"
+            android:hint="@string/email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/Black"
+            android:textColorHint="@color/Black"
+            android:textSize="@dimen/_14sp" />
+
+        <com.eljebo.common.utils.CustomEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/edittext_drawbale"
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableStart="@mipmap/ic_call_red"
+            android:hint="@string/phone_number"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/Black"
+            android:textColorHint="@color/Black"
+            android:textSize="@dimen/_14sp" />
+
+        <com.eljebo.common.utils.CustomEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/edittext_drawbale"
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableStart="@mipmap/ic_location"
+            android:hint="@string/address"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/Black"
+            android:textColorHint="@color/Black"
+            android:textSize="@dimen/_14sp" />
+
+        <com.eljebo.common.utils.CustomButton
+            android:id="@+id/saveBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/button_selector_theme_color"
+            android:text="@string/save"
+            android:textColor="@color/White"
+            android:textSize="@dimen/_18sp" />
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ic_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_12sdp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/ic_logo_login" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/firstNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_name"
+                android:hint="@string/first_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/lastNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_name"
+                android:hint="@string/last_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/emailET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_email"
+                android:hint="@string/email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/confirmEmailET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_email"
+                android:hint="@string/confirm_email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/userNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_name"
+                android:hint="@string/user_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/passwordET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_pswd"
+                android:hint="@string/password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/confirmPasswordET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_pswd"
+                android:hint="@string/confirm_password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/sex"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_12sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp">
+
+                <RadioButton
+                    android:id="@+id/maleRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_selector"
+                    android:checked="true"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/male"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_14sp" />
+
+                <RadioButton
+                    android:id="@+id/otherRB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:button="@drawable/radio_selector"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/other"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_14sp" />
+
+            </RelativeLayout>
+
+            <RadioButton
+                android:id="@+id/femaleRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:button="@drawable/radio_selector"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/female"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/countryET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawableEnd="@mipmap/ic_dwnarw"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_flag"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/country_of_residence"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/addressET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_location"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/address"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/addressTwoET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_location"
+                android:hint="@string/address_2_apt_number"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.eljebo.common.utils.CustomEditText
+                    android:id="@+id/stateET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_drawbale"
+                    android:drawableEnd="@mipmap/ic_dwnarw"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/state"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="@dimen/_12sdp"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_14sp" />
+
+                <com.eljebo.common.utils.CustomEditText
+                    android:id="@+id/cityET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_drawbale"
+                    android:drawableEnd="@mipmap/ic_dwnarw"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/city"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="@dimen/_12sdp"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_14sp" />
+
+                <com.eljebo.common.utils.CustomEditText
+                    android:id="@+id/zipCodeET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_drawbale"
+                    android:hint="@string/zip_code"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPhonetic"
+                    android:padding="@dimen/_12sdp"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_14sp" />
+            </LinearLayout>
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/phoneNumberET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_call_red"
+                android:hint="@string/phone_number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <include
+                android:id="@+id/questionsLL"
+                layout="@layout/security_questions_layout" />
+
+            <com.eljebo.common.utils.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/education"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_12sdp" />
+
+            <CheckBox
+                android:id="@+id/gedCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:button="@drawable/checkbox_selector"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/ged"
+                android:textAllCaps="true"
+
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <CheckBox
+                android:id="@+id/highSchoolCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:button="@drawable/checkbox_selector"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/high_school"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <CheckBox
+                android:id="@+id/collegeCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:button="@drawable/checkbox_selector"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/college_above"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/certificatesET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_certifications"
+                android:hint="@string/enter_your_certifications_and_license"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomButton
+                android:id="@+id/nextBT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/button_selector_theme_color"
+                android:text="@string/next"
+                android:textColor="@color/White"
+                android:textSize="@dimen/_18sp" />
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

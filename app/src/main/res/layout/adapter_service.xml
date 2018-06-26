@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/selectedServiceLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp">
+
+        <com.eljebo.common.utils.CustomTextView
+            android:id="@+id/titleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/clearnerLL"
+            android:text="@string/cleaners"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/_14sp" />
+
+        <LinearLayout
+            android:id="@+id/clearnerLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/priceET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/WhiteSmoke"
+                android:hint="@string/price"
+                android:inputType="number"
+                android:maxWidth="@dimen/_33sdp"
+                android:minWidth="@dimen/_33sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:textColor="@color/Gray"
+                android:textColorHint="@color/Gray"
+                android:textSize="@dimen/_14sp" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
+

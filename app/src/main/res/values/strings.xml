@@ -1,0 +1,274 @@
+<resources>
+    <string name="app_name">Eljebo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="check_login">Please check your e-mail and password</string>
+    <string name="press_again_to_exit">Press again to close ReceptionApp</string>
+    <string name="not_valid_email">Please enter valid email id</string>
+    <string name="out_of_memory">Out Of Memory</string>
+    <string name="not_sufficient_permissions">Not sufficient permissions \n Goto Settings></string>
+    <string name="permissionss">>Permissions</string>
+    <string name="choose_image_source">Choose Image Resource</string>
+    <string name="please_relaunch">"Please relaunch "</string>
+    <string name="check_gps">Location Update has encountered a problem. Please Check GPS is ON or OFF</string>
+    <string name="gps">" - GPS"</string>
+    <string name="this_device_is_not_supported">This Device is not supported</string>
+    <string name="problem_connecting_to_the_server">Problem connecting to server,please try later.</string>
+    <string name="connecting_to_internet">" Problem connecting to internet,please try again."</string>
+    <string name="connection_failed">" Connection failed,please try again."</string>
+    <string name="bad_request">" Bad request,please try again."</string>
+    <string name="not_found_please">" Not found,please try again."</string>
+    <string name="session_timeout_redirecting">Session timeout, Redirecting to login</string>
+    <string name="request_timeout_slow_connection">"Request Timeout. Maybe due to slow connection"</string>
+    <string name="netwrk_status">Network Status</string>
+    <string name="retry">Retry</string>
+    <string name="press_one_more_time">Press one more time to push app into background</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+    <string name="send">Send</string>
+    <string name="a_link_has">A link has been send to your email   please check and reset your password</string>
+    <string name="welcome_to_eljebo">Welcome to <font color="#F81617">Eljebo!</font></string>
+    <string name="user">User</string>
+    <string name="service_provider">Service Provider</string>
+    <string name="user_name">User Name</string>
+    <string name="enter_6_digit_otp_code_sent_to_your_email">Enter 6 digit OTP code sent to your email.</string>
+    <string name="xxxxxx">XXXXXX</string>
+    <string name="sign_in">Sign In</string>
+    <string name="security_questions">Security Questions</string>
+    <string name="write_a_security_question_1">Write a Security Question 1</string>
+    <string name="write_a_security_question_2">Write a Security Question 2</string>
+    <string name="write_a_security_question_3">Write a Security Question 3</string>
+    <string name="answer">Answer</string>
+    <string name="notifications">Notifications</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="confirm_email">Confirm Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sex">Sex</string>
+    <string name="male">Male</string>
+    <string name="other">Other</string>
+    <string name="female">Female</string>
+    <string name="country_of_residence">Country of Residence</string>
+    <string name="address">Address</string>
+    <string name="address_2_apt_number">Address 2 ( APT Number)</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="change_password">Change Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="name">Name</string>
+    <string name="save">Save</string>
+    <string name="education">Education</string>
+    <string name="ged">Ged</string>
+    <string name="high_school">High School</string>
+    <string name="college_above"><![CDATA[College & Above]]></string>
+    <string name="enter_your_certifications_and_license">Enter your Certifications or License</string>
+    <string name="select_the_service_which_matchs">Select the service which matches your skills</string>
+    <string name="service_charge_amount">Service Charge Amount</string>
+    <string name="cleaners">Cleaners</string>
+    <string name="baby_sitters">Baby Sitters</string>
+    <string name="plumbers_electricians"><![CDATA[Plumbers & Electricians]]></string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="certifications">Certifications</string>
+    <string name="next">Next</string>
+    <string name="home_aid_services"><![CDATA[Home Aid & Services]]></string>
+    <string name="other_explain">Other (Explain)</string>
+    <string name="home_care_requires_prove_of_certification_upon_arrival">Home Care (Requires prove of certification upon arrival)</string>
+    <string name="catering">Catering</string>
+    <string name="decorations_artiest"><![CDATA[Decorations & Artist]]></string>
+    <string name="planners">Planners</string>
+    <string name="technical_assistance">Technical Assistance</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="services">Services</string>
+    <string name="you_have_received_a_new_service_request">You have received a new service request.</string>
+    <string name="_1_min_ago">1 min ago</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="add_card_details">Add Card Details</string>
+    <string name="name_on_card">Name on Card</string>
+    <string name="card_number">Card Number</string>
+    <string name="mm_yy">MM/YY</string>
+    <string name="cvv">CVV</string>
+    <string name="go">Go</string>
+    <string name="i_agree_to_terms_conditions"><![CDATA[I agree to terms & conditions]]></string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+
+    <string name="cannot_get_location_please_refresh">can not get current location please refresh</string>
+    <string name="your_gps_seems_to_be_disable">Your GPS seems to be disabled, do you want to enable it?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="home">Home</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="message">Message</string>
+    <string name="call">Call</string>
+    <string name="video_chat">Video Chat</string>
+    <string name="check_in">Check In</string>
+    <string name="search">Search</string>
+    <string name="search_service">Search Service</string>
+    <string name="list_of_service_providers">List of Service Providers</string>
+    <string name="country">Country</string>
+    <string name="merry_thomson">Merry Thomson</string>
+    <string name="locate_user">Locate User</string>
+    <string name="check_in_timer">Check In Timer :</string>
+    <string name="_check_in_timer">Check In Timer</string>
+    <string name="jack_thomas">Jack Thomas</string>
+    <string name="leave_a_comment">Leave a comment...</string>
+    <string name="submit">Submit</string>
+    <string name="add_card">Add Card</string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum_lorem_lipsum">Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum Lorem lipsum</string>
+    <string name="customer">Customer</string>
+    <string name="to">To</string>
+    <string name="from">From</string>
+    <string name="upload_certifications">Upload Certifications</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="add_payment_details">Add Payment Details</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="debit_card">Debit Card</string>
+    <string name="atm_card">ATM Card</string>
+    <string name="paypal">Paypal</string>
+    <string name="feedback">Feedback</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="payments">Payments</string>
+    <string name="duration">Duration</string>
+    <string name="book_now">Book Now</string>
+    <string name="start">Start</string>
+    <string name="service_time">Service Time</string>
+    <string name="_20mins"><font color="#F81617" size="40">20</font><font size="20">mins</font></string>
+    <string name="_20_mins">20mins</string>
+    <string name="_1_mins">1 min</string>
+    <string name="extra_time_taken">Extra Time Taken</string>
+    <string name="_5mins">5mins</string>
+    <string name="extra_amount">Extra Amount</string>
+    <string name="_5">$5</string>
+    <string name="pay">Pay</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="total_check_in_time_to_finish_the_service">Total check in time to finish the service.</string>
+    <string name="_20"><font color="#F81617">$20</font></string>
+    <string name="select_time">Select Time</string>
+    <string name="availability">Availability</string>
+    <string name="cooks">Cooks</string>
+    <string name="bakers">Bakers</string>
+    <string name="servers">Servers</string>
+    <string name="school_assistance_tutor">School Assistance/Tutor</string>
+    <string name="certification_trainers">Certification Trainers</string>
+    <string name="event_decorators">Event Decorators</string>
+    <string name="photographer_d_j_program_m_c"><![CDATA[Photographer & D.J/Program M.C]]></string>
+    <string name="home_hair_stylist">Home Hair Stylist</string>
+    <string name="make_up_artist">Make-up Artist</string>
+    <string name="designers">Designers</string>
+    <string name="building_architects">Building Architects</string>
+    <string name="local_int_shippers"><![CDATA[Local & Int. Shippers]]></string>
+    <string name="mechanic">Mechanic</string>
+    <string name="technician">Technician</string>
+    <string name="duration_in_mins">Duration ( in Mins )</string>
+    <string name="price">price</string>
+    <string name="_00_00_00">00:00:00</string>
+    <string name="_123_lorem_ipsum_amet_lorem_ipsum_usa_n172201">#123 Lorem ipsum, Amet Lorem ipsum USA</string>
+    <string name="select_country">Please select Country first</string>
+    <string name="select_state">Please select State first</string>
+    <string name="enter_first_name">Please Enter First Name</string>
+    <string name="enter_last_name">Please Enter Last Name</string>
+    <string name="enter_valid_email">Please Enter Valid Email</string>
+    <string name="email_does_not_match">Email Does Not Match</string>
+    <string name="enter_the_password">Please Enter the Password</string>
+    <string name="enter_valid_password">Enter Valid Password</string>
+    <string name="password_does_not_match">Password Does Not Match</string>
+    <string name="enter_address">Please Enter the Address</string>
+    <string name="enter_second_address">Please Enter the Second Address</string>
+    <string name="enter_state">Please Enter the State</string>
+    <string name="please_enter_city">Please Enter City</string>
+    <string name="please_enter_zipcode">Please Enter the Zipcode</string>
+    <string name="please_enter_phone_number">Please Enter the Phone Number</string>
+    <string name="please_select_atleast_one_service">Please Select Atleast One Service</string>
+    <string name="please_enter_selected_service_price">Please Enter Selected Service Price</string>
+    <string name="please_select_education">Please Select the Education</string>
+    <string name="please_enter_time">Please Enter the Time</string>
+    <string name="please_enter_email">Please Enter Email</string>
+    <string name="please_enter_username">Please Enter the Username</string>
+    <string name="please_enter_confirm_email">Please enter confirm email</string>
+    <string name="plz_upload_image">Please upload image</string>
+    <string name="plz_enter_crtification_license">Please enter your certification or license</string>
+    <string name="max_image_limit">Maximum select image limit is 4</string>
+    <string name="plz_enter_questions">please enter all the questions &amp; answers</string>
+    <string name="plz_enter_answers">please enter all the answers</string>
+    <string name="enter_name">Please Enter the Name</string>
+    <string name="enter_card_number">Please Enter the Card Number</string>
+    <string name="enter_expiry_date">Please Enter the Expiry Date</string>
+    <string name="add_cvv">Please Add CVV</string>
+    <string name="booking_time">Booking Time</string>
+    <string name="booking_date">Booking Date</string>
+    <string name="wednesday_23rd_june_2018">Wednesday,23rd June 2018</string>
+    <string name="plz_try_again">Please try again</string>
+    <string name="plz_select_country">Please select Country</string>
+    <string name="please_enter_from_time">Please enter from time</string>
+    <string name="enter_valid_card_number">Enter Valid card number</string>
+    <string name="pls_enter_3_4_digits_cvv">Please enter 3 or 4 digits of cvv</string>
+    <string name="enter_month_year">Please enter valid month and year</string>
+    <string name="plz_acpt_terms">Please accept terms and conditions</string>
+    <string name="extra_time_started">Extra Time</string>
+    <string name="enter_email_address">Enter email address</string>
+    <string name="enter_password">Enter password</string>
+    <string name="yet_to_implement">Yet to implement</string>
+    <string name="plz_slct_date">Please select date</string>
+    <string name="plz_slct_time">Please select time</string>
+    <string name="plz_slct_duration">Please enter duration</string>
+    <string name="description">Description (1000 characters)</string>
+    <string name="location_update_failed">Location Update Failed</string>
+    <string name="enable_location_service"> Please enable location services from your settings.</string>
+    <string name="enable_location">Location update failed \\n\\nPlease enable location services from your settings.</string>
+
+    <string name="description_service_pro_profile">Description</string>
+
+    <plurals name="duration">
+        <item quantity="one">%d min</item>
+        <item quantity="many">%d mins</item>
+    </plurals>
+
+    <string-array name="drawer_items">
+        <item>Profile</item>
+        <item>Notifications</item>
+        <item>Settings</item>
+        <item>Log Out</item>
+    </string-array>
+
+    <string-array name="customer_drawer_items">
+        <item>Profile</item>
+        <item>Notifications</item>
+        <item>Log Out</item>
+    </string-array>
+
+    <string-array name="serviceList">
+        <item>Home Care (Requires prove of certification upon arrival)</item>
+        <item>Cleaners</item>
+        <item>Baby Sitters</item>
+        <item><![CDATA[Plumbers & Electricians]]></item>
+        <item>Other (Explain)</item>
+        <item>Cooks</item>
+        <item>Bakers</item>
+        <item>Servers</item>
+        <item>Other (Explain)</item>
+        <item>School Assistance/Tutor</item>
+        <item>Certification Trainers</item>
+        <item>Event Decorators</item>
+        <item><![CDATA[Photographer & D.J/Program M.C]]></item>
+        <item>Home Hair Stylist</item>
+        <item>Make-up Artist</item>
+        <item>Designers</item>
+        <item>Building Architects</item>
+        <item><![CDATA[Local & Int. Shippers]]></item>
+        <item>Mechanic</item>
+        <item>Technician</item>
+        <item>Other (Explain)</item>
+
+
+    </string-array>
+
+</resources>

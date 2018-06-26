@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.1"
+
+    dataBinding {
+        enabled = true
+    }
+
+
+    defaultConfig {
+        applicationId "com.eljebo"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+    signingConfigs {
+        release {
+            storeFile file("key.jks")
+            storePassword "eljebo.app"
+            keyAlias "eljebo.app"
+            keyPassword "eljebo.app"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each {output ->
+            def project = "eljebo"
+            def separator = "_"
+            /*def flavor = variant.productFlavors[0].name*/
+            def buildType = variant.variantData.variantConfiguration.buildType.name
+            def versionName = variant.versionName
+            def versionCode = variant.versionCode
+            def date = new Date();
+            def formattedDate = date.format('yyyy_MM_dd')
+            if (variant.buildType.name == "release"){
+                def newApkName = project + separator + "v" + versionName + separator + versionCode + separator + buildType + separator + formattedDate + ".apk"
+                output.outputFileName = new File(output.outputFile.parent, newApkName)
+            }
+            if (variant.buildType.name == "debug"){
+                def newApkName = project + separator + "v" + versionName + separator + versionCode + separator + buildType + ".apk"
+                output.outputFileName = new File(output.outputFile.parent, newApkName)
+            }
+        }
+    }
+}
+
+ext {
+    androidSupportVersion = '27.+'
+    playServicesVersion = '10.2.6'
+    firebaseVersion = '10.2.6'
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:design:27.+'
+    compile "com.android.support:support-v4:$androidSupportVersion"
+    compile "com.android.support:appcompat-v7:$androidSupportVersion"
+    compile "com.google.firebase:firebase-messaging:$firebaseVersion"
+    compile "com.android.support:recyclerview-v7:$androidSupportVersion"
+    compile "com.google.android.gms:play-services-auth:$playServicesVersion"
+    compile "com.google.android.gms:play-services-location:$playServicesVersion"
+    compile "com.google.android.gms:play-services-places:$playServicesVersion"
+    compile 'com.theartofdev.edmodo:android-image-cropper:2.3.1'
+    compile 'com.facebook.android:facebook-android-sdk:4.14.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.picasso:picasso:2.4.0'
+    compile 'com.intuit.sdp:sdp-android:1.0.5'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile project(':sync-manager-android-lib')
+    compile 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile project(':MulipleImageSelector')
+}

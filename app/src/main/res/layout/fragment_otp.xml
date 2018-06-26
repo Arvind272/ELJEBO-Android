@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ic_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+
+        <com.eljebo.common.utils.CustomTextView
+            android:id="@+id/msgTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/enter_6_digit_otp_code_sent_to_your_email"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/_22sp" />
+
+        <com.eljebo.common.utils.CustomEditText
+            android:id="@+id/codeET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/edittext_drawbale"
+            android:hint="@string/xxxxxx"
+            android:inputType="number"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:textSize="@dimen/_14sp" />
+
+        <com.eljebo.common.utils.CustomButton
+            android:id="@+id/sendBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector_theme_color"
+            android:text="@string/send"
+            android:textColor="@color/White"
+            android:textSize="@dimen/_18sp" />
+
+
+    </LinearLayout>
+
+</layout>

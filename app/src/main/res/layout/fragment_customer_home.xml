@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/White"
+            android:orientation="vertical">
+
+            <com.eljebo.common.utils.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/search_edittext_drawable"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_search"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/search"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/Black"
+                android:textColorHint="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <include
+                android:id="@+id/servicesLL"
+                layout="@layout/services_layout"
+                android:visibility="gone" />
+
+            <com.eljebo.common.utils.CustomExpandableListView
+                android:id="@+id/servicesELV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:childDivider="@color/White"
+                android:divider="@color/service_bg"
+                android:groupIndicator="@null" />
+
+            <com.eljebo.common.utils.CustomButton
+                android:id="@+id/searchServiceBT"
+                style="@style/primaryButtonTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/button_selector_theme_color"
+                android:text="@string/search_service"
+                android:textAllCaps="true"
+                android:textColor="@color/White"
+                android:textSize="@dimen/_18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

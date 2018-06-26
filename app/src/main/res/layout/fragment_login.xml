@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_bg"
+        android:padding="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomLL"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@mipmap/ic_logo_login"
+                android:contentDescription="@string/app_name" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/emailET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_name"
+                android:hint="@string/user_name"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textColorHint="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/passwordET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@mipmap/ic_pswd"
+                android:hint="@string/password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:padding="@dimen/_12sdp"
+                android:textColor="@color/Black"
+                android:textColorHint="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+
+            <com.eljebo.common.utils.CustomTextView
+                android:id="@+id/forPasswordTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:gravity="end"
+                android:text="@string/forgot_password"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+
+            <com.eljebo.common.utils.CustomButton
+                android:id="@+id/loginBT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector_theme_color"
+                android:text="@string/sign_in"
+                android:textColor="@color/White"
+                android:textSize="@dimen/_18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_12sdp">
+
+            <com.eljebo.common.utils.CustomTextView
+                android:id="@+id/dontHaveAccountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/don_t_have_an_account"
+                android:textColor="@color/Black" />
+
+            <LinearLayout
+                android:id="@+id/signUpLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/signUpTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_up"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@color/colorPrimary" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

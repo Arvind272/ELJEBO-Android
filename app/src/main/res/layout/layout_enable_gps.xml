@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sp"
+        android:layout_marginEnd="@dimen/_10sp"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:text="@string/location_update_failed"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/_18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sp"
+        android:layout_marginStart="@dimen/_20dp"
+        android:paddingBottom="@dimen/_5dp"
+        android:paddingTop="@dimen/_5dp"
+        android:text="@string/enable_location_service"
+        android:textSize="@dimen/_16sp" />
+
+    <TextView
+        android:id="@+id/settingTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="@dimen/_10sp"
+        android:layout_marginEnd="@dimen/_10sp"
+        android:layout_marginTop="@dimen/_5dp"
+        android:paddingBottom="@dimen/_5dp"
+        android:paddingEnd="@dimen/_10sp"
+        android:paddingStart="@dimen/_15dp"
+        android:paddingTop="@dimen/_5dp"
+        android:text="@string/settings"
+        android:textColor="@color/Blue"
+        android:textSize="@dimen/_16sp" />
+</LinearLayout>

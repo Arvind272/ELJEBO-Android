@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp">
+
+        <com.eljebo.common.utils.CustomTextView
+            android:id="@+id/serviceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/serviceChargeTV"
+            android:text="@string/plumbers_electricians"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/_14sp" />
+
+
+        <com.eljebo.common.utils.CustomTextView
+            android:id="@+id/serviceChargeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="$20"
+            android:textColor="@color/Gray"
+            android:textSize="@dimen/_14sp" />
+
+
+    </RelativeLayout>
+
+</layout>

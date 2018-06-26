@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/White"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/questionsLL"
+                layout="@layout/service_detail_layout" />
+
+            <com.eljebo.common.utils.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="@string/check_in_timer"
+                android:textColor="@color/Gray"
+                android:textSize="@dimen/_15sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/timerCTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/Black"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:text="@string/_00_00_00"
+                    android:textColor="@color/White"
+                    android:textSize="@dimen/_18sp" />
+
+                <Button
+                    android:id="@+id/timerOffIV"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/timerCTV"
+                    android:background="@drawable/timer_drawable" />
+
+                <Button
+                    android:id="@+id/timerOnIV"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/timerCTV"
+                    android:background="@drawable/timer_on_drawable"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <com.eljebo.common.utils.CustomTextView
+                android:id="@+id/extraTimeTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:text="@string/extra_time_started"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</layout>

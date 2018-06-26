@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ic_bg"
+        android:orientation="vertical">
+
+        <com.eljebo.common.utils.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_18sdp"
+            android:text="@string/add_payment_details"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/_20sdp" />
+
+        <com.eljebo.common.utils.CustomTextView
+            android:id="@+id/creditCardTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/payment_bg"
+            android:drawableEnd="@mipmap/ic_front_arw"
+            android:drawablePadding="@dimen/_15sdp"
+            android:drawableStart="@mipmap/ic_atm"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/_25sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingTop="@dimen/_25sdp"
+            android:text="@string/credit_card"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/_17sp" />
+
+        <com.eljebo.common.utils.CustomTextView
+            android:id="@+id/debitCardTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@color/payment_bg"
+            android:drawableEnd="@mipmap/ic_front_arw"
+            android:drawablePadding="@dimen/_15sdp"
+            android:drawableStart="@mipmap/ic_atm"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/_25sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingTop="@dimen/_25sdp"
+            android:text="@string/debit_card"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/_17sp" />
+
+        <com.eljebo.common.utils.CustomTextView
+            android:id="@+id/atmCardTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/payment_bg"
+            android:drawableEnd="@mipmap/ic_front_arw"
+            android:drawablePadding="@dimen/_15sdp"
+            android:drawableStart="@mipmap/ic_atm"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/_25sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingTop="@dimen/_25sdp"
+            android:text="@string/atm_card"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/_17sp" />
+
+        <com.eljebo.common.utils.CustomTextView
+            android:id="@+id/paypalTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@color/payment_bg"
+            android:drawableEnd="@mipmap/ic_front_arw"
+            android:drawablePadding="@dimen/_15sdp"
+            android:drawableStart="@mipmap/ic_paypal"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/_25sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingTop="@dimen/_25sdp"
+            android:text="@string/paypal"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/_17sp" />
+
+    </LinearLayout>
+</layout>

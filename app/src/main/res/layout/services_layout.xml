@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:id="@+id/serviceSV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/White"
+            android:orientation="vertical">
+
+            <com.eljebo.common.utils.CustomTextView
+                android:id="@+id/holdAidServicesTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/service_bg"
+                android:drawableEnd="@mipmap/ic_dwnarw"
+                android:drawablePadding="@dimen/_8sdp"
+                android:padding="@dimen/_12sdp"
+                android:text="@string/home_aid_services"
+                android:textColor="@color/Black" />
+
+            <LinearLayout
+                android:id="@+id/homeServiceLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_12sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/homeCareCB"
+                        android:text="@string/home_care_requires_prove_of_certification_upon_arrival"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/homeCareCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/cleanerCB"
+                        android:text="@string/cleaners"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/cleanerCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/babyCB"
+                        android:text="@string/baby_sitters"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/babyCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/plumberCB"
+                        android:text="@string/plumbers_electricians"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/plumberCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/otherCB"
+                        android:text="@string/other_explain"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/otherCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.eljebo.common.utils.CustomTextView
+                android:id="@+id/cateringTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/service_bg"
+                android:drawableEnd="@mipmap/ic_dwnarw"
+                android:drawablePadding="@dimen/_8sdp"
+                android:padding="@dimen/_12sdp"
+                android:text="@string/catering"
+                android:textColor="@color/Black" />
+
+            <LinearLayout
+                android:id="@+id/cateringServicesLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_12sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/cooksCB"
+                        android:text="@string/cooks"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/cooksCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/bakersCB"
+                        android:text="@string/bakers"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/bakersCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/serversCB"
+                        android:text="@string/servers"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/serversCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/cateringOtherCB"
+                        android:text="@string/other_explain"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/cateringOtherCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.eljebo.common.utils.CustomTextView
+                android:id="@+id/educationTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/service_bg"
+                android:drawableEnd="@mipmap/ic_dwnarw"
+                android:drawablePadding="@dimen/_8sdp"
+                android:padding="@dimen/_12sdp"
+                android:text="@string/education"
+                android:textColor="@color/Black" />
+
+            <LinearLayout
+                android:id="@+id/educationServicesLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_12sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/schoolAssistanceCB"
+                        android:text="@string/school_assistance_tutor"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/schoolAssistanceCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/certificationTrainersCB"
+                        android:text="@string/certification_trainers"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/certificationTrainersCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.eljebo.common.utils.CustomTextView
+                android:id="@+id/decorationTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/service_bg"
+                android:drawableEnd="@mipmap/ic_dwnarw"
+                android:drawablePadding="@dimen/_8sdp"
+                android:padding="@dimen/_12sdp"
+                android:text="@string/decorations_artiest"
+                android:textColor="@color/Black" />
+
+            <LinearLayout
+                android:id="@+id/decorationServicesLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_12sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/eventDecoratorsCB"
+                        android:text="@string/event_decorators"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/eventDecoratorsCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/photographersCB"
+                        android:text="@string/photographer_d_j_program_m_c"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/photographersCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/homeHairCB"
+                        android:text="@string/home_hair_stylist"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/homeHairCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/makeUpArtistCB"
+                        android:text="@string/make_up_artist"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/makeUpArtistCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/designersCB"
+                        android:text="@string/designers"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/designersCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.eljebo.common.utils.CustomTextView
+                android:id="@+id/plannersTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/service_bg"
+                android:drawableEnd="@mipmap/ic_dwnarw"
+                android:drawablePadding="@dimen/_8sdp"
+                android:padding="@dimen/_12sdp"
+                android:text="@string/planners"
+                android:textColor="@color/Black" />
+
+            <LinearLayout
+                android:id="@+id/plannersServicesLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_12sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/buildingArchitectsCB"
+                        android:text="@string/building_architects"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/buildingArchitectsCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/localIntShippersCB"
+                        android:text="@string/local_int_shippers"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/localIntShippersCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.eljebo.common.utils.CustomTextView
+                android:id="@+id/technicalTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/service_bg"
+                android:drawableEnd="@mipmap/ic_dwnarw"
+                android:drawablePadding="@dimen/_8sdp"
+                android:padding="@dimen/_12sdp"
+                android:text="@string/technical_assistance"
+                android:textColor="@color/Black" />
+
+            <LinearLayout
+                android:id="@+id/technicalServicesLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_12sdp"
+                android:paddingStart="@dimen/_12sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/mechanicCB"
+                        android:text="@string/mechanic"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/mechanicCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/technicianCB"
+                        android:text="@string/technician"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/technicianCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/otherTechnicalCB"
+                        android:text="@string/other_explain"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_14sp" />
+
+
+                    <CheckBox
+                        android:id="@+id/otherTechnicalCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+
+                        android:button="@drawable/checkbox_selector"
+                        android:padding="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

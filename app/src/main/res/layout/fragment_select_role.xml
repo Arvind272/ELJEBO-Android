@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ic_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_logo_login"
+            android:contentDescription="@string/app_name" />
+
+        <com.eljebo.common.utils.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:id="@+id/welcomeTV"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/_25sdp" />
+
+
+        <com.eljebo.common.utils.CustomButton
+            android:id="@+id/userBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_selector_theme_color"
+            android:text="@string/customer"
+            android:textColor="@color/White"
+            android:textSize="@dimen/_18sp" />
+
+        <com.eljebo.common.utils.CustomButton
+            android:id="@+id/serviceProviderBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/button_selector"
+            android:text="@string/service_provider"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/_18sp" />
+
+
+    </LinearLayout>
+
+</layout>

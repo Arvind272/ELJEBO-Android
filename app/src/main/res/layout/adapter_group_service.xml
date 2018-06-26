@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.eljebo.common.utils.CustomTextView
+            android:id="@+id/headerServicesTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/service_bg"
+            android:drawableEnd="@mipmap/ic_dwnarw"
+            android:drawablePadding="@dimen/_8sdp"
+            android:padding="@dimen/_12sdp"
+            android:text="@string/home_aid_services"
+            android:textColor="@color/Black" />
+
+    </LinearLayout>
+</layout>

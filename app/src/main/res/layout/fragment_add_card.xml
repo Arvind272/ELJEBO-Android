@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/ic_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+
+            <com.eljebo.common.utils.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/add_card_details"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_20sdp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/nameOnCardET"
+                style="@style/App_EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/bottom_line"
+                android:gravity="center_vertical"
+                android:hint="@string/name_on_card"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textColorHint="@color/Gray"
+                android:textSize="@dimen/_14sp" />
+
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/cardNumberET"
+                style="@style/App_EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/bottom_line"
+                android:gravity="center_vertical"
+                android:hint="@string/card_number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="16"
+                android:textColorHint="@color/Gray"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/mmYYET"
+                style="@style/App_EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/bottom_line"
+                android:gravity="center_vertical"
+                android:hint="@string/mm_yy"
+                android:imeOptions="actionNext"
+                android:inputType="date"
+                android:textColorHint="@color/Gray"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomEditText
+                android:id="@+id/cVVET"
+                style="@style/App_EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/bottom_line"
+                android:gravity="center_vertical"
+                android:hint="@string/cvv"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:textColorHint="@color/Gray"
+                android:textSize="@dimen/_14sp" />
+
+
+            <com.eljebo.common.utils.CustomButton
+                android:id="@+id/saveBT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:background="@drawable/button_selector_theme_color"
+                android:text="@string/save"
+                android:textColor="@color/White"
+                android:textSize="@dimen/_18sp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>
