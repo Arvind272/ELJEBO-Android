@@ -33,6 +33,40 @@
                     }
                 }
             ]
+        },
+        {
+            "outputFile": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/MulipleImageSelector/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/home/samosys/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.1.aar/29d61343338086c293cacbe195e2036e/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/home/samosys/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.1.aar/3c16addbe0885dc88d6247b2b622b1e4/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
         }
     ]
 }

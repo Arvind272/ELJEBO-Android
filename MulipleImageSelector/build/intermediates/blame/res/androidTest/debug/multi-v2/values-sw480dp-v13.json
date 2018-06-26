@@ -14,6 +14,21 @@
                     }
                 }
             ]
+        },
+        {
+            "outputFile": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/MulipleImageSelector/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-sw480dp-v13/values-sw480dp-v13.xml",
+            "map": [
+                {
+                    "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/MulipleImageSelector/build/intermediates/bundles/debug/res/values-sw480dp-v13/values-sw480dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,104,146",
+                        "endColumns": "48,41,40",
+                        "endOffsets": "99,141,182"
+                    }
+                }
+            ]
         }
     ]
 }

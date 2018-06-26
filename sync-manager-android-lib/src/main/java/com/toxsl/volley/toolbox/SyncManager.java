@@ -196,7 +196,7 @@ public class SyncManager implements SyncEventListner {
     public boolean sendJsonToServer(String url, String object, SyncEventListner syncEventListner) {
         String completeUrl = getUrl(url);
         if (isNetworkAvailable()) {
-            log("sendToServer = " + completeUrl + " params = " + object);
+            log("sendToServer getCountryList= " + completeUrl + " params = " + object);
             sendStringRequest(syncEventListner, object, completeUrl);
             return true;
         } else
@@ -252,6 +252,8 @@ public class SyncManager implements SyncEventListner {
         MultipartRequest multipartRequest = new MultipartRequest(completeUrl, params, new onVolleyResponse(syncEventListner) {
             @Override
             public void onResponse(String response) {
+
+                Log.e("response", "response==> " +response);
                 syncEventListner.onSyncFinish();
                 if (response != null && !response.equals("")) {
                     try {
@@ -259,7 +261,9 @@ public class SyncManager implements SyncEventListner {
                         JSONObject jsonObject = new JSONObject(response);
                         log(jsonObject.toString());
                         if (!isValidateDateCheck(jsonObject, syncEventListner)) return;
-                        syncEventListner.onSyncSuccess(jsonObject.optString("controller"), jsonObject.optString("action"), jsonObject.optString("status").equalsIgnoreCase("OK"), jsonObject);
+                        syncEventListner.onSyncSuccess(jsonObject.optString("controller"),
+                                jsonObject.optString("action"),
+                                jsonObject.optString("status").equalsIgnoreCase("OK"), jsonObject);
                     } catch (JSONException e) {
                         log("Error parsing Response >>>>>> " + e + " \n" + response);
                         e.printStackTrace();
@@ -279,7 +283,8 @@ public class SyncManager implements SyncEventListner {
                 syncEventListner.onSyncFinish();
                 String apiCrash = "";
                 if (error.networkResponse != null) {
-                    if (HttpURLConnection.HTTP_MOVED_PERM == error.networkResponse.statusCode || error.networkResponse.statusCode == HttpURLConnection.HTTP_MOVED_TEMP || error.networkResponse.statusCode == HttpURLConnection.HTTP_SEE_OTHER) {
+                    if (HttpURLConnection.HTTP_MOVED_PERM == error.networkResponse.statusCode ||
+                            error.networkResponse.statusCode == HttpURLConnection.HTTP_MOVED_TEMP || error.networkResponse.statusCode == HttpURLConnection.HTTP_SEE_OTHER) {
                         String location = error.networkResponse.headers.get("Location");
                         sendToServer(location, params, syncEventListner);
                     } else if (error.networkResponse.data != null) {
@@ -316,7 +321,8 @@ public class SyncManager implements SyncEventListner {
             syncEventListner = this;
         }
         syncEventListner.onSyncStart();
-        StringRequest stringRequest = new StringRequest(params == null ? Request.Method.GET : Request.Method.POST, completeUrl, new onVolleyResponse(syncEventListner) {
+        StringRequest stringRequest = new StringRequest(params == null ? Request.Method.GET :
+                Request.Method.GET, completeUrl, new onVolleyResponse(syncEventListner) {
             @Override
             public void onResponse(String response) {
                 syncEventListner.onSyncFinish();

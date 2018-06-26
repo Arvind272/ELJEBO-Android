@@ -10,6 +10,7 @@ import com.eljebo.common.data.CountryData;
 import com.eljebo.common.dialog.CountryDialog;
 import com.eljebo.common.utils.AdapterListener;
 import com.eljebo.databinding.AdapterCountryDialogBinding;
+import com.eljebo.serviceprovider.new_bean.CountryDialogListDataBean;
 
 import java.util.ArrayList;
 
@@ -23,12 +24,16 @@ public class CountryDialogAdapter extends RecyclerView.Adapter<CountryDialogAdap
     private ArrayList<CountryData> countryDataArrayList;
     private Fragment fragment;
     private AdapterListener adapterListener;
+    private ArrayList<CountryDialogListDataBean> countryDialogListDataBeans;
 
-    public CountryDialogAdapter(CountryDialog countryDialog, ArrayList<CountryData> countryDataArrayList, Fragment fragment, AdapterListener adapterListener) {
+    public CountryDialogAdapter(CountryDialog countryDialog, ArrayList<CountryData> countryDataArrayList,
+                                Fragment fragment, AdapterListener adapterListener,
+                                ArrayList<CountryDialogListDataBean> countryDialogListDataBeans) {
         this.countryDialog = countryDialog;
         this.countryDataArrayList = countryDataArrayList;
         this.fragment = fragment;
         this.adapterListener = adapterListener;
+        this.countryDialogListDataBeans = countryDialogListDataBeans;
     }
 
     @Override
@@ -41,7 +46,7 @@ public class CountryDialogAdapter extends RecyclerView.Adapter<CountryDialogAdap
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.binding.countryTV.setText(countryDataArrayList.get(position).title);
+        holder.binding.countryTV.setText(countryDialogListDataBeans.get(position).getName());
         if (position + 1 == countryDataArrayList.size()) {
             adapterListener.onEndList();
         }
@@ -49,7 +54,7 @@ public class CountryDialogAdapter extends RecyclerView.Adapter<CountryDialogAdap
 
     @Override
     public int getItemCount() {
-        return countryDataArrayList.size();
+        return countryDialogListDataBeans.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

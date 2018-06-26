@@ -10,6 +10,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +30,7 @@ import com.eljebo.common.utils.Const;
 import com.eljebo.customer.fragment.CustomerSignUpFragment;
 import com.eljebo.databinding.DialogCountryBinding;
 import com.eljebo.serviceprovider.fragment.SignupFragment;
+import com.eljebo.serviceprovider.new_bean.CountryDialogListDataBean;
 import com.google.gson.Gson;
 import com.toxsl.volley.Request;
 import com.toxsl.volley.VolleyError;
@@ -38,6 +40,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -59,6 +62,8 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
     private String Type_Name;
     private AdapterListener adapterListener;
 
+    private ArrayList<CountryDialogListDataBean> countryDialogListDataBeans = new ArrayList<>();
+
     public CountryDialog(@NonNull BaseActivity baseActivity, int id, int type, Fragment fragment) {
         super(baseActivity, R.style.animateDialog);
 
@@ -69,7 +74,8 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        binding = DataBindingUtil.inflate(LayoutInflater.from(baseActivity), R.layout.dialog_country, null, false);
+        binding = DataBindingUtil.inflate(LayoutInflater.from(baseActivity), R.layout.dialog_country,
+                null, false);
         setContentView(binding.getRoot());
         if (getWindow() != null) {
             getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
@@ -146,7 +152,6 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
                 } else {
                     hitSearchAPI(Type_Name);
                 }
-
             }
 
             @Override
@@ -179,21 +184,25 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
     private void hitSearchAPI(String type_Name) {
         if (!singleHit) {
             singleHit = true;
-            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_SEARCH_REGION + "?keyword=" + binding.searchET.getText().toString().trim() + "&type=" + type_Name + "&page=" + currentPage, null, this);
+            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_SEARCH_REGION +
+                    "?keyword=" + binding.searchET.getText().toString().trim() + "&type=" +
+                    type_Name + "&page=" + currentPage, null, this);
         }
     }
 
     private void hitCountryApi() {
         if (!singleHit) {
             singleHit = true;
-            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_COUNTRY_LIST + "?page=" + currentPage, null, this);
+            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_COUNTRY_LIST
+                    , null, this);
         }
     }
 
     private void hitStateApi() {
         if (!singleHit) {
             singleHit = true;
-            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_STATE_LIST + "?country_id=" + id + "&page=" + currentPage, null, this);
+            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_STATE_LIST + "?country_id=" + id,
+                    null, this);
         }
     }
 
@@ -222,20 +231,47 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
     @Override
     public void onSyncSuccess(String controller, String action, boolean status, JSONObject jsonObject) {
         try {
-            if (jsonObject.getString("url").equalsIgnoreCase(Const.API_SERVICE_COUNTRY_LIST)
+           /* if (jsonObject.getString("url").equalsIgnoreCase(Const.API_SERVICE_COUNTRY_LIST)
                     || jsonObject.getString("url").equalsIgnoreCase(Const.API_SERVICE_STATE_LIST)
                     || jsonObject.getString("url").equalsIgnoreCase(Const.API_SERVICE_CITY_LIST)
                     || jsonObject.getString("url").equalsIgnoreCase(Const.API_SERVICE_SEARCH_REGION)) {
-                if (jsonObject.getInt("status") == Const.STATUSOK) {
+                if (jsonObject.getInt("status") == Const.STATUSOK) {*/
 
                     if (currentPage == 0) {
                         countryDataArrayList.clear();
                     }
+                  countryDataArrayList.clear();
+            countryDialogListDataBeans.clear();
+
                     currentPage++;
                     JSONArray object = jsonObject.getJSONArray("data");
                     for (int i = 0; i < object.length(); i++) {
-                        countryData = new Gson().fromJson(jsonObject.getJSONArray("data").getJSONObject(i).toString(), CountryData.class);
+
+                        JSONObject jsonObjData = object.getJSONObject(i);
+
+
+                        countryData = new Gson().fromJson(jsonObject.getJSONArray("data").
+                                getJSONObject(i).toString(), CountryData.class);
                         countryDataArrayList.add(countryData);
+
+                        if (jsonObject.getString("url").equals("getCountryList")){
+                            countryDialogListDataBeans.add(new CountryDialogListDataBean(
+                                    jsonObjData.getString("id"),
+                                    jsonObjData.getString("sortname"),
+                                    jsonObjData.getString("name"),
+                                    jsonObjData.getString("phonecode"),
+                                    jsonObjData.getString("status")));
+
+                        } else if (jsonObject.getString("url").equals("getStateList")){
+                            countryDialogListDataBeans.add(new CountryDialogListDataBean(
+                                    jsonObjData.getString("id"),
+                                   "",
+                                    jsonObjData.getString("name"),
+                                    "",
+                                    jsonObjData.getString("country_id")));
+                        }
+
+
                     }
 
                     if (currentPage >= jsonObject.optInt("total_pages")) {
@@ -243,11 +279,12 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
                     } else {
                         singleHit = false;
                     }
+
                     setAdapter();
-                } else {
+               /* } else {
                     baseActivity.showToastOne(jsonObject.getString("error"));
                 }
-            }
+            }*/
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -255,7 +292,8 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
 
     public void setAdapter() {
         if (countryDialogAdapter == null) {
-            countryDialogAdapter = new CountryDialogAdapter(this, countryDataArrayList, fragment, adapterListener);
+            countryDialogAdapter = new CountryDialogAdapter(this, countryDataArrayList, fragment, adapterListener,
+                    countryDialogListDataBeans);
             binding.signUpRV.setAdapter(countryDialogAdapter);
         } else {
             countryDialogAdapter.notifyDataSetChanged();
@@ -279,7 +317,9 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
             im.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
         }
         if (fragment instanceof SignupFragment) {
-            ((SignupFragment) fragment).setResidenceData(countryDataArrayList.get(adapterPosition).id, countryDataArrayList.get(adapterPosition).title);
+            ((SignupFragment) fragment).setResidenceData(
+                    Integer.parseInt(countryDialogListDataBeans.get(adapterPosition).getId()),
+                    countryDialogListDataBeans.get(adapterPosition).getName());
         } else if (fragment instanceof CustomerSignUpFragment) {
             ((CustomerSignUpFragment) fragment).setResidenceData(countryDataArrayList.get(adapterPosition).id, countryDataArrayList.get(adapterPosition).title);
         }

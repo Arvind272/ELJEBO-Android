@@ -15,6 +15,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.text.InputFilter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -502,6 +503,9 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
     }
 
     public void setResidenceData(Integer id, String title) {
+
+        Log.e("setResidenceData", "id==> " +id+ " title==>> "+title);
+
         InputMethodManager im = (InputMethodManager) baseActivity.getSystemService(Context.INPUT_METHOD_SERVICE);
         if (im != null) {
             im.hideSoftInputFromWindow(baseActivity.getWindow().getDecorView().getWindowToken(), 0);

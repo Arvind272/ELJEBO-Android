@@ -2,7 +2,13 @@ package com.eljebo.common.utils;
 
 public class Const {
 
-    public static final String SERVER_REMOTE_URL = "http://jupiter.toxsl.in/eljebo/";
+
+    public static final String NEW_BASE_URL = "http://103.15.67.74/eljebo/webservice/new/main/";
+
+   public static final String SERVER_REMOTE_URL = "http://103.15.67.74/eljebo/webservice/new/main/";
+   //public static final String SERVER_REMOTE_URL = "http://jupiter.toxsl.in/eljebo/";
+
+
     public static final String DISPLAY_MESSAGE_ACTION = "com.packagename.DISPLAY_MESSAGE";
     public static final int PLAY_SERVICES_RESOLUTION_REQUEST = 1234;
     /**
@@ -21,8 +27,8 @@ public class Const {
 
     public static final String API_CHECK = "http://web3.toxsl.in/craving-foodies/api/user/check";
     public static final String API_SERVICE_LIST = "api/service/list";
-    public static final String API_SERVICE_COUNTRY_LIST = "api/service/country-list";
-    public static final String API_SERVICE_STATE_LIST = "api/service/state-list";
+    public static final String API_SERVICE_COUNTRY_LIST = "getCountryList";
+    public static final String API_SERVICE_STATE_LIST = "getStateList";
     public static final String API_SERVICE_CITY_LIST = "api/service/city-list";
     public static final String API_USER_PROVIDER_SIGNUP = "api/user/provider-signup";
     public static final String API_USER_CUSTOMER_SIGNUP = "api/user/customer-signup";
