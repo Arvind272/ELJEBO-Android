@@ -24,12 +24,11 @@ public class Const {
     public static final String STORE_USER_PROFILE_DATA = "userProfileData";
 
 
-
     public static final String API_CHECK = "http://web3.toxsl.in/craving-foodies/api/user/check";
-    public static final String API_SERVICE_LIST = "api/service/list";
+    public static final String API_SERVICE_LIST = "getServiceList";
     public static final String API_SERVICE_COUNTRY_LIST = "getCountryList";
     public static final String API_SERVICE_STATE_LIST = "getStateList";
-    public static final String API_SERVICE_CITY_LIST = "api/service/city-list";
+    public static final String API_SERVICE_CITY_LIST = "getCityList";
     public static final String API_USER_PROVIDER_SIGNUP = "api/user/provider-signup";
     public static final String API_USER_CUSTOMER_SIGNUP = "api/user/customer-signup";
     public static final String API_SERVICE_SEARCH_REGION = "api/service/search-region";

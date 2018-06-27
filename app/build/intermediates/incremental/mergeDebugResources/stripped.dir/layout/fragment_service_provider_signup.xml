@@ -404,7 +404,6 @@
                 android:gravity="center_vertical"
                 android:hint="@string/select_the_service_which_matchs"
                 android:imeOptions="actionNext"
-
                 android:inputType="text"
                 android:padding="@dimen/_12sdp"
                 android:textColor="@color/Black"

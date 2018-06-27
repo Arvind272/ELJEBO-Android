@@ -209,7 +209,8 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
     private void hitCityApi() {
         if (!singleHit) {
             singleHit = true;
-            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_CITY_LIST + "?state_id=" + id + "&page=" + currentPage, null, this);
+            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_CITY_LIST + "?state_id=" + id,
+                    null, this);
         }
     }
 
@@ -254,7 +255,7 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
                                 getJSONObject(i).toString(), CountryData.class);
                         countryDataArrayList.add(countryData);
 
-                        if (jsonObject.getString("url").equals("getCountryList")){
+                        if (jsonObject.getString("url").equals("getCountryList")) {
                             countryDialogListDataBeans.add(new CountryDialogListDataBean(
                                     jsonObjData.getString("id"),
                                     jsonObjData.getString("sortname"),
@@ -262,16 +263,21 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
                                     jsonObjData.getString("phonecode"),
                                     jsonObjData.getString("status")));
 
-                        } else if (jsonObject.getString("url").equals("getStateList")){
+                        } else if (jsonObject.getString("url").equals("getStateList")) {
                             countryDialogListDataBeans.add(new CountryDialogListDataBean(
                                     jsonObjData.getString("id"),
-                                   "",
+                                    "",
                                     jsonObjData.getString("name"),
                                     "",
                                     jsonObjData.getString("country_id")));
+                        } else if (jsonObject.getString("url").equals("getCityList")) {
+                            countryDialogListDataBeans.add(new CountryDialogListDataBean(
+                                    jsonObjData.getString("id"),
+                                    "",
+                                    jsonObjData.getString("name"),
+                                    "",
+                                    jsonObjData.getString("state_id")));
                         }
-
-
                     }
 
                     if (currentPage >= jsonObject.optInt("total_pages")) {

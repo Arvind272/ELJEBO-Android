@@ -24,12 +24,12 @@
         "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_service_provider_location.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljibo/eljebo-android-911/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_settings.xml",
-        "source": "/home/samosys/Documents/eljibo/eljebo-android-911/app/src/main/res/layout/fragment_settings.xml"
-    },
-    {
         "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_settings.xml",
         "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "/home/samosys/Documents/eljibo/eljebo-android-911/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_settings.xml",
+        "source": "/home/samosys/Documents/eljibo/eljebo-android-911/app/src/main/res/layout/fragment_settings.xml"
     },
     {
         "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_payment.xml",

@@ -14,6 +14,8 @@ import com.eljebo.common.utils.Const;
 
 public class SplashActivity extends BaseActivity {
 
+    private String getStrStatus = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

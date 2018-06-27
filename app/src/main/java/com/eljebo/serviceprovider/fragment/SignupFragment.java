@@ -356,7 +356,6 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
             }
         }
 
-
         setSelectedServiceAdapter();
     }
 
@@ -514,6 +513,11 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         if (countryDialog != null && countryDialog.isShowing()) {
             countryDialog.dismiss();
         }
+
+        Log.e("getDataCountryIds", "==> " + type + " ==Country==>> " + Const.COUNTRY +
+                " ==State==>> " + Const.STATE +
+                " ==City==>> " + Const.CITY);
+
         if (type == Const.COUNTRY) {
             binding.countryET.setText(title);
             binding.stateET.setText(baseActivity.getString(R.string.state));
@@ -529,7 +533,6 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         } else {
             binding.cityET.setText(title);
             cityID = id;
-
         }
     }
 
@@ -620,7 +623,6 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                 } else {
                     baseActivity.showToastOne(jsonObject.getString("error"));
                 }
-
             }
         } catch (JSONException e) {
             e.printStackTrace();

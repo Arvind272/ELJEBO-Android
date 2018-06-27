@@ -2,6 +2,7 @@ package com.eljebo.common.adapter;
 
 import android.databinding.DataBindingUtil;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,7 +73,12 @@ public class ExpandableServiceAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getGroupView(int i, boolean b, View view, ViewGroup viewGroup) {
-        AdapterGroupServiceBinding binding = DataBindingUtil.inflate(LayoutInflater.from(viewGroup.getContext()), R.layout.adapter_group_service, viewGroup, false);
+        AdapterGroupServiceBinding binding = DataBindingUtil.inflate(LayoutInflater.from(viewGroup.getContext()),
+                R.layout.adapter_group_service, viewGroup, false);
+
+
+        Log.e("getGroupData", "==> " + getGroup(i).title);
+
         binding.headerServicesTV.setText(getGroup(i).title);
 
         if (getGroup(i).isExpand) {
@@ -89,6 +95,9 @@ public class ExpandableServiceAdapter extends BaseExpandableListAdapter {
     public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
         AdapterChildServiceBinding childBinding = DataBindingUtil.inflate(LayoutInflater.from(viewGroup.getContext()), R.layout.adapter_child_service, viewGroup, false);
         childBinding.titleTV.setText(getChild(i, i1).title);
+
+        Log.e("getChildData", "==> " + getChild(i, i1).title);
+
         childBinding.cleanerCB.setOnCheckedChangeListener(new check(i, i1) {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
