@@ -14,21 +14,6 @@
                     }
                 }
             ]
-        },
-        {
-            "outputFile": "/home/samosys/Documents/eljibo/eljebo-android-911/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
-            "map": [
-                {
-                    "source": "/home/samosys/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/5096a0a170ef631f0cc2b90224ced691/res/values-ldltr-v21/values-ldltr-v21.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "112",
-                        "endOffsets": "163"
-                    }
-                }
-            ]
         }
     ]
 }

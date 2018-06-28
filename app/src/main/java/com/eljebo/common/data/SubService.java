@@ -27,10 +27,10 @@ public class SubService implements Parcelable {
         }
 
     };
-    @SerializedName("id")
+    @SerializedName("sub_service_id")
     @Expose
     public Integer id;
-    @SerializedName("title")
+    @SerializedName("sub_service_name")
     @Expose
     public String title;
     @SerializedName("service_id")

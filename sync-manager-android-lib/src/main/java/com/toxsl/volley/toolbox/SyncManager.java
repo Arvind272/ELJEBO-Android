@@ -196,7 +196,7 @@ public class SyncManager implements SyncEventListner {
     public boolean sendJsonToServer(String url, String object, SyncEventListner syncEventListner) {
         String completeUrl = getUrl(url);
         if (isNetworkAvailable()) {
-            log("sendToServer getCountryList= " + completeUrl + " params = " + object);
+            log("sendToServer==>>> " + completeUrl + " params = " + object);
             sendStringRequest(syncEventListner, object, completeUrl);
             return true;
         } else
@@ -332,7 +332,10 @@ public class SyncManager implements SyncEventListner {
                         JSONObject jsonObject = new JSONObject(response);
                         log(jsonObject.toString());
                         if (!isValidateDateCheck(jsonObject, syncEventListner)) return;
-                        syncEventListner.onSyncSuccess(jsonObject.optString("controller"), jsonObject.optString("action"), jsonObject.optString("status").equalsIgnoreCase("OK"), jsonObject);
+                        syncEventListner.onSyncSuccess(jsonObject.optString("controller"),
+                                jsonObject.optString("action"),
+                                jsonObject.optString("status").equalsIgnoreCase("OK"),
+                                jsonObject);
                     } catch (JSONException e) {
                         log("Error parsing Response >>>>>> " + e + " \n" + response);
                         e.printStackTrace();

@@ -16,6 +16,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.text.InputFilter;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,15 @@ import android.widget.CompoundButton;
 import android.widget.ExpandableListView;
 import android.widget.RadioButton;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.eljebo.R;
 import com.eljebo.common.activity.BaseActivity;
 import com.eljebo.common.activity.LoginSignUpActivity;
@@ -34,6 +43,7 @@ import com.eljebo.common.data.ServiceData;
 import com.eljebo.common.data.SubService;
 import com.eljebo.common.dialog.CountryDialog;
 import com.eljebo.common.fragment.BaseFragment;
+import com.eljebo.common.fragment.LoginFragment;
 import com.eljebo.common.utils.Const;
 import com.eljebo.common.utils.CustomEditText;
 import com.eljebo.common.utils.ImageUtils;
@@ -44,6 +54,8 @@ import com.eljebo.serviceprovider.adapter.ServiceAdapter;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocomplete;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
@@ -53,6 +65,8 @@ import org.json.JSONObject;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 import me.nereo.multi_image_selector.MultiImageSelectorActivity;
 
@@ -71,6 +85,7 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
     private Dialog countryDialog;
     private ArrayList<ServiceData> serviceDatas = new ArrayList<>();
     private int REQUEST_GALLERY_CODE = 111;
+    String deviceToken = "";
 
     @Nullable
     @Override
@@ -92,14 +107,16 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         ((LoginSignUpActivity) baseActivity).setToolbar("", false);
         binding.firstNameET.setFilters(new InputFilter[]{baseActivity.getEditTextFilter()});
         binding.lastNameET.setFilters(new InputFilter[]{baseActivity.getEditTextFilter()});
+
+        /*deviceToken = FirebaseInstanceId.getInstance().getToken();
+        Log.e("deviceToken", "deviceToken==> " +deviceToken);*/
+
         initUI();
     }
 
     @Override
     public void onResume() {
         super.onResume();
-
-
     }
 
     private void initUI() {
@@ -179,8 +196,13 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                 baseActivity.store.setData("selectedServices", selectedServiceData);
                 baseActivity.hideSoftKeyboard();
                 if (validate()) {
-                gotoPaymentFragment();
+                    gotoPaymentFragment();
                 }
+
+                Log.e("getServiceJson", "11==> " + getServicesJson());
+                Log.e("getServiceJson", "22==> " + getSecurityQueJson());
+                Log.e("getServiceJson", "33==> " + getImageJSON());
+
                 break;
             case R.id.cityET:
                 baseActivity.hideSoftKeyboard();
@@ -342,7 +364,8 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
 
     //add selected  service
     public void checkServiceData(int groupPostion, int childPosition) {
-        serviceDatas.get(groupPostion).subServices.get(childPosition).isChecked = !serviceDatas.get(groupPostion).subServices.get(childPosition).isChecked;
+        serviceDatas.get(groupPostion).subServices.get(childPosition).isChecked =
+                !serviceDatas.get(groupPostion).subServices.get(childPosition).isChecked;
         selectedServiceData.clear();
         for (int g = 0; g < serviceDatas.size(); g++) {
             for (int c = 0; c < serviceDatas.get(g).subServices.size(); c++) {
@@ -352,6 +375,8 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                     service.title = serviceDatas.get(g).subServices.get(c).title;
                     service.price = "";
                     selectedServiceData.add(service);
+
+                    Log.e("getSubServiceData", "==> " + selectedServiceData);
                 }
             }
         }
@@ -455,7 +480,8 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         profileData.certification = binding.certificatesET.getText().toString().trim();
         profileData.multiImage = getImageJSON();
 
-        Fragment fragment = new PaymentFragment();
+
+        /*Fragment fragment = new PaymentFragment();
         Bundle bundle = new Bundle();
         bundle.putParcelable("signupData", profileData);
         fragment.setArguments(bundle);
@@ -464,7 +490,112 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                 .beginTransaction()
                 .replace(R.id.login_frame, fragment)
                 .addToBackStack(null)
-                .commit();
+                .commit();*/
+
+        doSignUpFromServer();
+
+    }
+
+    public void doSignUpFromServer() {
+
+        StringRequest postRequest = new StringRequest(Request.Method.POST, Const.NEW_BASE_URL
+                + "serviceProviderSignup",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+
+                        try {
+                            RequestQueue queue = Volley.newRequestQueue(getActivity());
+                            queue.getCache().clear();
+                            Log.e("SignUpResponse==>>", response);
+                            JSONObject json = new JSONObject(response);
+                            String message = json.getString("message");
+
+                            if (json.getString("status").equals("1")){
+
+                               /* Toast toast = Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT);
+                                toast.setGravity(Gravity.CENTER, 0, 0);
+                                toast.show();*/
+
+
+
+                               /* Intent intent = new Intent(getActivity(), LoginFragment.class);
+                                startActivity(intent);*/
+
+                                Fragment fragment = new LoginFragment();
+                                Bundle bundle = new Bundle();
+                                bundle.putInt("role", Const.ROLE_PROVIDER);
+                                store.setInt("role", Const.ROLE_PROVIDER);
+                                fragment.setArguments(bundle);
+                                baseActivity.getSupportFragmentManager()
+                                        .beginTransaction()
+                                        .replace(R.id.login_frame, fragment)
+                                        .addToBackStack(null)
+                                        .commit();
+
+                            } else {
+                               /* Toast toast = Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT);
+                                toast.setGravity(Gravity.CENTER, 0, 0);
+                                toast.show();*/
+                            }
+
+                            showToast(""+message);
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                    }
+        })
+        {
+
+            @Override
+            protected Map<String, String> getParams() {
+
+                /*firstname , lastname,email, password, device_type, device_token, username ,
+                        gender('0', '1', '2')1-Male, 2-Female,0-Other*/
+                Map<String, String> params = new HashMap<>();
+                params.put("firstname", binding.firstNameET.getText().toString().trim());
+                params.put("lastname", binding.lastNameET.getText().toString().trim());
+                params.put("email", binding.emailET.getText().toString().trim());
+                params.put("password", binding.firstNameET.getText().toString().trim());
+                params.put("device_type", "1");
+                params.put("device_token", "fdgf564875gfg6438ccbryuiruijkhgdfkjg");
+                params.put("username", binding.userNameET.getText().toString().trim());
+                params.put("gender", String.valueOf(gender));
+
+                Log.e("SignUp", "Params==>> " + params);
+
+                return params;
+            }
+
+        };
+
+        Volley.newRequestQueue(getActivity()).add(postRequest);
+        Log.e("LOGIN", postRequest.toString());
+        postRequest.setRetryPolicy(new RetryPolicy() {
+                                       @Override
+                                       public int getCurrentTimeout() {
+                                           return 50000;
+                                       }
+
+                                       @Override
+                                       public int getCurrentRetryCount() {
+                                           return 50000;
+                                       }
+
+                                       @Override
+                                       public void retry(VolleyError error) throws VolleyError {
+
+                                       }
+                                   });
     }
 
     private void openClock(CustomEditText customEditText) {
@@ -503,7 +634,7 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
 
     public void setResidenceData(Integer id, String title) {
 
-        Log.e("setResidenceData", "id==> " +id+ " title==>> "+title);
+        Log.e("setResidenceData", "id==> " + id + " title==>> " + title);
 
         InputMethodManager im = (InputMethodManager) baseActivity.getSystemService(Context.INPUT_METHOD_SERVICE);
         if (im != null) {
@@ -613,16 +744,17 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         super.onSyncSuccess(controller, action, status, jsonObject);
         try {
             if (jsonObject.getString("url").equals(Const.API_SERVICE_LIST)) {
-                if (jsonObject.getInt("status") == Const.STATUSOK) {
-                    serviceDatas.clear();
-                    for (int k = 0; k < jsonObject.getJSONArray("detail").length(); k++) {
-                        ServiceData serviceData = new Gson().fromJson(jsonObject.getJSONArray("detail").getJSONObject(k).toString(), ServiceData.class);
-                        serviceDatas.add(serviceData);
-                    }
-                    setServiceAdapter();
-                } else {
-                    baseActivity.showToastOne(jsonObject.getString("error"));
+                //  if (jsonObject.getInt("status") == Const.STATUSOK) {
+                serviceDatas.clear();
+                for (int k = 0; k < jsonObject.getJSONArray("data").length(); k++) {
+                    ServiceData serviceData = new Gson().fromJson(jsonObject.getJSONArray("data")
+                            .getJSONObject(k).toString(), ServiceData.class);
+                    serviceDatas.add(serviceData);
                 }
+                setServiceAdapter();
+               /* } else {
+                    baseActivity.showToastOne(jsonObject.getString("error"));
+                }*/
             }
         } catch (JSONException e) {
             e.printStackTrace();

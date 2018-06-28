@@ -14,21 +14,6 @@
                     }
                 }
             ]
-        },
-        {
-            "outputFile": "/home/samosys/Documents/eljibo/eljebo-android-911/MulipleImageSelector/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-land/values-land.xml",
-            "map": [
-                {
-                    "source": "/home/samosys/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.1.aar/29d61343338086c293cacbe195e2036e/res/values-land/values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,125,189,260",
-                        "endColumns": "69,63,70,67",
-                        "endOffsets": "120,184,255,323"
-                    }
-                }
-            ]
         }
     ]
 }

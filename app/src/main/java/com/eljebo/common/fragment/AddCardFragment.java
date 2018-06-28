@@ -106,11 +106,6 @@ public class AddCardFragment extends BaseFragment {
         }
     }
 
-    public void newValidation(){
-
-    }
-
-
     private void gotoTermsFragment() {
         Fragment fragment = new TermsAndServicesFragment();
         ProfileData profileData = getArguments().getParcelable("signupData");

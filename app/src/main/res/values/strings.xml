@@ -215,6 +215,7 @@
     <string name="plz_acpt_terms">Please accept terms and conditions</string>
     <string name="extra_time_started">Extra Time</string>
     <string name="enter_email_address">Enter email address</string>
+    <string name="enter_username">Enter username</string>
     <string name="enter_password">Enter password</string>
     <string name="yet_to_implement">Yet to implement</string>
     <string name="plz_slct_date">Please select date</string>

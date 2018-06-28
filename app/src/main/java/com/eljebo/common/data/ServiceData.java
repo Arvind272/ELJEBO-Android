@@ -30,10 +30,10 @@ public class ServiceData implements Parcelable {
         }
 
     };
-    @SerializedName("id")
+    @SerializedName("service_id")
     @Expose
     public Integer id;
-    @SerializedName("title")
+    @SerializedName("service_name")
     @Expose
     public String title;
     @SerializedName("type_id")
@@ -48,7 +48,7 @@ public class ServiceData implements Parcelable {
     @SerializedName("created_by_id")
     @Expose
     public Integer createdById;
-    @SerializedName("subServices")
+    @SerializedName("sub_service")
     @Expose
     public List<SubService> subServices = new ArrayList<>();
     public boolean isExpand;

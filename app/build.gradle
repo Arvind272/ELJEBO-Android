@@ -15,6 +15,9 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
+
+        multiDexEnabled true
+
     }
     signingConfigs {
         release {
@@ -56,6 +59,7 @@ android {
 ext {
     androidSupportVersion = '27.+'
     playServicesVersion = '10.2.6'
+   /* firebaseVersion = '10.2.6'*/
     firebaseVersion = '10.2.6'
 }
 
@@ -66,11 +70,19 @@ dependencies {
     compile 'com.android.support:design:27.+'
     compile "com.android.support:support-v4:$androidSupportVersion"
     compile "com.android.support:appcompat-v7:$androidSupportVersion"
-    compile "com.google.firebase:firebase-messaging:$firebaseVersion"
+
     compile "com.android.support:recyclerview-v7:$androidSupportVersion"
+
+
+    compile "com.google.firebase:firebase-core:$firebaseVersion"
+    compile "com.google.firebase:firebase-messaging:$firebaseVersion"
+
     compile "com.google.android.gms:play-services-auth:$playServicesVersion"
     compile "com.google.android.gms:play-services-location:$playServicesVersion"
     compile "com.google.android.gms:play-services-places:$playServicesVersion"
+    compile 'com.firebase:firebase-client-android:2.5.2'
+    compile "com.google.firebase:firebase-database:$firebaseVersion"
+
     compile 'com.theartofdev.edmodo:android-image-cropper:2.3.1'
     compile 'com.facebook.android:facebook-android-sdk:4.14.0'
     compile 'com.google.code.gson:gson:2.8.0'
@@ -81,4 +93,16 @@ dependencies {
     compile 'com.paypal.sdk:paypal-android-sdk:2.16.0'
     compile 'de.hdodenhof:circleimageview:2.2.0'
     compile project(':MulipleImageSelector')
+
+
+    compile 'com.android.support:multidex:1.0.1'
+
+    compile 'cc.cloudist.acplibrary:library:1.2.1'
+    compile 'com.android.volley:volley:1.0.0'
+
 }
+
+
+/*apply plugin: 'com.google.gms.google-services'*/
+
+

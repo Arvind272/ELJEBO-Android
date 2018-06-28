@@ -59,11 +59,6 @@ public class LoginSignUpActivity extends BaseActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    public void getTolbarData(String title, boolean enable) {
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

@@ -1,4 +1,7 @@
-#Wed Jun 27 19:26:28 IST 2018
-base.0=/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/transforms/dexMerger/debug/0
+#Thu Jun 28 19:34:46 IST 2018
+base.0=/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/transforms/dexMerger/debug/13
+path.1=classes2.dex
+renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
+base.1=/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/transforms/dexMerger/debug/13

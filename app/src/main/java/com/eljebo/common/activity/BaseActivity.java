@@ -144,11 +144,6 @@ public class BaseActivity extends AppCompatActivity implements SyncEventListner,
         finish();
     }
 
-    public void gotoLoginSignUpActivityNew() {
-        startActivity(new Intent(this, LoginSignUpActivity.class));
-        finish();
-    }
-
     public void gotoServiceProviderMainActivity() {
         startActivity(new Intent(this, MainActivity.class));
         finish();
