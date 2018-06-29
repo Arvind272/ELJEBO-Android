@@ -1,12 +1,16 @@
 package com.eljebo.common.utils;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 public class Const {
 
 
+    public static final String PREFName = "Mypref";
     public static final String NEW_BASE_URL = "http://103.15.67.74/eljebo/webservice/new/main/";
 
-   public static final String SERVER_REMOTE_URL = "http://103.15.67.74/eljebo/webservice/new/main/";
-   //public static final String SERVER_REMOTE_URL = "http://jupiter.toxsl.in/eljebo/";
+    public static final String SERVER_REMOTE_URL = "http://103.15.67.74/eljebo/webservice/new/main/";
+    //public static final String SERVER_REMOTE_URL = "http://jupiter.toxsl.in/eljebo/";
 
 
     public static final String DISPLAY_MESSAGE_ACTION = "com.packagename.DISPLAY_MESSAGE";
@@ -35,11 +39,13 @@ public class Const {
     public static final String API_LOGIN = "login";
     ///Roles
 
-    public static final int ROLE_USER = 3;
-    public static final int ROLE_PROVIDER = 4;
-    public static final int MALE = 0;
-    public static final int FEMALE = 1;
-    public static final int OTHER = 2;
+    /*public static final int ROLE_USER = 3;
+    public static final int ROLE_PROVIDER = 4;*/
+    public static final int ROLE_USER = 1;
+    public static final int ROLE_PROVIDER = 2;
+    public static final int MALE = 1;
+    public static final int FEMALE = 2;
+    public static final int OTHER = 0;
     public static final int COUNTRY = 0;
     public static final int STATE = 1;
     public static final int CITY = 2;
@@ -51,10 +57,34 @@ public class Const {
     public static final int STATUSOK = 200;
 
 
+    public static String saveData(Context context, String key, String value) {
+        SharedPreferences sharedPreferences;
+        SharedPreferences.Editor editor;
+        try {
+            sharedPreferences = context.getSharedPreferences(PREFName, Context.MODE_PRIVATE);
+            editor = sharedPreferences.edit();
+            editor.putString(key, value);
+            editor.apply();
+        } catch (NullPointerException e) {
+            System.out.print("error" + e);
+        }
+        return key;
+    }
+
+    public static String loadData(Context context, String key) {
+        SharedPreferences sharedPreferences;
+        SharedPreferences.Editor editor;
+        sharedPreferences = context.getSharedPreferences(PREFName, Context.MODE_PRIVATE);
+        String value = sharedPreferences.getString(key, "0");
+        return value;
+    }
+
+
     //education const
     public static final int EDUCATION_LEVEL_GED = 1;
     public static final int EDUCATION_LEVEL_HIH_SCHOOL = 2;
     public static final int EDUCATION_LEVEL_COLLEGE_AND_ABOVE = 3;
+
     public static final int LOCATION_CODE = 1;
 
 

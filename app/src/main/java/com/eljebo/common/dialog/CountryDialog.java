@@ -327,7 +327,9 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
                     Integer.parseInt(countryDialogListDataBeans.get(adapterPosition).getId()),
                     countryDialogListDataBeans.get(adapterPosition).getName());
         } else if (fragment instanceof CustomerSignUpFragment) {
-            ((CustomerSignUpFragment) fragment).setResidenceData(countryDataArrayList.get(adapterPosition).id, countryDataArrayList.get(adapterPosition).title);
+            ((CustomerSignUpFragment) fragment).setResidenceData(
+                    Integer.parseInt(countryDialogListDataBeans.get(adapterPosition).getId()),
+                    countryDialogListDataBeans.get(adapterPosition).getName());
         }
     }
 

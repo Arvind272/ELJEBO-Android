@@ -50,6 +50,11 @@ public class ProfileData implements Parcelable {
     public int paymentType;
     public int roleId;
 
+    public int countryIds;
+    public int stateIds;
+    public int cityIds;
+
+
     public ProfileData(Parcel in) {
         first_name = in.readString();
         last_name = in.readString();
@@ -69,6 +74,10 @@ public class ProfileData implements Parcelable {
         education_level = in.readString();
         certification = in.readString();
         roleId = in.readInt();
+
+        countryIds = in.readInt();
+        stateIds = in.readInt();
+        cityIds = in.readInt();
     }
 
     public ProfileData() {
@@ -100,5 +109,9 @@ public class ProfileData implements Parcelable {
         parcel.writeInt(roleId);
         parcel.writeString(city_state);
         parcel.writeString(education_level);
+
+        parcel.writeInt(countryIds);
+        parcel.writeInt(stateIds);
+        parcel.writeInt(cityIds);
     }
 }

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.text.InputFilter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -88,10 +89,10 @@ public class CustomerSignUpFragment extends BaseFragment {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.nextBT:
-//                baseActivity.hideSoftKeyboard();
-//                if (validate()) {
+                baseActivity.hideSoftKeyboard();
+                if (validate()) {
                 gotoPaymentFragment();
-//                }
+                }
                 break;
             case R.id.cityET:
                 baseActivity.hideSoftKeyboard();
@@ -228,20 +229,18 @@ public class CustomerSignUpFragment extends BaseFragment {
     private void gotoPaymentFragment() {
         if (binding.maleRB.isChecked()) {
             gender = Const.MALE;
-
         } else if (binding.femaleRB.isChecked()) {
             gender = Const.FEMALE;
         } else if (binding.otherRB.isChecked()) {
             gender = Const.OTHER;
         }
 
-
         ProfileData profileData = new ProfileData();
         profileData.first_name = binding.firstNameET.getText().toString().trim();
         profileData.last_name = binding.lastNameET.getText().toString().trim();
         profileData.email = binding.emailET.getText().toString().trim();
         profileData.username = binding.userNameET.getText().toString().trim();
-        profileData.password = binding.firstNameET.getText().toString().trim();
+        profileData.password = binding.passwordET.getText().toString().trim();
         profileData.contact_no = binding.phoneNumberET.getText().toString().trim();
         profileData.address = binding.addressET.getText().toString().trim();
         profileData.address_two = binding.addressTwoET.getText().toString().trim();
@@ -253,6 +252,11 @@ public class CustomerSignUpFragment extends BaseFragment {
         profileData.security_question = getSecurityQueJson();
         profileData.education_level = getEducationData();
         profileData.certification = binding.certificatesET.getText().toString().trim();
+        profileData.countryIds = countryID;
+        profileData.stateIds = stateID;
+        profileData.cityIds = cityID;
+
+
         Fragment fragment = new PaymentFragment();
         Bundle bundle = new Bundle();
         bundle.putParcelable("signupData", profileData);
@@ -293,10 +297,18 @@ public class CustomerSignUpFragment extends BaseFragment {
     }
 
     public void setResidenceData(Integer id, String title) {
+
+        Log.e("setResidenceData", "id==> " + id + " title==>> " + title);
+
         baseActivity.hideSoftKeyboard();
         if (countryDialog != null && countryDialog.isShowing()) {
             countryDialog.dismiss();
         }
+
+        Log.e("getDataCountryIds", "==> " + type + " ==Country==>> " + Const.COUNTRY +
+                " ==State==>> " + Const.STATE +
+                " ==City==>> " + Const.CITY);
+
         if (type == Const.COUNTRY) {
             binding.countryET.setText(title);
             binding.stateET.setText(baseActivity.getString(R.string.state));

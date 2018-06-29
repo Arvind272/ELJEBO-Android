@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Typeface;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -46,6 +47,7 @@ import com.eljebo.common.fragment.BaseFragment;
 import com.eljebo.common.fragment.LoginFragment;
 import com.eljebo.common.utils.Const;
 import com.eljebo.common.utils.CustomEditText;
+import com.eljebo.common.utils.GoogleApisHandle;
 import com.eljebo.common.utils.ImageUtils;
 import com.eljebo.customer.fragment.PaymentFragment;
 import com.eljebo.databinding.FragmentServiceProviderSignupBinding;
@@ -110,6 +112,8 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
 
         /*deviceToken = FirebaseInstanceId.getInstance().getToken();
         Log.e("deviceToken", "deviceToken==> " +deviceToken);*/
+
+
 
         initUI();
     }
@@ -197,11 +201,10 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                 baseActivity.hideSoftKeyboard();
                 if (validate()) {
                     gotoPaymentFragment();
+                } else {
+                   // gotoPaymentFragment();
                 }
 
-                Log.e("getServiceJson", "11==> " + getServicesJson());
-                Log.e("getServiceJson", "22==> " + getSecurityQueJson());
-                Log.e("getServiceJson", "33==> " + getImageJSON());
 
                 break;
             case R.id.cityET:
@@ -452,18 +455,17 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         if (binding.maleRB.isChecked()) {
             gender = Const.MALE;
         } else if (binding.femaleRB.isChecked()) {
-            gender = 1;
-        } else if (binding.otherRB.isChecked()) {
             gender = 2;
+        } else if (binding.otherRB.isChecked()) {
+            gender = 0;
         }
-
 
         ProfileData profileData = new ProfileData();
         profileData.first_name = binding.firstNameET.getText().toString().trim();
         profileData.last_name = binding.lastNameET.getText().toString().trim();
         profileData.email = binding.emailET.getText().toString().trim();
         profileData.username = binding.userNameET.getText().toString().trim();
-        profileData.password = binding.firstNameET.getText().toString().trim();
+        profileData.password = binding.passwordET.getText().toString().trim();
         profileData.contact_no = binding.phoneNumberET.getText().toString().trim();
         profileData.address = binding.addressET.getText().toString().trim();
         profileData.address_two = binding.addressTwoET.getText().toString().trim();
@@ -479,9 +481,12 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         profileData.education_level = getEducationData();
         profileData.certification = binding.certificatesET.getText().toString().trim();
         profileData.multiImage = getImageJSON();
+        profileData.countryIds = countryID;
+        profileData.stateIds = stateID;
+        profileData.cityIds = cityID;
 
 
-        /*Fragment fragment = new PaymentFragment();
+        Fragment fragment = new PaymentFragment();
         Bundle bundle = new Bundle();
         bundle.putParcelable("signupData", profileData);
         fragment.setArguments(bundle);
@@ -490,9 +495,9 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                 .beginTransaction()
                 .replace(R.id.login_frame, fragment)
                 .addToBackStack(null)
-                .commit();*/
+                .commit();
 
-        doSignUpFromServer();
+       // doSignUpFromServer();
 
     }
 
@@ -560,16 +565,37 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
             protected Map<String, String> getParams() {
 
                 /*firstname , lastname,email, password, device_type, device_token, username ,
-                        gender('0', '1', '2')1-Male, 2-Female,0-Other*/
+                        gender('0', '1', '2')1-Male, 2-Female,0-Other,
+                        country_id, country_id, address, address2, state_id, city_id, latitude, longitude,
+                        zip_code, mobile, security_que_ans, certificate_ids,
+                        sub_category(in josn value with 'sub_service_id' , 'charge_amount') ,  education*/
+
+                String refreshedToken = baseActivity.getUniqueDeviceId();
+                Log.e("SignUp", "refreshedToken==>> " + refreshedToken);
+
                 Map<String, String> params = new HashMap<>();
                 params.put("firstname", binding.firstNameET.getText().toString().trim());
                 params.put("lastname", binding.lastNameET.getText().toString().trim());
                 params.put("email", binding.emailET.getText().toString().trim());
-                params.put("password", binding.firstNameET.getText().toString().trim());
+                params.put("password", binding.passwordET.getText().toString().trim());
                 params.put("device_type", "1");
-                params.put("device_token", "fdgf564875gfg6438ccbryuiruijkhgdfkjg");
+                params.put("device_token", refreshedToken);
                 params.put("username", binding.userNameET.getText().toString().trim());
                 params.put("gender", String.valueOf(gender));
+
+                params.put("country_id", String.valueOf(countryID));
+                params.put("address", binding.addressET.getText().toString().trim());
+                params.put("address2", binding.addressTwoET.getText().toString().trim());
+                params.put("state_id", String.valueOf(stateID));
+                params.put("city_id", String.valueOf(cityID));
+                params.put("latitude", "22.54654");
+                params.put("longitude", "75.54464");
+                params.put("zip_code", binding.zipCodeET.getText().toString().trim());
+                params.put("mobile", binding.phoneNumberET.getText().toString().trim());
+                params.put("security_que_ans", getSecurityQueJson().toString());
+                params.put("certificate_ids", "");//getImageJSON().toString()
+                params.put("sub_category", getServicesJson().toString());
+                params.put("education", getEducationData().toLowerCase());
 
                 Log.e("SignUp", "Params==>> " + params);
 
@@ -668,6 +694,11 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
     }
 
     private boolean validate() {
+
+        Log.e("getJson", "getSecurityQueJson==> " + getSecurityQueJson());
+        Log.e("getJson", "getServicesJson==> " + getServicesJson());
+        Log.e("getJson", "getEducationData==> " + getEducationData());
+        Log.e("getJson", "getImageJSON==> " + getImageJSON());
 
         if (binding.firstNameET.getText().toString().trim().isEmpty()) {
             showToast(getString(R.string.enter_first_name));

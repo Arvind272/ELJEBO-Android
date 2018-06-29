@@ -249,7 +249,8 @@ public class SyncManager implements SyncEventListner {
             syncEventListner = this;
         }
         syncEventListner.onSyncStart();
-        MultipartRequest multipartRequest = new MultipartRequest(completeUrl, params, new onVolleyResponse(syncEventListner) {
+        MultipartRequest multipartRequest = new MultipartRequest(completeUrl,
+                params, new onVolleyResponse(syncEventListner) {
             @Override
             public void onResponse(String response) {
 
@@ -284,7 +285,8 @@ public class SyncManager implements SyncEventListner {
                 String apiCrash = "";
                 if (error.networkResponse != null) {
                     if (HttpURLConnection.HTTP_MOVED_PERM == error.networkResponse.statusCode ||
-                            error.networkResponse.statusCode == HttpURLConnection.HTTP_MOVED_TEMP || error.networkResponse.statusCode == HttpURLConnection.HTTP_SEE_OTHER) {
+                            error.networkResponse.statusCode == HttpURLConnection.HTTP_MOVED_TEMP
+                            || error.networkResponse.statusCode == HttpURLConnection.HTTP_SEE_OTHER) {
                         String location = error.networkResponse.headers.get("Location");
                         sendToServer(location, params, syncEventListner);
                     } else if (error.networkResponse.data != null) {

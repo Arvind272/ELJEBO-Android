@@ -35,7 +35,6 @@ public class AddCardFragment extends BaseFragment {
                     inflater, R.layout.fragment_add_card, container, false);
             return binding.getRoot();
         }
-
     }
 
     @Override
@@ -59,12 +58,10 @@ public class AddCardFragment extends BaseFragment {
         binding.mmYYET.addTextChangedListener(new TextWatcher() {
             @Override
             public void afterTextChanged(Editable editable) {
-
             }
 
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
@@ -99,9 +96,9 @@ public class AddCardFragment extends BaseFragment {
         switch (v.getId()) {
             case R.id.saveBT:
                 baseActivity.hideSoftKeyboard();
-//                if (validation()) {
+                if (validation()) {
                     gotoTermsFragment();
-//                }
+                }
                 break;
         }
     }
@@ -112,8 +109,8 @@ public class AddCardFragment extends BaseFragment {
         profileData.cardHolderName = binding.nameOnCardET.getText().toString().trim();
         profileData.card_number = binding.cardNumberET.getText().toString().trim();
         profileData.cvv = binding.cVVET.getText().toString().trim();
-//        profileData.expiry_year = binding.mmYYET.getText().toString().trim().substring(3, 5);
-//        profileData.expiry_month = binding.mmYYET.getText().toString().trim().substring(0, 2);
+        profileData.expiry_year = binding.mmYYET.getText().toString().trim().substring(3, 5);
+        profileData.expiry_month = binding.mmYYET.getText().toString().trim().substring(0, 2);
         profileData.paymentType = getArguments().getInt("payment_type");
         Bundle bundle = new Bundle();
         bundle.putParcelable("signupData", profileData);

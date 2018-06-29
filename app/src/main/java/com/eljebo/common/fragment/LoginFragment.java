@@ -166,7 +166,22 @@ public class LoginFragment extends BaseFragment {
 
                             if (json.getString("status").equals("1")){
 
-                                baseActivity.gotoOtpFragment();
+                                JSONObject jsonObjData = json.getJSONObject("data");
+
+                                String id = jsonObjData.getString("id");
+                                String user_type = jsonObjData.getString("user_type");
+                                String token = json.getString("token");
+
+                                Const.saveData(getActivity(), "loginUserId", id);
+                                Const.saveData(getActivity(), "loginUserToken", token);
+
+                                if (user_type.equals("2")){
+                                    baseActivity.gotoServiceProviderMainActivity();
+                                } else if (user_type.equals("1")){
+                                    baseActivity.gotoCustomerMainActivity();
+                                }
+
+                               // baseActivity.gotoOtpFragment();
                             } else {
 
                             }
@@ -195,7 +210,7 @@ public class LoginFragment extends BaseFragment {
                 String refreshedToken = baseActivity.getUniqueDeviceId();
                 params.put("device_token", refreshedToken);
                 params.put("device_type", "1");
-                params.put("user_type", "2");
+                params.put("user_type", String.valueOf(role));//Provider-2, Customer-1
 
                 Log.e("Login", "Params==>> " + params);
 
@@ -223,6 +238,18 @@ public class LoginFragment extends BaseFragment {
         });
     }
 
+    private void getClassActivity() {
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            baseActivity.getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.login_frame, new LoginFragment())
+                    .commit();
+        } else if (store.getInt("role") == Const.ROLE_USER) {
+            baseActivity.gotoCustomerMainActivity();
+        } else {
+            baseActivity.gotoServiceProviderMainActivity();
+        }
+    }
 
     private void gotoSignUpCustomer() {
         baseActivity.getSupportFragmentManager()

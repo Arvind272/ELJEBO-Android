@@ -4,6 +4,7 @@ package com.eljebo.customer.fragment;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,6 +71,10 @@ public class CustomerHomeFragment extends BaseFragment {
             case R.id.searchServiceBT:
                 baseActivity.hideSoftKeyboard();
                 baseActivity.store.setData("selectedServices", selectedServiceData);
+                Log.e("selectedServices", "selectedServices==> " +selectedServiceData.size());
+                for (int i=0;i<selectedServiceData.size();i++){
+                    Log.e("selectedServices", "item==> " +selectedServiceData.get(i).id);
+                }
                 gotoServiceProviderFragment();
                 break;
         }
@@ -93,16 +98,17 @@ public class CustomerHomeFragment extends BaseFragment {
         super.onSyncSuccess(controller, action, status, jsonObject);
         try {
             if (jsonObject.getString("url").equals(Const.API_SERVICE_LIST)) {
-                if (jsonObject.getInt("status") == Const.STATUSOK) {
+              //  if (jsonObject.getInt("status") == Const.STATUSOK) {
                     serviceDatas.clear();
-                    for (int k = 0; k < jsonObject.getJSONArray("detail").length(); k++) {
-                        ServiceData serviceData = new Gson().fromJson(jsonObject.getJSONArray("detail").getJSONObject(k).toString(), ServiceData.class);
+                    for (int k = 0; k < jsonObject.getJSONArray("data").length(); k++) {
+                        ServiceData serviceData = new Gson().fromJson(jsonObject.getJSONArray("data")
+                                .getJSONObject(k).toString(), ServiceData.class);
                         serviceDatas.add(serviceData);
                     }
                     setServiceAdapter();
-                } else {
+                /*} else {
                     baseActivity.showToastOne(jsonObject.getString("error"));
-                }
+                }*/
 
             }
         } catch (JSONException e) {

@@ -27,7 +27,7 @@
             android:layout_marginTop="@dimen/_15sdp"
             android:background="@drawable/edittext_drawbale"
             android:hint="@string/xxxxxx"
-            android:inputType="number"
+            android:inputType="text"
             android:paddingBottom="@dimen/_10sdp"
             android:paddingEnd="@dimen/_20sdp"
             android:paddingStart="@dimen/_20sdp"
