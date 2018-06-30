@@ -122,13 +122,13 @@ public class OtpFragment extends BaseFragment {
                             String message = json.getString("message");
 
                             if (json.getString("status").equals("1")){
-
                                 sendDataToServer();
 
                             } else {
                             }
                             showToast(""+message);
                             if (acProgressFlower.isShowing()){
+
                                 acProgressFlower.dismiss();
                             }
                         } catch (JSONException e) {

@@ -26,8 +26,11 @@ import com.eljebo.common.fragment.LoginFragment;
 import com.eljebo.common.utils.Const;
 import com.eljebo.customer.activity.CustomerMainActivity;
 import com.eljebo.customer.adapter.ServiceProvidersAdapter;
+import com.eljebo.customer.cus_new_bean.ServiceProviderListBean;
 import com.eljebo.databinding.FragmentServiceProvidersBinding;
+import com.google.gson.JsonObject;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -46,6 +49,8 @@ public class ServiceProvidersFragment extends BaseFragment {
 
     private View view;
     private FragmentServiceProvidersBinding binding;
+    private String selectedSubServiceIds = "";
+    private ArrayList<ServiceProviderListBean> serviceProviderListBeans;
 
     @Nullable
     @Override
@@ -71,20 +76,32 @@ public class ServiceProvidersFragment extends BaseFragment {
 
     private void initUI() {
 
+        serviceProviderListBeans = new ArrayList<>();
+
         ArrayList<SubService> subServices = baseActivity.store.<SubService>getData("selectedServices");
         Log.e("getSelectedSubService", "==> " +subServices.size());
+
         for (int i=0;i<subServices.size();i++){
             Log.e("getSelectedSubService", "ids==> " +subServices.get(i).id);
+
+            if (i==0){
+                selectedSubServiceIds = subServices.get(i).id.toString();
+            } else {
+                selectedSubServiceIds = selectedSubServiceIds+","+subServices.get(i).id;
+            }
         }
+        Log.e("getSelectedSubService", "selectedSubServiceIds==> " +selectedSubServiceIds);
 
         binding.serviceProviderRV.setLayoutManager(new LinearLayoutManager(baseActivity));
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(binding.serviceProviderRV.getContext(),
                 LinearLayoutManager.VERTICAL);
         binding.serviceProviderRV.addItemDecoration(dividerItemDecoration);
-        ServiceProvidersAdapter serviceProvidersAdapter = new ServiceProvidersAdapter(this);
-        binding.serviceProviderRV.setAdapter(serviceProvidersAdapter);
+        /*ServiceProvidersAdapter serviceProvidersAdapter = new ServiceProvidersAdapter(this);
+        binding.serviceProviderRV.setAdapter(serviceProvidersAdapter);*/
 
-        getServiceProviderList();
+        getServiceProviderList(this);
+
+
     }
 
     public void setClick(int pos) {
@@ -95,7 +112,7 @@ public class ServiceProvidersFragment extends BaseFragment {
     }
 
 
-    public void getServiceProviderList() {
+    public void getServiceProviderList(final ServiceProvidersFragment serviceProvidersFragment) {
 
         final ACProgressFlower acProgressFlower = new ACProgressFlower.Builder(getActivity())
                 .direction(ACProgressConstant.DIRECT_CLOCKWISE)
@@ -112,11 +129,41 @@ public class ServiceProvidersFragment extends BaseFragment {
                         try {
                             RequestQueue queue = Volley.newRequestQueue(getActivity());
                             queue.getCache().clear();
+                            serviceProviderListBeans.clear();
                             Log.e("getServiceProviderListResponse==>>", response);
                             JSONObject json = new JSONObject(response);
                             String message = json.getString("message");
 
                             if (json.getString("status").equals("1")){
+
+                                JSONArray jsonArrData = json.getJSONArray("data");
+                                for (int i=0;i<jsonArrData.length();i++){
+
+                                    JSONObject jsonObjData = jsonArrData.getJSONObject(i);
+
+                                    String user_id = "";
+                                    String name = "";
+                                    String profile_pic = "";
+
+                                    if (!jsonObjData.isNull("user_id")){
+                                        user_id = jsonObjData.getString("user_id");
+                                    }
+                                    if (!jsonObjData.isNull("name")){
+                                        name = jsonObjData.getString("name");
+                                    }
+                                    if (!jsonObjData.isNull("profile_pic")){
+                                        profile_pic = jsonObjData.getString("profile_pic");
+                                    }
+
+
+                                    serviceProviderListBeans.add(new ServiceProviderListBean(user_id,
+                                            name, profile_pic));
+                                }
+
+                                ServiceProvidersAdapter serviceProvidersAdapter = new ServiceProvidersAdapter(
+                                        serviceProvidersFragment, serviceProviderListBeans, getActivity());
+                                binding.serviceProviderRV.setAdapter(serviceProvidersAdapter);
+                                serviceProvidersAdapter.notifyDataSetChanged();
 
                             } else {
                             }
@@ -150,7 +197,7 @@ public class ServiceProvidersFragment extends BaseFragment {
                 Map<String, String> params = new HashMap<>();
                 params.put("user_id", Const.loadData(getActivity(), "loginUserId"));
                 params.put("token", Const.loadData(getActivity(), "loginUserToken"));
-                params.put("service_ids", "10,11,12,13");
+                params.put("service_ids", selectedSubServiceIds);
 
                 Log.e("getServiceProviderList", "Params==>> " + params);
 

@@ -14,9 +14,18 @@ public class AdapterServiceProviderBinding extends android.databinding.ViewDataB
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.serviceProviderCIV, 1);
+        sViewsWithIds.put(R.id.rlParentView, 1);
+        sViewsWithIds.put(R.id.serviceProviderCIV, 2);
+        sViewsWithIds.put(R.id.progressBarLoader, 3);
+        sViewsWithIds.put(R.id.customTextServiceProName, 4);
     }
     // views
+    @NonNull
+    public final com.eljebo.common.utils.CustomTextView customTextServiceProName;
+    @NonNull
+    public final android.widget.ProgressBar progressBarLoader;
+    @NonNull
+    public final android.widget.RelativeLayout rlParentView;
     @NonNull
     public final de.hdodenhof.circleimageview.CircleImageView serviceProviderCIV;
     @NonNull
@@ -28,8 +37,11 @@ public class AdapterServiceProviderBinding extends android.databinding.ViewDataB
 
     public AdapterServiceProviderBinding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 0);
-        final Object[] bindings = mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds);
-        this.serviceProviderCIV = (de.hdodenhof.circleimageview.CircleImageView) bindings[1];
+        final Object[] bindings = mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds);
+        this.customTextServiceProName = (com.eljebo.common.utils.CustomTextView) bindings[4];
+        this.progressBarLoader = (android.widget.ProgressBar) bindings[3];
+        this.rlParentView = (android.widget.RelativeLayout) bindings[1];
+        this.serviceProviderCIV = (de.hdodenhof.circleimageview.CircleImageView) bindings[2];
         this.serviceProviderRL = (android.widget.RelativeLayout) bindings[0];
         this.serviceProviderRL.setTag(null);
         setRootTag(root);

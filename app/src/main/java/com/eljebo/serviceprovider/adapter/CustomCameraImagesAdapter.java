@@ -39,7 +39,8 @@ public class CustomCameraImagesAdapter extends RecyclerView.Adapter<CustomCamera
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        AdapterCustomCameraImagesBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.adapter_custom_camera_images, parent, false);
+        AdapterCustomCameraImagesBinding binding = DataBindingUtil.
+                inflate(LayoutInflater.from(parent.getContext()), R.layout.adapter_custom_camera_images, parent, false);
         return new CustomCameraImagesAdapter.MyViewHolder(binding);
     }
 

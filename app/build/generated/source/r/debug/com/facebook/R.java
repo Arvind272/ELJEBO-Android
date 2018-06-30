@@ -139,21 +139,21 @@ public final class R {
         public static final int com_facebook_tooltip_bubble_view_text_body = 0x7f090068;
         public static final int com_facebook_tooltip_bubble_view_top_pointer = 0x7f090069;
         public static final int confirmation_code = 0x7f09006e;
-        public static final int display_always = 0x7f090091;
-        public static final int inline = 0x7f0900d3;
-        public static final int large = 0x7f0900d6;
-        public static final int left = 0x7f0900d9;
-        public static final int messenger_send_button = 0x7f0900ee;
-        public static final int never_display = 0x7f0900fb;
-        public static final int normal = 0x7f0900ff;
-        public static final int open_graph = 0x7f09010a;
-        public static final int page = 0x7f090110;
-        public static final int progress_bar = 0x7f09012c;
-        public static final int right = 0x7f090136;
-        public static final int small = 0x7f090171;
-        public static final int standard = 0x7f09017d;
-        public static final int top = 0x7f0901a4;
-        public static final int unknown = 0x7f0901ae;
+        public static final int display_always = 0x7f090092;
+        public static final int inline = 0x7f0900d4;
+        public static final int large = 0x7f0900d7;
+        public static final int left = 0x7f0900da;
+        public static final int messenger_send_button = 0x7f0900ef;
+        public static final int never_display = 0x7f0900fc;
+        public static final int normal = 0x7f090100;
+        public static final int open_graph = 0x7f09010b;
+        public static final int page = 0x7f090111;
+        public static final int progress_bar = 0x7f09012e;
+        public static final int right = 0x7f090138;
+        public static final int small = 0x7f090174;
+        public static final int standard = 0x7f090180;
+        public static final int top = 0x7f0901a7;
+        public static final int unknown = 0x7f0901b1;
     }
     public static final class layout {
         public static final int com_facebook_activity_layout = 0x7f0c002b;
