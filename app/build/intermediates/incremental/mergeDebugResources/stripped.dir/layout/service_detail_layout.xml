@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                                   
+
+    <LinearLayout
+        android:id="@+id/profileLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:orientation="vertical" android:tag="layout/service_detail_layout_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/meal_image_order"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_margin="@dimen/_5sdp"
+                android:src="@mipmap/ic_pic_home" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/customTextViewProName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:text="@string/jack_thomas"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_16sp" />
+
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/customTextViewAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/_3sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:text="@string/_123_lorem_ipsum_amet_lorem_ipsum_usa_n172201"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_13sp" />
+                <LinearLayout
+                    android:id="@+id/availabilityLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:text="@string/availability"
+                        android:textColor="@color/Gray"
+                        android:textSize="@dimen/_13sp" />
+
+                    <com.eljebo.common.utils.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_1sdp"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp"                        android:gravity="right"
+                        android:text="10:00am - 12:00pm"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/_13sp" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:orientation="vertical">
+            <com.eljebo.common.utils.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/description_service_pro_profile"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.eljebo.common.utils.CustomTextView
+                android:id="@+id/descriptionET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edittext_drawbale"
+                android:gravity="start"
+                android:imeOptions="actionNext"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of "
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/Gray"
+                android:textColorHint="@color/Black"
+                android:textSize="@dimen/_14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/serviceLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/White"
+            android:orientation="vertical"
+            android:padding="@dimen/_3sdp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_80sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/service_time"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:text="10:00am - 12:00pm"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_80sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/duration"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="1min"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_14sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/White"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_3sdp"
+            android:paddingEnd="@dimen/_3sdp"
+            android:paddingStart="@dimen/_3sdp">
+
+            <LinearLayout
+                android:id="@+id/educationLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_80sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/education"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:text=" High School"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_14sp" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/certificationLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_80sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/certifications"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:src="@mipmap/ic_certificate" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:src="@mipmap/ic_certificate01" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/durationLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_80sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/duration"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/_1_mins"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bookingDetailLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/White"
+            android:orientation="vertical"
+            android:padding="@dimen/_3sdp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_80sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/booking_time"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/bookingTimeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:text="02:00pm"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_80sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/booking_date"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/bookingDateTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/wednesday_23rd_june_2018"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/_80sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/duration"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/durationTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/_20_mins"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/_14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/cleanerLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/editTextBackGround"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/cleanerChargeTV"
+                    android:text="@string/cleaners"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/cleanerChargeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="$20"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/babyChargeTV"
+                    android:text="@string/baby_sitters"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/babyChargeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:text="$20"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp">
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/plumberCharegeTV"
+                    android:text="@string/plumbers_electricians"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+
+                <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/plumberCharegeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="$20"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_14sp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/servicesRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/editTextBackGround"/>
+    </LinearLayout>
+
+
+         

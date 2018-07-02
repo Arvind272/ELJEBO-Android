@@ -1,0 +1,3 @@
+# Referenced at /home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:55
+-keep class com.eljebo.common.utils.UILApplication { <init>(...); }
+
