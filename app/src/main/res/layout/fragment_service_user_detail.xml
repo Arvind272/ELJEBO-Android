@@ -23,6 +23,7 @@
                 android:padding="@dimen/_10sdp">
 
                 <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/customTextViewMsgBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawablePadding="@dimen/_5sdp"
@@ -34,6 +35,7 @@
                     android:textSize="@dimen/_14sp" />
 
                 <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/customTextViewCallBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_5sdp"

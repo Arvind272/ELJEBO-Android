@@ -1,162 +1,162 @@
 [
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_change_password.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_change_password.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_forgot_password.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_forgot_password.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_provider_location.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_service_provider_location.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_group_service.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_group_service.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/services_layout.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/services_layout.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_terms.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_terms.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_settings.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_settings.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_child_service.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_child_service.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_services.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_services.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_customer_check_in.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_customer_check_in.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_payment.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_payment.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_customer_home.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_customer_home.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_customer_signup.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_customer_signup.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_country.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/dialog_country.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_customer_profile.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_customer_profile.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_provider_signup.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_service_provider_signup.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_country.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/dialog_country.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_home.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_customer_check_in_timer.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_customer_check_in_timer.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_service.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_service.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_terms.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_terms.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_custom_camera_images.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_custom_camera_images.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_login.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_login.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_provider_detail.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_service_provider_detail.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_list.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_list.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/service_detail_layout.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/service_detail_layout.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_providers.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_service_providers.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_info_window.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/layout_info_window.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_services.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_services.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_personal_info.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_personal_info.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_personal_info.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_personal_info.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_customer_profile.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_customer_profile.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_child_service.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_child_service.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_select_role.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_select_role.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_feedback.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_feedback.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_payment.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_payment.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_custom_camera_images.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_custom_camera_images.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_country_dialog.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_country_dialog.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_card.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_add_card.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_feedback.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_feedback.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/security_questions_layout.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/security_questions_layout.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_service_provider.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_service_provider.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_user_detail.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_service_user_detail.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_services.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_services.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_check_in.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_check_in.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_check_in.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_check_in.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_forgot_password.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_forgot_password.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_card.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_add_card.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_home.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_customer_signup.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_customer_signup.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_pay.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_pay.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_profile.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_profile.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_customer_home.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_customer_home.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_providers.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_service_providers.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_service.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_service.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_login.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_login.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_group_service.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_group_service.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_customer_check_in_timer.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_customer_check_in_timer.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_customer_check_in.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_customer_check_in.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_settings.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_settings.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_country_dialog.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_country_dialog.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_list.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_list.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_service_provider.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_service_provider.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_provider_location.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_service_provider_location.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_select_role.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_select_role.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_change_password.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_change_password.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_provider_detail.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_service_provider_detail.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_otp.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_otp.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_otp.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_otp.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_user_detail.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_service_user_detail.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_notification_layout.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_notification_layout.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_notification_layout.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_notification_layout.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_profile.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_profile.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/security_questions_layout.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/security_questions_layout.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_info_window.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/layout_info_window.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/adapter_services.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/adapter_services.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_provider_signup.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_service_provider_signup.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/services_layout.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/services_layout.xml"
     },
     {
-        "merged": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/service_detail_layout.xml",
-        "source": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/service_detail_layout.xml"
+        "merged": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_pay.xml",
+        "source": "/home/user1/Documents/eljebo_git/ELJEBO-Android/app/src/main/res/layout/fragment_pay.xml"
     }
 ]

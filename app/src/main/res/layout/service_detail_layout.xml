@@ -30,6 +30,7 @@
                 android:orientation="vertical">
 
                 <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/customTextViewProName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
@@ -40,6 +41,7 @@
 
 
                 <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/customTextViewAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:lineSpacingExtra="@dimen/_3sdp"

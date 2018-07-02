@@ -15,22 +15,24 @@ public class ServiceDetailLayoutBinding extends android.databinding.ViewDataBind
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.meal_image_order, 1);
-        sViewsWithIds.put(R.id.availabilityLL, 2);
-        sViewsWithIds.put(R.id.descriptionET, 3);
-        sViewsWithIds.put(R.id.serviceLL, 4);
-        sViewsWithIds.put(R.id.educationLL, 5);
-        sViewsWithIds.put(R.id.certificationLL, 6);
-        sViewsWithIds.put(R.id.durationLL, 7);
-        sViewsWithIds.put(R.id.duration, 8);
-        sViewsWithIds.put(R.id.bookingDetailLL, 9);
-        sViewsWithIds.put(R.id.bookingTimeTV, 10);
-        sViewsWithIds.put(R.id.bookingDateTV, 11);
-        sViewsWithIds.put(R.id.durationTV, 12);
-        sViewsWithIds.put(R.id.cleanerLL, 13);
-        sViewsWithIds.put(R.id.cleanerChargeTV, 14);
-        sViewsWithIds.put(R.id.babyChargeTV, 15);
-        sViewsWithIds.put(R.id.plumberCharegeTV, 16);
-        sViewsWithIds.put(R.id.servicesRV, 17);
+        sViewsWithIds.put(R.id.customTextViewProName, 2);
+        sViewsWithIds.put(R.id.customTextViewAddress, 3);
+        sViewsWithIds.put(R.id.availabilityLL, 4);
+        sViewsWithIds.put(R.id.descriptionET, 5);
+        sViewsWithIds.put(R.id.serviceLL, 6);
+        sViewsWithIds.put(R.id.educationLL, 7);
+        sViewsWithIds.put(R.id.certificationLL, 8);
+        sViewsWithIds.put(R.id.durationLL, 9);
+        sViewsWithIds.put(R.id.duration, 10);
+        sViewsWithIds.put(R.id.bookingDetailLL, 11);
+        sViewsWithIds.put(R.id.bookingTimeTV, 12);
+        sViewsWithIds.put(R.id.bookingDateTV, 13);
+        sViewsWithIds.put(R.id.durationTV, 14);
+        sViewsWithIds.put(R.id.cleanerLL, 15);
+        sViewsWithIds.put(R.id.cleanerChargeTV, 16);
+        sViewsWithIds.put(R.id.babyChargeTV, 17);
+        sViewsWithIds.put(R.id.plumberCharegeTV, 18);
+        sViewsWithIds.put(R.id.servicesRV, 19);
     }
     // views
     @NonNull
@@ -49,6 +51,10 @@ public class ServiceDetailLayoutBinding extends android.databinding.ViewDataBind
     public final com.eljebo.common.utils.CustomTextView cleanerChargeTV;
     @NonNull
     public final android.widget.LinearLayout cleanerLL;
+    @NonNull
+    public final com.eljebo.common.utils.CustomTextView customTextViewAddress;
+    @NonNull
+    public final com.eljebo.common.utils.CustomTextView customTextViewProName;
     @NonNull
     public final com.eljebo.common.utils.CustomTextView descriptionET;
     @NonNull
@@ -76,26 +82,28 @@ public class ServiceDetailLayoutBinding extends android.databinding.ViewDataBind
 
     public ServiceDetailLayoutBinding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 0);
-        final Object[] bindings = mapBindings(bindingComponent, root, 18, sIncludes, sViewsWithIds);
-        this.availabilityLL = (android.widget.LinearLayout) bindings[2];
-        this.babyChargeTV = (com.eljebo.common.utils.CustomTextView) bindings[15];
-        this.bookingDateTV = (com.eljebo.common.utils.CustomTextView) bindings[11];
-        this.bookingDetailLL = (android.widget.LinearLayout) bindings[9];
-        this.bookingTimeTV = (com.eljebo.common.utils.CustomTextView) bindings[10];
-        this.certificationLL = (android.widget.LinearLayout) bindings[6];
-        this.cleanerChargeTV = (com.eljebo.common.utils.CustomTextView) bindings[14];
-        this.cleanerLL = (android.widget.LinearLayout) bindings[13];
-        this.descriptionET = (com.eljebo.common.utils.CustomTextView) bindings[3];
-        this.duration = (com.eljebo.common.utils.CustomTextView) bindings[8];
-        this.durationLL = (android.widget.LinearLayout) bindings[7];
-        this.durationTV = (com.eljebo.common.utils.CustomTextView) bindings[12];
-        this.educationLL = (android.widget.LinearLayout) bindings[5];
+        final Object[] bindings = mapBindings(bindingComponent, root, 20, sIncludes, sViewsWithIds);
+        this.availabilityLL = (android.widget.LinearLayout) bindings[4];
+        this.babyChargeTV = (com.eljebo.common.utils.CustomTextView) bindings[17];
+        this.bookingDateTV = (com.eljebo.common.utils.CustomTextView) bindings[13];
+        this.bookingDetailLL = (android.widget.LinearLayout) bindings[11];
+        this.bookingTimeTV = (com.eljebo.common.utils.CustomTextView) bindings[12];
+        this.certificationLL = (android.widget.LinearLayout) bindings[8];
+        this.cleanerChargeTV = (com.eljebo.common.utils.CustomTextView) bindings[16];
+        this.cleanerLL = (android.widget.LinearLayout) bindings[15];
+        this.customTextViewAddress = (com.eljebo.common.utils.CustomTextView) bindings[3];
+        this.customTextViewProName = (com.eljebo.common.utils.CustomTextView) bindings[2];
+        this.descriptionET = (com.eljebo.common.utils.CustomTextView) bindings[5];
+        this.duration = (com.eljebo.common.utils.CustomTextView) bindings[10];
+        this.durationLL = (android.widget.LinearLayout) bindings[9];
+        this.durationTV = (com.eljebo.common.utils.CustomTextView) bindings[14];
+        this.educationLL = (android.widget.LinearLayout) bindings[7];
         this.mealImageOrder = (de.hdodenhof.circleimageview.CircleImageView) bindings[1];
-        this.plumberCharegeTV = (com.eljebo.common.utils.CustomTextView) bindings[16];
+        this.plumberCharegeTV = (com.eljebo.common.utils.CustomTextView) bindings[18];
         this.profileLL = (android.widget.LinearLayout) bindings[0];
         this.profileLL.setTag(null);
-        this.serviceLL = (android.widget.LinearLayout) bindings[4];
-        this.servicesRV = (android.support.v7.widget.RecyclerView) bindings[17];
+        this.serviceLL = (android.widget.LinearLayout) bindings[6];
+        this.servicesRV = (android.support.v7.widget.RecyclerView) bindings[19];
         setRootTag(root);
         // listeners
         invalidateAll();

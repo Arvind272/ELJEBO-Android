@@ -1,12 +1,23 @@
 package com.eljebo.serviceprovider.fragment;
 
+import android.Manifest;
+import android.app.Dialog;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.eljebo.R;
 import com.eljebo.common.adapter.ServiceAdapter;
@@ -61,6 +72,38 @@ public class ServiceUserDetailFragment extends BaseFragment {
         binding.questionsLL.serviceLL.setVisibility(View.VISIBLE);
         binding.checkInCTV.setOnClickListener(this);
         binding.timerOnIV.setOnClickListener(this);
+        binding.customTextViewCallBtn.setOnClickListener(this);
+        binding.customTextViewMsgBtn.setOnClickListener(this);
+
+        /*binding.customTextViewCallBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String phoneNumber = "5454688854";
+                Intent intent = new Intent(Intent.ACTION_CALL,
+                        Uri.parse("tel:" + phoneNumber));
+                if (ActivityCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    return;
+                }
+                startActivity(intent);
+            }
+        });
+
+        binding.customTextViewMsgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phoneNumber = "Testin message";
+                Intent intent = new Intent(Intent.CATEGORY_APP_MESSAGING,
+                        Uri.parse("tel:" + phoneNumber));
+                if (ActivityCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.SEND_RESPOND_VIA_MESSAGE)
+                        != PackageManager.PERMISSION_GRANTED) {
+                    return;
+                }
+                startActivity(intent);
+            }
+        });*/
     }
 
     @Override
@@ -76,7 +119,86 @@ public class ServiceUserDetailFragment extends BaseFragment {
             case R.id.timerOnIV:
                 gotoCheckInFragment();
                 break;
+
+            case R.id.customTextViewCallBtn:
+                String phoneNumber = "5454688854";
+                Intent intent = new Intent(Intent.ACTION_DIAL,
+                        Uri.parse("tel:" + phoneNumber));
+
+                if (ContextCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(getActivity(),
+                            new String[]{Manifest.permission.CALL_PHONE},1);
+                }
+                else
+                {
+                    startActivity(intent);
+                }
+                break;
+
+            case R.id.customTextViewMsgBtn:
+
+                showMsgDialog();
+                /*Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+               // sendIntent.setData(Uri.parse("sms:"));
+                sendIntent.setType("vnd.android-dir/mms-sms");
+                sendIntent.putExtra("address", "5454688854");
+                sendIntent.putExtra("sms_body","Body of Message");
+
+                if (ContextCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(getActivity(),
+                            new String[]{Manifest.permission.CALL_PHONE},1);
+                }
+                else {
+                    startActivity(sendIntent);
+                }*/
+                break;
         }
+    }
+
+    public void showMsgDialog(){
+        final Dialog dialog = new Dialog(getActivity());
+        /*binding = DataBindingUtil.inflate(LayoutInflater.from(getContext())
+                , R.layout.show_msg_dialog_dialog, false);*/
+        dialog.setContentView(R.layout.show_msg_dialog_dialog);
+        dialog.setCanceledOnTouchOutside(false);
+
+        Button btnOk = (Button) dialog.findViewById(R.id.btnOk);
+        Button btnCancel = (Button)dialog.findViewById(R.id.btnCancel);
+
+        // if button is clicked, close the custom dialog
+        btnOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+
+                Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+                // sendIntent.setData(Uri.parse("sms:"));
+                sendIntent.setType("vnd.android-dir/mms-sms");
+                sendIntent.putExtra("address", "5454688854");
+                sendIntent.putExtra("sms_body","Body of Message");
+
+                if (ContextCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(getActivity(),
+                            new String[]{Manifest.permission.CALL_PHONE},1);
+                }
+                else {
+                    startActivity(sendIntent);
+                }
+            }
+        });
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+
+        dialog.show();
+
     }
 
     private void gotoCheckInFragment() {

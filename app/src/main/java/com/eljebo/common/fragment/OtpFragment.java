@@ -158,7 +158,7 @@ public class OtpFragment extends BaseFragment {
 
                 Map<String, String> params = new HashMap<>();
                 params.put("otp", binding.codeET.getText().toString().trim());
-                params.put("user_id", Const.loadData(getActivity(), "loginUserId"));//
+                params.put("user_id", Const.loadData(getActivity(), "loginUserId"));
 
                 Log.e("Otp", "Params==>> " + params);
 

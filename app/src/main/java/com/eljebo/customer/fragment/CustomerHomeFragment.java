@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import com.eljebo.R;
 import com.eljebo.common.adapter.ExpandableServiceAdapter;
@@ -75,7 +76,12 @@ public class CustomerHomeFragment extends BaseFragment {
                 for (int i=0;i<selectedServiceData.size();i++){
                     Log.e("selectedServices", "item==> " +selectedServiceData.get(i).id);
                 }
-                gotoServiceProviderFragment();
+                if (selectedServiceData.size()>0){
+                    gotoServiceProviderFragment();
+                } else {
+                    Toast.makeText(getActivity(), "Please select at least one service",
+                            Toast.LENGTH_SHORT).show();
+                }
                 break;
         }
     }

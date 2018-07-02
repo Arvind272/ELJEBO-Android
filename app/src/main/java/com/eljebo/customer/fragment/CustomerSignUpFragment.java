@@ -1,12 +1,17 @@
 package com.eljebo.customer.fragment;
 
+import android.Manifest;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.text.InputFilter;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.eljebo.R;
 import com.eljebo.common.activity.BaseActivity;
@@ -41,6 +47,7 @@ public class CustomerSignUpFragment extends BaseFragment {
     private int gender = 0;
     private int type = 0;
     private Dialog countryDialog;
+    private static final int PERMISSION_REQUEST_CODE = 1;
 
     @Nullable
     @Override
@@ -90,9 +97,17 @@ public class CustomerSignUpFragment extends BaseFragment {
         switch (v.getId()) {
             case R.id.nextBT:
                 baseActivity.hideSoftKeyboard();
-                if (validate()) {
-                gotoPaymentFragment();
+                if (!checkPermission()) {
+                    requestPermission();
+                } else {
+                    //  Snackbar.make(view,"Permission already granted.",Snackbar.LENGTH_LONG).show();
+                    baseActivity.hideSoftKeyboard();
+                    if (validate()) {
+                        gotoPaymentFragment();
+                    }
                 }
+
+
                 break;
             case R.id.cityET:
                 baseActivity.hideSoftKeyboard();
@@ -125,6 +140,44 @@ public class CustomerSignUpFragment extends BaseFragment {
 
             case R.id.addressET:
                 callGoogleSearch(Const.LOCATION_CODE);
+                break;
+        }
+    }
+
+    private boolean checkPermission(){
+        int result = ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION);
+        if (result == PackageManager.PERMISSION_GRANTED){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private void requestPermission(){
+
+        if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),Manifest.permission.ACCESS_FINE_LOCATION)){
+
+            Toast.makeText(getActivity(),"GPS permission allows us to access location data. Please allow in App Settings for additional functionality.",Toast.LENGTH_LONG).show();
+
+        } else {
+
+            ActivityCompat.requestPermissions(getActivity(),new String[]{Manifest.permission.ACCESS_FINE_LOCATION},PERMISSION_REQUEST_CODE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSION_REQUEST_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    Snackbar.make(view,"Permission Granted, Now you can access location data.",Snackbar.LENGTH_LONG).show();
+
+                } else {
+
+                    Snackbar.make(view,"Permission Denied, You cannot access location data.",Snackbar.LENGTH_LONG).show();
+
+                }
                 break;
         }
     }

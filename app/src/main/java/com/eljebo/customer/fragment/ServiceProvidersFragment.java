@@ -78,19 +78,20 @@ public class ServiceProvidersFragment extends BaseFragment {
 
         serviceProviderListBeans = new ArrayList<>();
 
-        ArrayList<SubService> subServices = baseActivity.store.<SubService>getData("selectedServices");
+        ArrayList<SubService> subServices =
+                baseActivity.store.<SubService>getData("selectedServices");
         Log.e("getSelectedSubService", "==> " +subServices.size());
 
         for (int i=0;i<subServices.size();i++){
             Log.e("getSelectedSubService", "ids==> " +subServices.get(i).id);
-
             if (i==0){
                 selectedSubServiceIds = subServices.get(i).id.toString();
             } else {
                 selectedSubServiceIds = selectedSubServiceIds+","+subServices.get(i).id;
             }
         }
-        Log.e("getSelectedSubService", "selectedSubServiceIds==> " +selectedSubServiceIds);
+        Log.e("getSelectedSubService", "selectedSubServiceIds==> "
+                +selectedSubServiceIds);
 
         binding.serviceProviderRV.setLayoutManager(new LinearLayoutManager(baseActivity));
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(binding.serviceProviderRV.getContext(),
@@ -105,6 +106,8 @@ public class ServiceProvidersFragment extends BaseFragment {
     }
 
     public void setClick(int pos) {
+        Const.saveData(getActivity(), "getServiceProviderUserId",
+                serviceProviderListBeans.get(pos).getUser_id());
         baseActivity.getSupportFragmentManager().beginTransaction()
                 .replace(R.id.customer_container, new ServiceProviderLocationFragment())
                 .addToBackStack(null)

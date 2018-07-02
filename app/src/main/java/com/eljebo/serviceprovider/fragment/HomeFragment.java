@@ -151,7 +151,9 @@ public class HomeFragment extends BaseFragment implements BaseActivity.PermCallb
                 public void onMapReady(GoogleMap googleMap) {
                     googleMap.getUiSettings().setZoomControlsEnabled(true);
                     googleMap.getUiSettings().setMapToolbarEnabled(false);
-                    if (ActivityCompat.checkSelfPermission(baseActivity, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(baseActivity,
+                            Manifest.permission.ACCESS_FINE_LOCATION)
+                            != PackageManager.PERMISSION_GRANTED) {
                         return;
                     }
                     HomeFragment.this.googleMap = googleMap;
@@ -205,7 +207,8 @@ public class HomeFragment extends BaseFragment implements BaseActivity.PermCallb
                     .strokeColor(Color.TRANSPARENT)
                     .fillColor(ContextCompat.getColor(baseActivity, R.color.map_color)));
             googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 14));
-            googleMap.addMarker(new MarkerOptions().position(new LatLng(latitude, longitude)).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_loc_small)));
+            googleMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(latitude, longitude)).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_loc_small)));
         }
     }
 
@@ -268,7 +271,10 @@ public class HomeFragment extends BaseFragment implements BaseActivity.PermCallb
         googleMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
             @Override
             public View getInfoWindow(Marker marker) {
-                infoWindowBinding = DataBindingUtil.inflate(LayoutInflater.from(baseActivity), R.layout.layout_info_window, null, false);
+                infoWindowBinding = DataBindingUtil.
+                        inflate(LayoutInflater.from(baseActivity),
+                                R.layout.layout_info_window,
+                                null, false);
                 return infoWindowBinding.getRoot();
             }
 

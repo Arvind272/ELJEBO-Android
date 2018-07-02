@@ -7,15 +7,21 @@ import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
+import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.text.InputFilter;
+import android.util.Base64;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -64,7 +70,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -88,6 +96,8 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
     private ArrayList<ServiceData> serviceDatas = new ArrayList<>();
     private int REQUEST_GALLERY_CODE = 111;
     String deviceToken = "";
+    private static final int PERMISSION_REQUEST_CODE = 1;
+    Bitmap bitmap;
 
     @Nullable
     @Override
@@ -197,14 +207,19 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         baseActivity.hideSoftKeyboard();
         switch (v.getId()) {
             case R.id.nextBT:
-                baseActivity.store.setData("selectedServices", selectedServiceData);
-                baseActivity.hideSoftKeyboard();
-                if (validate()) {
-                    gotoPaymentFragment();
-                } else {
-                   // gotoPaymentFragment();
-                }
 
+                baseActivity.hideSoftKeyboard();
+                if (!checkPermission()) {
+                    requestPermission();
+                } else {
+                  //  Snackbar.make(view,"Permission already granted.",Snackbar.LENGTH_LONG).show();
+                    baseActivity.store.setData("selectedServices", selectedServiceData);
+                    if (validate()) {
+                        gotoPaymentFragment();
+                    } else {
+                        // gotoPaymentFragment();
+                    }
+                }
 
                 break;
             case R.id.cityET:
@@ -267,6 +282,47 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                 break;
             case R.id.addressET:
                 callGoogleSearch(Const.LOCATION_CODE);
+                break;
+        }
+    }
+
+
+
+
+    private boolean checkPermission(){
+        int result = ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION);
+        if (result == PackageManager.PERMISSION_GRANTED){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private void requestPermission(){
+
+        if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),Manifest.permission.ACCESS_FINE_LOCATION)){
+
+            Toast.makeText(getActivity(),"GPS permission allows us to access location data. Please allow in App Settings for additional functionality.",Toast.LENGTH_LONG).show();
+
+        } else {
+
+            ActivityCompat.requestPermissions(getActivity(),new String[]{Manifest.permission.ACCESS_FINE_LOCATION},PERMISSION_REQUEST_CODE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSION_REQUEST_CODE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    Snackbar.make(view,"Permission Granted, Now you can access location data.",Snackbar.LENGTH_LONG).show();
+
+                } else {
+
+                    Snackbar.make(view,"Permission Denied, You cannot access location data.",Snackbar.LENGTH_LONG).show();
+
+                }
                 break;
         }
     }
@@ -406,10 +462,10 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_GALLERY_CODE) {
             try {
-
                 for (int i = 0; i < data.getStringArrayListExtra(MultiImageSelectorActivity.EXTRA_RESULT).size(); i++) {
                     if (imageList.size() < 4) {
-                        imageList.add(i, data.getStringArrayListExtra(MultiImageSelectorActivity.EXTRA_RESULT).get(i));
+                        imageList.add(i,
+                                data.getStringArrayListExtra(MultiImageSelectorActivity.EXTRA_RESULT).get(i));
                     } else {
                         showToast(baseActivity.getString(R.string.max_image_limit));
                     }
@@ -442,12 +498,18 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
     private void setImageAdapter() {
         binding.imageRV.setVisibility(View.VISIBLE);
 
+        Log.e("imageList", "imageList==> " + imageList);
+
+        ArrayList<String> finalSelectedCertiImage = new ArrayList<>();
+
         if (imagesAdapter == null) {
-            imagesAdapter = new CustomCameraImagesAdapter(baseActivity, imageList, this);
+            imagesAdapter = new CustomCameraImagesAdapter(baseActivity, imageList,
+                    this);
             binding.imageRV.setAdapter(imagesAdapter);
         } else {
             imagesAdapter.notifyDataSetChanged();
         }
+       // imageUploadToServer(imageList);
     }
 
 
@@ -872,6 +934,83 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         timeListener(CustomEditText customEditText) {
             this.customEditText = customEditText;
         }
+    }
+
+    public void mulitImageForLoop(){
+        for (int i=0;i<imageList.size();i++){
+
+        }
+    }
+
+    public void imageUploadToServer(final ArrayList<String> imageList){
+
+
+        Log.e("imageList", "imageList==>>>> " +imageList);
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        byte[] imageBytes = baos.toByteArray();
+        final String imageString = Base64.encodeToString(imageBytes, Base64.DEFAULT);
+
+
+        StringRequest postRequest = new StringRequest(Request.Method.POST,
+                Const.NEW_BASE_URL
+                + "uploadImage",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            RequestQueue queue = Volley.newRequestQueue(getActivity());
+                            queue.getCache().clear();
+                            Log.e("UploadImage==>>", response);
+                            JSONObject json = new JSONObject(response);
+                            String message = json.getString("message");
+                            if (json.getString("status").equals("1")){
+
+                            } else {
+                            }
+
+                           // showToast(""+message);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                    }
+                })
+        {
+
+            @Override
+            protected Map<String, String> getParams() {
+                /*user_id, token, user_type,image_name*/
+                Map<String, String> params = new HashMap<>();
+                params.put("user_type", "2");
+                params.put("image_name", "");
+
+                Log.e("UploadImage", "Params==>> " + params);
+                return params;
+            }
+        };
+        Volley.newRequestQueue(getActivity()).add(postRequest);
+        Log.e("UploadImage", postRequest.toString());
+        postRequest.setRetryPolicy(new RetryPolicy() {
+            @Override
+            public int getCurrentTimeout() {
+                return 50000;
+            }
+            @Override
+            public int getCurrentRetryCount() {
+                return 50000;
+            }
+            @Override
+            public void retry(VolleyError error) throws VolleyError {
+            }
+        });
     }
 
 

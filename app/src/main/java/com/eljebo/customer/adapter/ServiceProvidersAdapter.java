@@ -22,7 +22,8 @@ import java.util.ArrayList;
  * Created by TOXSL\vinay.goyal on 12/6/18.
  */
 
-public class ServiceProvidersAdapter extends RecyclerView.Adapter<ServiceProvidersAdapter.ViewHolder> {
+public class ServiceProvidersAdapter extends RecyclerView.Adapter<
+        ServiceProvidersAdapter.ViewHolder> {
 
     private ServiceProvidersFragment serviceProvidersFragment;
     private Context context;
@@ -64,7 +65,6 @@ public class ServiceProvidersAdapter extends RecyclerView.Adapter<ServiceProvide
 
         holder.binding.serviceProviderCIV.setBorderColor(Color.parseColor("#DCDCDC"));
         holder.binding.serviceProviderCIV.setBorderWidth(2);
-
 
         holder.binding.progressBarLoader.setVisibility(View.VISIBLE);
         holder.binding.serviceProviderCIV.setVisibility(View.VISIBLE);

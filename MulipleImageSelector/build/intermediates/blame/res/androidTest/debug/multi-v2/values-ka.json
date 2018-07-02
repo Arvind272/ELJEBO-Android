@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/samosys/Documents/eljebo_git/ELJEBO-Android/MulipleImageSelector/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ka/values-ka.xml",
+            "outputFile": "/home/user1/Documents/eljebo_git/ELJEBO-Android/MulipleImageSelector/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-ka/values-ka.xml",
             "map": [
                 {
-                    "source": "/home/samosys/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.1.aar/29d61343338086c293cacbe195e2036e/res/values-ka/values-ka.xml",
+                    "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.1.aar/17454df6a6478fc47d1b14015920ab2c/res/values-ka/values-ka.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/samosys/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.1.aar/3c16addbe0885dc88d6247b2b622b1e4/res/values-ka/values-ka.xml",
+                    "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.1.aar/59d0faf1afa091336c9491ba08098a04/res/values-ka/values-ka.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -102,7 +102,8 @@ public class PayFragment extends BaseFragment {
     }
 
     private void gotoServiceProviderDetailFragment() {
-        ServiceProviderDetailFragment serviceProviderDetailFragment = new ServiceProviderDetailFragment();
+        ServiceProviderDetailFragment serviceProviderDetailFragment =
+                new ServiceProviderDetailFragment();
         serviceProviderDetailFragment.setArguments(bundle);
         baseActivity.getSupportFragmentManager().beginTransaction()
                 .replace(R.id.customer_container, serviceProviderDetailFragment)

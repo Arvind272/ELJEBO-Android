@@ -20,20 +20,31 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.eljebo.R;
 import com.eljebo.common.activity.BaseActivity;
 import com.eljebo.common.adapter.ServiceAdapter;
 import com.eljebo.common.data.SubService;
 import com.eljebo.common.fragment.BaseFragment;
+import com.eljebo.common.utils.Const;
 import com.eljebo.common.utils.CustomEditText;
 import com.eljebo.common.utils.GoogleApisHandle;
 import com.eljebo.customer.activity.CustomerMainActivity;
+import com.eljebo.customer.adapter.ServiceProvidersAdapter;
+import com.eljebo.customer.cus_new_bean.ServiceProviderListBean;
 import com.eljebo.databinding.FragmentServiceProviderLocationBinding;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -43,8 +54,19 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+
+import cc.cloudist.acplibrary.ACProgressConstant;
+import cc.cloudist.acplibrary.ACProgressFlower;
 
 /**
  * Created by TOXSL\vinay.goyal on 14/6/18.
@@ -61,6 +83,10 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
     private AlertDialog.Builder alert;
     private Calendar datetime;
     private ServiceAdapter serviceAdapter;
+    private String getServiceProviderUserId = "";
+
+    String latitude = "";
+    String longitude = "";
 
     @Nullable
     @Override
@@ -89,22 +115,28 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         binding.questionsLL.servicesRV.setLayoutManager(linearLayoutManager);
 
+        getServiceProviderUserId = Const.loadData(getActivity(), "getServiceProviderUserId");
+
         if (baseActivity.store.containValue("selectedServices")) {
-            serviceAdapter = new ServiceAdapter(this, baseActivity.store.<SubService>getData("selectedServices"));
+            serviceAdapter = new ServiceAdapter(this,
+                    baseActivity.store.<SubService>getData("selectedServices"));
             binding.questionsLL.servicesRV.setAdapter(serviceAdapter);
         } else {
             binding.questionsLL.cleanerLL.setVisibility(View.VISIBLE);
         }
         baseActivity.hideSoftKeyboard();
         binding.questionsLL.availabilityLL.setVisibility(View.VISIBLE);
-        ((CustomerMainActivity) baseActivity).setTitle(getString(R.string.jack_thomas));
-        if (baseActivity.checkPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 11, this)) {
+       // ((CustomerMainActivity) baseActivity).setTitle(getString(R.string.jack_thomas));
+        getServiceProviderDetails();
+        if (baseActivity.checkPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                11, this)) {
             initUI();
         }
         binding.bookNowBT.setOnClickListener(this);
         binding.dateET.setOnClickListener(this);
         binding.timeET.setOnClickListener(this);
     }
+
 
     private void initUI() {
         initializeMap();
@@ -117,9 +149,9 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
         switch (v.getId()) {
             case R.id.bookNowBT:
                 baseActivity.hideSoftKeyboard();
-//                if (validate()) {
+               if (validate()) {
                 gotoPayFragment();
-//                }
+               }
 
                 break;
 
@@ -160,20 +192,193 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
                 .commit();
     }
 
+
+    public void getServiceProviderDetails() {
+
+        final ACProgressFlower acProgressFlower = new ACProgressFlower.Builder(getActivity())
+                .direction(ACProgressConstant.DIRECT_CLOCKWISE)
+                .themeColor(Color.WHITE)
+                // .text("Title is here")
+                .fadeColor(Color.DKGRAY).build();
+        acProgressFlower.show();
+
+        StringRequest postRequest = new StringRequest(Request.Method.POST,
+                Const.NEW_BASE_URL
+                + "getServiceProviderProfile",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            RequestQueue queue = Volley.newRequestQueue(getActivity());
+                            queue.getCache().clear();
+                            Log.e("getServiceProviderDetails==>>", response);
+                            JSONObject json = new JSONObject(response);
+                            String message = json.getString("message");
+
+                            if (json.getString("status").equals("1")){
+
+                                JSONObject jsonObjData = json.getJSONObject("data");
+
+                                    String name = "";
+                                    String gender = "";
+                                    String address = "";
+
+                                    String address2 = "";
+
+                                    String zip_code = "";
+                                    String start_time = "";
+                                    String end_time = "";
+                                    String country = "";
+                                    String state = "";
+                                    String city = "";
+                                    String profile_pic = "";
+
+                                    String fullAddressHere = "";
+
+                                    if (!jsonObjData.isNull("name")){
+                                        name = jsonObjData.getString("name");
+                                        binding.questionsLL.customTextViewProName.setText(""+name);
+                                        ((CustomerMainActivity) baseActivity).setTitle(""+name);
+                                    }
+                                    if (!jsonObjData.isNull("gender")){
+                                        gender = jsonObjData.getString("gender");
+                                    }
+                                    if (!jsonObjData.isNull("address")){
+                                        address = jsonObjData.getString("address");
+                                        fullAddressHere = address;
+                                    }
+
+                                    if (!jsonObjData.isNull("address2")){
+                                        address2 = jsonObjData.getString("address2");
+
+                                        fullAddressHere = fullAddressHere +" " +address2;
+
+                                    }
+                                    if (!jsonObjData.isNull("latitude")){
+                                        latitude = jsonObjData.getString("latitude");
+                                    }
+                                    if (!jsonObjData.isNull("longitude")){
+                                        longitude = jsonObjData.getString("longitude");
+                                    }
+                                    if (!jsonObjData.isNull("zip_code")){
+                                        zip_code = jsonObjData.getString("zip_code");
+                                    }
+                                    if (!jsonObjData.isNull("start_time")){
+                                        start_time = jsonObjData.getString("start_time");
+                                    }
+                                    if (!jsonObjData.isNull("end_time")){
+                                        end_time = jsonObjData.getString("end_time");
+                                    }
+                                    if (!jsonObjData.isNull("city")){
+                                        city = jsonObjData.getString("city");
+                                        fullAddressHere = fullAddressHere +" "+city;
+                                    }
+                                    if (!jsonObjData.isNull("state")){
+                                        state = jsonObjData.getString("state");
+                                        fullAddressHere = fullAddressHere +" "+state;
+                                    }
+                                    if (!jsonObjData.isNull("country")){
+                                        country = jsonObjData.getString("country");
+                                        fullAddressHere = fullAddressHere +" "+country;
+                                    }
+
+                                    binding.questionsLL.customTextViewAddress.setText(""+fullAddressHere);
+
+                                    if (!jsonObjData.isNull("profile_pic")){
+                                        profile_pic = jsonObjData.getString("profile_pic");
+
+                                        Picasso.with(getActivity())
+                                                .load(profile_pic)
+                                                .placeholder(R.mipmap.ic_pic_home)
+                                                .error(R.mipmap.ic_pic_home)
+                                                .into(binding.questionsLL.mealImageOrder);
+                                    }
+
+                                initUI();
+
+                            } else {
+                            }
+
+                            showToast(""+message);
+                            if (acProgressFlower.isShowing()){
+                                acProgressFlower.dismiss();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            if (acProgressFlower.isShowing()){
+                                acProgressFlower.dismiss();
+                            }
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                        if (acProgressFlower.isShowing()){
+                            acProgressFlower.dismiss();
+                        }
+                    }
+                })
+        {
+            @Override
+            protected Map<String, String> getParams() {
+                //user_id, token , service_provider_id
+
+                Map<String, String> params = new HashMap<>();
+                params.put("user_id", Const.loadData(getActivity(), "loginUserId"));
+                params.put("token", Const.loadData(getActivity(), "loginUserToken"));
+                params.put("service_provider_id", getServiceProviderUserId);
+
+                Log.e("getServiceProviderDetai", "Params==>> " + params);
+
+                return params;
+            }
+        };
+
+        Volley.newRequestQueue(getActivity()).add(postRequest);
+        Log.e("LOGIN", postRequest.toString());
+        postRequest.setRetryPolicy(new RetryPolicy() {
+            @Override
+            public int getCurrentTimeout() {
+                return 50000;
+            }
+
+            @Override
+            public int getCurrentRetryCount() {
+                return 50000;
+            }
+
+            @Override
+            public void retry(VolleyError error) throws VolleyError {
+
+            }
+        });
+    }
+
+
+
+
     private void initializeMap() {
-        mLocationManager = (LocationManager) baseActivity.getSystemService(Context.LOCATION_SERVICE);
+        mLocationManager = (LocationManager)
+                baseActivity.getSystemService(Context.LOCATION_SERVICE);
         if (googleMap == null) {
-            SupportMapFragment map = ((SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map));
+            SupportMapFragment map = ((SupportMapFragment)
+                    getChildFragmentManager().findFragmentById(R.id.map));
             map.getMapAsync(new OnMapReadyCallback() {
                 @Override
                 public void onMapReady(GoogleMap googleMap) {
                     googleMap.getUiSettings().setZoomControlsEnabled(true);
                     googleMap.getUiSettings().setMapToolbarEnabled(false);
-                    if (ActivityCompat.checkSelfPermission(baseActivity, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(baseActivity,
+                            Manifest.permission.ACCESS_FINE_LOCATION) !=
+                            PackageManager.PERMISSION_GRANTED) {
                         return;
                     }
                     ServiceProviderLocationFragment.this.googleMap = googleMap;
-                    current_location = GoogleApisHandle.getInstance(baseActivity).getLastKnownLocation(baseActivity);
+                    current_location = GoogleApisHandle.getInstance(baseActivity).
+                            getLastKnownLocation(baseActivity);
                     initializeMap();
                 }
             });
@@ -191,7 +396,14 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
     private void setMarker() {
         if (current_location != null) {
             if (googleMap != null)
-                setMarkeronMapDriverLoc(current_location.getLatitude(), current_location.getLongitude());
+                if (!latitude.equals("")){
+                    setMarkeronMapDriverLoc(Double.parseDouble(latitude),
+                            Double.parseDouble(longitude));
+                }else {
+                    setMarkeronMapDriverLoc(current_location.getLatitude(),
+                            current_location.getLongitude());
+                }
+
         } else {
             if (mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 if (count < 5) {
