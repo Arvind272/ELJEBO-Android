@@ -33,6 +33,7 @@
                 android:textSize="@dimen/_14sp" />
 
             <com.eljebo.common.utils.CustomTextView
+                android:id="@+id/customTextViewGetStateDialog"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_2sdp"
@@ -50,6 +51,7 @@
                 android:textSize="@dimen/_14sp" />
 
             <com.eljebo.common.utils.CustomTextView
+                android:id="@+id/customTextViewGetCityDialog"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_2sdp"

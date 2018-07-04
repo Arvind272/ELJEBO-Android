@@ -15,11 +15,17 @@ public class FragmentServiceProvidersBinding extends android.databinding.ViewDat
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.customTextViewGetCountryDialog, 1);
-        sViewsWithIds.put(R.id.serviceProviderRV, 2);
+        sViewsWithIds.put(R.id.customTextViewGetStateDialog, 2);
+        sViewsWithIds.put(R.id.customTextViewGetCityDialog, 3);
+        sViewsWithIds.put(R.id.serviceProviderRV, 4);
     }
     // views
     @NonNull
+    public final com.eljebo.common.utils.CustomTextView customTextViewGetCityDialog;
+    @NonNull
     public final com.eljebo.common.utils.CustomTextView customTextViewGetCountryDialog;
+    @NonNull
+    public final com.eljebo.common.utils.CustomTextView customTextViewGetStateDialog;
     @NonNull
     private final android.widget.LinearLayout mboundView0;
     @NonNull
@@ -31,11 +37,13 @@ public class FragmentServiceProvidersBinding extends android.databinding.ViewDat
 
     public FragmentServiceProvidersBinding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 0);
-        final Object[] bindings = mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds);
+        final Object[] bindings = mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds);
+        this.customTextViewGetCityDialog = (com.eljebo.common.utils.CustomTextView) bindings[3];
         this.customTextViewGetCountryDialog = (com.eljebo.common.utils.CustomTextView) bindings[1];
+        this.customTextViewGetStateDialog = (com.eljebo.common.utils.CustomTextView) bindings[2];
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.serviceProviderRV = (android.support.v7.widget.RecyclerView) bindings[2];
+        this.serviceProviderRV = (android.support.v7.widget.RecyclerView) bindings[4];
         setRootTag(root);
         // listeners
         invalidateAll();

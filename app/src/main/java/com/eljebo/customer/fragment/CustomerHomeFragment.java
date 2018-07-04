@@ -87,7 +87,8 @@ public class CustomerHomeFragment extends BaseFragment {
     }
 
     private void hitServicesApi() {
-        baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_LIST, null, this);
+        baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_LIST,
+                null, this);
     }
 
     private void gotoServiceProviderFragment() {

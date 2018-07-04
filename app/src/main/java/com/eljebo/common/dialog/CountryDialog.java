@@ -28,6 +28,7 @@ import com.eljebo.common.data.CountryData;
 import com.eljebo.common.utils.AdapterListener;
 import com.eljebo.common.utils.Const;
 import com.eljebo.customer.fragment.CustomerSignUpFragment;
+import com.eljebo.customer.fragment.ServiceProvidersFragment;
 import com.eljebo.databinding.DialogCountryBinding;
 import com.eljebo.serviceprovider.fragment.SignupFragment;
 import com.eljebo.serviceprovider.new_bean.CountryDialogListDataBean;
@@ -328,6 +329,10 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
                     countryDialogListDataBeans.get(adapterPosition).getName());
         } else if (fragment instanceof CustomerSignUpFragment) {
             ((CustomerSignUpFragment) fragment).setResidenceData(
+                    Integer.parseInt(countryDialogListDataBeans.get(adapterPosition).getId()),
+                    countryDialogListDataBeans.get(adapterPosition).getName());
+        } else if (fragment instanceof ServiceProvidersFragment){
+            ((ServiceProvidersFragment) fragment).setResidenceData(
                     Integer.parseInt(countryDialogListDataBeans.get(adapterPosition).getId()),
                     countryDialogListDataBeans.get(adapterPosition).getName());
         }

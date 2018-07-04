@@ -1,6 +1,7 @@
 package com.eljebo.customer.fragment;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -81,7 +83,11 @@ public class ServiceProvidersFragment extends BaseFragment {
 
     private void initUI() {
 
+
+
         binding.customTextViewGetCountryDialog.setOnClickListener(this);
+        binding.customTextViewGetStateDialog.setOnClickListener(this);
+        binding.customTextViewGetCityDialog.setOnClickListener(this);
 
         serviceProviderListBeans = new ArrayList<>();
 
@@ -107,7 +113,8 @@ public class ServiceProvidersFragment extends BaseFragment {
         /*ServiceProvidersAdapter serviceProvidersAdapter = new ServiceProvidersAdapter(this);
         binding.serviceProviderRV.setAdapter(serviceProvidersAdapter);*/
 
-        getServiceProviderList(this);
+        getUserInfoDetail(this);
+        //getServiceProviderList(this);
 
 
     }
@@ -122,6 +129,31 @@ public class ServiceProvidersFragment extends BaseFragment {
                 type = Const.COUNTRY;
                 countryDialog = new CountryDialog(baseActivity, countryID, type, this);
                 countryDialog.show();
+                break;
+            }
+
+            case R.id.customTextViewGetStateDialog:{
+                if (countryID == 0) {
+                    showToast(getString(R.string.select_country));
+                } else {
+                    type = Const.STATE;
+                    countryDialog = new CountryDialog(baseActivity, countryID, type, this);
+                    countryDialog.show();
+                    baseActivity.hideSoftKeyboard();
+                }
+                break;
+            }
+
+            case R.id.customTextViewGetCityDialog:{
+                baseActivity.hideSoftKeyboard();
+                if (countryID == 0 || stateID == 0) {
+                    showToast(getString(R.string.select_state));
+                } else {
+                    type = Const.CITY;
+                    countryDialog = new CountryDialog(baseActivity, stateID, type, this);
+                    countryDialog.show();
+                }
+                break;
             }
         }
     }
@@ -224,6 +256,10 @@ public class ServiceProvidersFragment extends BaseFragment {
                 params.put("token", Const.loadData(getActivity(), "loginUserToken"));
                 params.put("service_ids", selectedSubServiceIds);
 
+               /* params.put("service_ids", String.valueOf(1));
+                params.put("service_ids", selectedSubServiceIds);
+                params.put("service_ids", selectedSubServiceIds);*/
+
                 Log.e("getServiceProviderList", "Params==>> " + params);
 
                 return params;
@@ -250,7 +286,7 @@ public class ServiceProvidersFragment extends BaseFragment {
         });
     }
 
-    public void getServiceProviderList(final ServiceProvidersFragment serviceProvidersFragment) {
+    public void getUserInfoDetail(final ServiceProvidersFragment serviceProvidersFragment) {
 
         final ACProgressFlower acProgressFlower = new ACProgressFlower.Builder(getActivity())
                 .direction(ACProgressConstant.DIRECT_CLOCKWISE)
@@ -261,7 +297,7 @@ public class ServiceProvidersFragment extends BaseFragment {
 
         StringRequest postRequest = new StringRequest(Request.Method.POST,
                 Const.NEW_BASE_URL
-                        + "serviceProviderList",
+                        + "getUserInfo",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -269,40 +305,24 @@ public class ServiceProvidersFragment extends BaseFragment {
                             RequestQueue queue = Volley.newRequestQueue(getActivity());
                             queue.getCache().clear();
                             serviceProviderListBeans.clear();
-                            Log.e("getServiceProviderListResponse==>>", response);
+                            Log.e("getUserInfoDetail==>>", response);
                             JSONObject json = new JSONObject(response);
                             String message = json.getString("message");
 
                             if (json.getString("status").equals("1")){
 
-                                JSONArray jsonArrData = json.getJSONArray("data");
-                                for (int i=0;i<jsonArrData.length();i++){
+                                JSONObject jsonObjData = json.getJSONObject("data");
+                               // String
 
-                                    JSONObject jsonObjData = jsonArrData.getJSONObject(i);
+                                String country_id =jsonObjData.getString("country_id");
+                                String state_id =jsonObjData.getString("state_id");
+                                String city_id =jsonObjData.getString("city_id");
 
-                                    String user_id = "";
-                                    String name = "";
-                                    String profile_pic = "";
+                                countryID = Integer.parseInt(country_id);
+                                stateID = Integer.parseInt(state_id);
+                                cityID = Integer.parseInt(city_id);
 
-                                    if (!jsonObjData.isNull("user_id")){
-                                        user_id = jsonObjData.getString("user_id");
-                                    }
-                                    if (!jsonObjData.isNull("name")){
-                                        name = jsonObjData.getString("name");
-                                    }
-                                    if (!jsonObjData.isNull("profile_pic")){
-                                        profile_pic = jsonObjData.getString("profile_pic");
-                                    }
-
-
-                                    serviceProviderListBeans.add(new ServiceProviderListBean(user_id,
-                                            name, profile_pic));
-                                }
-
-                                ServiceProvidersAdapter serviceProvidersAdapter = new ServiceProvidersAdapter(
-                                        serviceProvidersFragment, serviceProviderListBeans, getActivity());
-                                binding.serviceProviderRV.setAdapter(serviceProvidersAdapter);
-                                serviceProvidersAdapter.notifyDataSetChanged();
+                                getServiceProviderList(serviceProvidersFragment);
 
                             } else {
                             }
@@ -362,6 +382,42 @@ public class ServiceProvidersFragment extends BaseFragment {
             }
         });
     }
+
+    public void setResidenceData(Integer id, String title) {
+
+        Log.e("setResidenceData", "id==> " + id + " title==>> " + title);
+
+        InputMethodManager im = (InputMethodManager) baseActivity.getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (im != null) {
+            im.hideSoftInputFromWindow(baseActivity.getWindow().getDecorView().getWindowToken(), 0);
+        }
+        baseActivity.hideSoftKeyboard();
+        if (countryDialog != null && countryDialog.isShowing()) {
+            countryDialog.dismiss();
+        }
+
+        Log.e("getDataCountryIds", "==> " + type + " ==Country==>> " + Const.COUNTRY +
+                " ==State==>> " + Const.STATE +
+                " ==City==>> " + Const.CITY);
+
+        if (type == Const.COUNTRY) {
+            binding.customTextViewGetCountryDialog.setText(title);
+            binding.customTextViewGetStateDialog.setText(baseActivity.getString(R.string.state));
+            binding.customTextViewGetCityDialog.setText(baseActivity.getString(R.string.city));
+            countryID = id;
+            stateID = 0;
+            cityID = 0;
+        } else if (type == Const.STATE) {
+            binding.customTextViewGetStateDialog.setText(title);
+            binding.customTextViewGetCityDialog.setText(baseActivity.getString(R.string.city));
+            stateID = id;
+            cityID = 0;
+        } else {
+            binding.customTextViewGetCityDialog.setText(title);
+            cityID = id;
+        }
+    }
+
 
 
 }

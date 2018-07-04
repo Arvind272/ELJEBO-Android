@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jul 04 18:18:46 IST 2018
+#Wed Jul 04 19:29:51 IST 2018
 5.base=/home/user1/Documents/ELJEBO-Android/app/build/intermediates/transforms/stripDebugSymbol/debug/0
 22.path=lib/x86_64/libopencv_core.so
 32.set=NATIVE_RESOURCE

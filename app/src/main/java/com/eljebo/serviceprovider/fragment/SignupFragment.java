@@ -447,7 +447,8 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         setSelectedServiceAdapter();
     }
 
-    private void changeGender(RadioButton selected, RadioButton unselected, RadioButton unselected1) {
+    private void changeGender(RadioButton selected,
+                              RadioButton unselected, RadioButton unselected1) {
         selected.setChecked(true);
         unselected.setChecked(false);
         unselected1.setChecked(false);

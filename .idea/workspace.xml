@@ -11,8 +11,305 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c9f2f61-1534-492e-8d45-68adb9d0b8e4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/fileHashes/fileHashes.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.1/taskHistory/taskHistory.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/bundles/debug/data-binding/bin-files/com.eljebo-com.eljebo-layoutinfo.bin" afterPath="$PROJECT_DIR$/app/build/intermediates/bundles/debug/data-binding/bin-files/com.eljebo-com.eljebo-layoutinfo.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/compat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/compat/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/constraint/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/constraint/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/coreui/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/coreui/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/coreutils/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/coreutils/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/fragment/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/fragment/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/graphics/drawable/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/graphics/drawable/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/graphics/drawable/animated/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/graphics/drawable/animated/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/mediacompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/mediacompat/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/transition/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/transition/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v4/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v4/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cc/cloudist/acplibrary/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/cc/cloudist/acplibrary/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/android/databinding/library/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/android/databinding/library/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/android/databinding/library/baseAdapters/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/android/databinding/library/baseAdapters/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$integer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$interpolator.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$interpolator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$mipmap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$plurals.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$plurals.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/R$xml.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/activity/BaseActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/activity/BaseActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/activity/LoginSignUpActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/activity/LoginSignUpActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/dialog/CountryDialog$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/dialog/CountryDialog$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/dialog/CountryDialog$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/dialog/CountryDialog$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/dialog/CountryDialog.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/dialog/CountryDialog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/AddCardFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/AddCardFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/FeedbackFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/FeedbackFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/ForgotPasswordFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/ForgotPasswordFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/LoginFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/LoginFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/OtpFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/OtpFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/RoleSelectionFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/RoleSelectionFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/TermsAndServicesFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/fragment/TermsAndServicesFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/snackBAr/Snackbar.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/snackBAr/Snackbar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/socialLogin/FacebookLogin.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/common/socialLogin/FacebookLogin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/activity/CustomerMainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/activity/CustomerMainActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/activity/CustomerMainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/activity/CustomerMainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerCheckInFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerCheckInFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerCheckInTimerFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerCheckInTimerFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerHomeFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerHomeFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerHomeFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerHomeFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerHomeFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerHomeFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerProfileFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerProfileFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerSignUpFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/CustomerSignUpFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/PayFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/PayFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/PaymentFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/PaymentFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProviderDetailFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProviderDetailFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProviderLocationFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProviderLocationFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProvidersFragment$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProvidersFragment$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProvidersFragment$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProvidersFragment$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProvidersFragment$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProvidersFragment$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProvidersFragment$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProvidersFragment$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProvidersFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/customer/fragment/ServiceProvidersFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterChildServiceBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterChildServiceBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterCustomCameraImagesBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterCustomCameraImagesBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterGroupServiceBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterGroupServiceBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterNotificationLayoutBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterNotificationLayoutBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterServiceBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterServiceBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterServiceProviderBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterServiceProviderBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterServicesBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/AdapterServicesBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/DialogCountryBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/DialogCountryBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentAddCardBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentAddCardBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentChangePasswordBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentChangePasswordBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentCheckInBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentCheckInBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentCustomerCheckInBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentCustomerCheckInBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentCustomerCheckInTimerBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentCustomerCheckInTimerBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentCustomerHomeBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentCustomerHomeBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentCustomerProfileBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentCustomerProfileBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentCustomerSignupBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentCustomerSignupBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentFeedbackBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentFeedbackBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentForgotPasswordBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentForgotPasswordBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentHomeBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentHomeBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentLoginBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentLoginBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentOtpBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentOtpBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentPayBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentPayBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentPaymentBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentPaymentBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentPersonalInfoBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentPersonalInfoBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentProfileBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentProfileBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentSelectRoleBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentSelectRoleBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentServiceProviderDetailBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentServiceProviderDetailBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentServiceProviderLocationBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentServiceProviderLocationBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentServiceProviderSignupBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentServiceProviderSignupBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentServiceProvidersBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentServiceProvidersBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentServiceUserDetailBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentServiceUserDetailBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentSettingsBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentSettingsBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentTermsBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/FragmentTermsBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/SecurityQuestionsLayoutBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/SecurityQuestionsLayoutBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/ServiceDetailLayoutBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/ServiceDetailLayoutBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/ServicesLayoutBinding.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/databinding/ServicesLayoutBinding.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/activity/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/activity/MainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/adapter/DrawerAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/adapter/DrawerAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/CheckInFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/CheckInFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/HomeFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/HomeFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/PersonalInfoFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/PersonalInfoFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/ProfileFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/ProfileFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/ServiceUserDetailFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/ServiceUserDetailFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/ServicesFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/ServicesFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$timeListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment$timeListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/fragment/SignupFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/video_service_call/NewVideoCallingServiceProActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/video_service_call/NewVideoCallingServiceProActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/video_service_call/VideoActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/eljebo/serviceprovider/video_service_call/VideoActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/facebook/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gdacciaro/iOSDialog/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/gdacciaro/iOSDialog/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/google/android/gms/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/intuit/sdp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/intuit/sdp/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/theartofdev/edmodo/cropper/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/theartofdev/edmodo/cropper/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/twilio/video/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/twilio/video/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/me/nereo/multi_image_selector/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/me/nereo/multi_image_selector/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/zip-cache/aCYC9jJ+6IeZZNN5ISDw8rqvZmU=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/zip-cache/aCYC9jJ+6IeZZNN5ISDw8rqvZmU=" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_fragment_service_providers.xml.flat" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_fragment_service_providers.xml.flat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/compat/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/compat/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/constraint/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/constraint/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/coreui/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/coreui/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/coreutils/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/coreutils/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/design/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/design/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/fragment/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/fragment/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/graphics/drawable/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/graphics/drawable/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/graphics/drawable/animated/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/graphics/drawable/animated/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/mediacompat/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/mediacompat/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/transition/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/transition/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/v4/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/v4/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/v7/appcompat/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/v7/appcompat/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/v7/recyclerview/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/android/support/v7/recyclerview/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/cc/cloudist/acplibrary/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/cc/cloudist/acplibrary/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/android/databinding/library/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/android/databinding/library/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/android/databinding/library/baseAdapters/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/android/databinding/library/baseAdapters/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$integer.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$integer.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$interpolator.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$interpolator.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$layout.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$layout.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$menu.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$menu.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$mipmap.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$mipmap.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$plurals.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$plurals.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$string.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$string.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$style.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$style.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$styleable.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$styleable.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$xml.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/R$xml.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/activity/BaseActivity.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/activity/BaseActivity.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/activity/LoginSignUpActivity.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/activity/LoginSignUpActivity.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/dialog/CountryDialog$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/dialog/CountryDialog$1.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/dialog/CountryDialog$2.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/dialog/CountryDialog$2.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/dialog/CountryDialog.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/dialog/CountryDialog.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/AddCardFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/AddCardFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/FeedbackFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/FeedbackFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/ForgotPasswordFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/ForgotPasswordFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/LoginFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/LoginFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/OtpFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/OtpFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/RoleSelectionFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/RoleSelectionFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/TermsAndServicesFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/fragment/TermsAndServicesFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/snackBAr/Snackbar.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/snackBAr/Snackbar.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/socialLogin/FacebookLogin.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/common/socialLogin/FacebookLogin.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/activity/CustomerMainActivity$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/activity/CustomerMainActivity$1.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/activity/CustomerMainActivity.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/activity/CustomerMainActivity.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerCheckInFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerCheckInFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerCheckInTimerFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerCheckInTimerFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerHomeFragment$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerHomeFragment$1.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerHomeFragment$2.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerHomeFragment$2.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerHomeFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerHomeFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerProfileFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerProfileFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerSignUpFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/CustomerSignUpFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/PayFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/PayFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/PaymentFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/PaymentFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProviderDetailFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProviderDetailFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProviderLocationFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProviderLocationFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProvidersFragment$1.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProvidersFragment$1.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProvidersFragment$2.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProvidersFragment$2.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProvidersFragment$3.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProvidersFragment$3.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProvidersFragment$4.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProvidersFragment$4.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProvidersFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/customer/fragment/ServiceProvidersFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterChildServiceBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterChildServiceBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterCustomCameraImagesBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterCustomCameraImagesBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterGroupServiceBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterGroupServiceBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterNotificationLayoutBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterNotificationLayoutBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterServiceBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterServiceBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterServiceProviderBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterServiceProviderBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterServicesBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/AdapterServicesBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/DialogCountryBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/DialogCountryBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentAddCardBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentAddCardBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentChangePasswordBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentChangePasswordBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentCheckInBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentCheckInBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentCustomerCheckInBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentCustomerCheckInBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentCustomerCheckInTimerBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentCustomerCheckInTimerBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentCustomerHomeBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentCustomerHomeBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentCustomerProfileBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentCustomerProfileBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentCustomerSignupBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentCustomerSignupBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentFeedbackBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentFeedbackBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentForgotPasswordBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentForgotPasswordBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentHomeBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentHomeBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentLoginBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentLoginBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentOtpBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentOtpBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentPayBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentPayBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentPaymentBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentPaymentBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentPersonalInfoBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentPersonalInfoBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentProfileBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentProfileBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentSelectRoleBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentSelectRoleBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentServiceProviderDetailBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentServiceProviderDetailBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentServiceProviderLocationBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentServiceProviderLocationBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentServiceProviderSignupBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentServiceProviderSignupBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentServiceProvidersBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentServiceProvidersBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentServiceUserDetailBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentServiceUserDetailBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentSettingsBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentSettingsBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentTermsBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/FragmentTermsBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/SecurityQuestionsLayoutBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/SecurityQuestionsLayoutBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/ServiceDetailLayoutBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/ServiceDetailLayoutBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/ServicesLayoutBinding.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/databinding/ServicesLayoutBinding.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/activity/MainActivity.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/activity/MainActivity.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/adapter/DrawerAdapter.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/adapter/DrawerAdapter.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/CheckInFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/CheckInFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/HomeFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/HomeFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/PersonalInfoFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/PersonalInfoFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/ProfileFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/ProfileFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/ServiceUserDetailFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/ServiceUserDetailFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/ServicesFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/ServicesFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$10.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$10.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$11.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$11.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$12.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$12.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$4.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$4.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$5.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$5.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$6.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$6.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$7.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$7.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$8.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$8.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$9.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$9.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$timeListener.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment$timeListener.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/fragment/SignupFragment.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/video_service_call/NewVideoCallingServiceProActivity.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/video_service_call/NewVideoCallingServiceProActivity.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/video_service_call/VideoActivity.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/eljebo/serviceprovider/video_service_call/VideoActivity.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/facebook/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/facebook/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/gdacciaro/iOSDialog/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/gdacciaro/iOSDialog/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/google/android/gms/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/google/android/gms/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/intuit/sdp/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/intuit/sdp/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/theartofdev/edmodo/cropper/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/theartofdev/edmodo/cropper/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/twilio/video/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/com/twilio/video/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/me/nereo/multi_image_selector/R$id.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/81/me/nereo/multi_image_selector/R$id.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/home/user1/Documents/ELJEBO-Android/app/build/outputs/apk/debug/eljebo_v1.0_1_debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/home/user1/Documents/ELJEBO-Android/app/build/outputs/apk/debug/eljebo_v1.0_1_debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/eljebo/databinding/FragmentServiceProvidersBinding.java" afterPath="$PROJECT_DIR$/app/build/generated/source/apt/debug/com/eljebo/databinding/FragmentServiceProvidersBinding.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/dataBinding/debug/android/databinding/layouts/DataBindingInfo.java" afterPath="$PROJECT_DIR$/app/build/generated/source/dataBinding/debug/android/databinding/layouts/DataBindingInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/compat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/compat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/constraint/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/constraint/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/coreui/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/coreui/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/coreutils/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/coreutils/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/fragment/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/fragment/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/graphics/drawable/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/graphics/drawable/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/graphics/drawable/animated/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/graphics/drawable/animated/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/mediacompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/mediacompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/transition/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/transition/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v4/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v4/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/recyclerview/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/cc/cloudist/acplibrary/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/cc/cloudist/acplibrary/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/android/databinding/library/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/android/databinding/library/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/android/databinding/library/baseAdapters/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/android/databinding/library/baseAdapters/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/eljebo/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/eljebo/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/facebook/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/facebook/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/gdacciaro/iOSDialog/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/gdacciaro/iOSDialog/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/intuit/sdp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/intuit/sdp/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/theartofdev/edmodo/cropper/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/theartofdev/edmodo/cropper/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/twilio/video/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/twilio/video/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/me/nereo/multi_image_selector/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/me/nereo/multi_image_selector/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/debug.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/data-binding-info/debug/fragment_service_providers-layout.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/data-binding-info/debug/fragment_service_providers-layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_providers.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_providers.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/debug/file-input-save-data.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/eljebo/common/dialog/CountryDialog.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/eljebo/common/dialog/CountryDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/fragment/CustomerHomeFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/fragment/CustomerHomeFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/fragment/ServiceProvidersFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/fragment/ServiceProvidersFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/eljebo/serviceprovider/fragment/SignupFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/eljebo/serviceprovider/fragment/SignupFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_service_providers.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_service_providers.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,8 +336,8 @@
       <file leaf-file-name="CustomerHomeFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/fragment/CustomerHomeFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+            <state relative-caret-position="195">
+              <caret line="93" column="44" lean-forward="false" selection-start-line="93" selection-start-column="44" selection-end-line="93" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -49,9 +346,15 @@
       <file leaf-file-name="ServiceProvidersFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/fragment/ServiceProvidersFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="252" column="31" lean-forward="false" selection-start-line="252" selection-start-column="31" selection-end-line="252" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="339">
+              <caret line="260" column="66" lean-forward="true" selection-start-line="260" selection-start-column="66" selection-end-line="260" selection-end-column="66" />
+              <folding>
+                <element signature="e#4858#4892#0" expanded="true" />
+                <element signature="e#5388#5420#0" expanded="true" />
+                <element signature="e#15990#16028#0" expanded="true" />
+                <element signature="e#16087#16124#0" expanded="true" />
+                <element signature="e#16367#16404#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,8 +365,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+            <state relative-caret-position="356">
+              <caret line="53" column="60" lean-forward="false" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -72,19 +375,25 @@
       <file leaf-file-name="SignupFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/eljebo/serviceprovider/fragment/SignupFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="205" column="33" lean-forward="false" selection-start-line="205" selection-start-column="33" selection-end-line="205" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="267">
+              <caret line="233" column="45" lean-forward="false" selection-start-line="233" selection-start-column="45" selection-end-line="233" selection-end-column="45" />
+              <folding>
+                <element signature="e#9671#9705#0" expanded="true" />
+                <element signature="e#13152#13204#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CountryDialog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/eljebo/common/dialog/CountryDialog.java">
+      <file leaf-file-name="CountryDialogAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/eljebo/common/adapter/CountryDialogAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="66" column="11" lean-forward="false" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="376">
+              <caret line="70" column="38" lean-forward="false" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+              <folding>
+                <element signature="e#2498#2699#0" expanded="true" />
+                <element signature="e#2698#2699#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,7 +406,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
               <caret line="195" column="42" lean-forward="false" selection-start-line="195" selection-start-column="33" selection-end-line="195" selection-end-column="42" />
-              <folding />
+              <folding>
+                <element signature="e#9379#9393#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,11 +424,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>serviceProviderListBeans</find>
-      <find>jack_thomas</find>
-      <find>getServiceProviderListResponse</find>
-      <find>CameraCapturerCompat</find>
-      <find>customTextViewVideoCall</find>
       <find>getServiceProviderUserId</find>
       <find>customTextViewVideoCallBtn</find>
       <find>SendVideoDateUpdate</find>
@@ -140,9 +446,14 @@
       <find>payBT</find>
       <find>customTextViewCallBtn</find>
       <find>customTextViewMsgBtn</find>
-      <find>searchServiceBT</find>
       <find>serviceProviderRV</find>
+      <find>customTextViewGetStateDialog</find>
+      <find>stateET</find>
+      <find>signUpRV</find>
       <find>countryET</find>
+      <find>getUserInfoDetail</find>
+      <find>customTextViewGetCityDialog</find>
+      <find>searchServiceBT</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/app/src/main/java/com/eljebo</dir>
@@ -3670,7 +3981,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/common/data/ProfileData.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/common/fragment/AddCardFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_otp.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/common/dialog/CountryDialog.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/common/fragment/LoginFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/cus_new_bean/ServiceProviderListBean.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/serviceprovider/adapter/CustomCameraImagesAdapter.java" />
@@ -3679,7 +3989,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/serviceprovider/fragment/HomeFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/show_msg_dialog_dialog.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/serviceprovider/fragment/MyService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/fragment/CustomerHomeFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/adapter/ServiceProvidersAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/service_detail_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/fragment/ServiceProviderLocationFragment.java" />
@@ -3713,6 +4022,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/serviceprovider/video_service_call/VideoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_service_providers.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/serviceprovider/fragment/SignupFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/common/dialog/CountryDialog.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/fragment/CustomerHomeFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/fragment/ServiceProvidersFragment.java" />
       </list>
     </option>
@@ -4177,7 +4488,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530709292450" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530712878850" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -4225,7 +4536,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530709292450" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530712878850" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -4408,7 +4719,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530709292451" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530712878851" />
       </method>
     </configuration>
     <configuration default="false" name="quickstartKotlin" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -4457,7 +4768,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530709292451" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1530712878851" />
       </method>
     </configuration>
     <list size="2">
@@ -4649,22 +4960,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_video_call_white_24dp.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_switch_camera_white_24dp.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_videocam_white_24dp.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -4828,14 +5123,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -5063,17 +5350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_service_provider_signup.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="195" column="42" lean-forward="false" selection-start-line="195" selection-start-column="33" selection-end-line="195" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_customer_home.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -5081,17 +5357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="45" column="48" lean-forward="false" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_service_providers.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -5104,35 +5369,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/fragment/CustomerHomeFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="90" column="5" lean-forward="false" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+        <state relative-caret-position="196">
+          <caret line="57" column="18" lean-forward="false" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_service_providers.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="53" column="60" lean-forward="false" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_service_provider_signup.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="195" column="42" lean-forward="false" selection-start-line="195" selection-start-column="33" selection-end-line="195" selection-end-column="42" />
+          <folding>
+            <element signature="e#9379#9393#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_country.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/eljebo/common/adapter/CountryDialogAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="70" column="38" lean-forward="false" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+          <folding>
+            <element signature="e#2498#2699#0" expanded="true" />
+            <element signature="e#2698#2699#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/eljebo/common/dialog/CountryDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="66" column="11" lean-forward="false" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="213">
+          <caret line="325" column="29" lean-forward="false" selection-start-line="325" selection-start-column="29" selection-end-line="325" selection-end-column="29" />
+          <folding>
+            <element signature="e#4152#5008#0" expanded="true" />
+            <element signature="e#5007#5008#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/eljebo/serviceprovider/fragment/SignupFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="205" column="33" lean-forward="false" selection-start-line="205" selection-start-column="33" selection-end-line="205" selection-end-column="33" />
+        <state relative-caret-position="267">
+          <caret line="233" column="45" lean-forward="false" selection-start-line="233" selection-start-column="45" selection-end-line="233" selection-end-column="45" />
+          <folding>
+            <element signature="e#9671#9705#0" expanded="true" />
+            <element signature="e#13152#13204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/fragment/CustomerHomeFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="93" column="44" lean-forward="false" selection-start-line="93" selection-start-column="44" selection-end-line="93" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/eljebo/customer/fragment/ServiceProvidersFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="252" column="31" lean-forward="false" selection-start-line="252" selection-start-column="31" selection-end-line="252" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="339">
+          <caret line="260" column="66" lean-forward="true" selection-start-line="260" selection-start-column="66" selection-end-line="260" selection-end-column="66" />
+          <folding>
+            <element signature="e#4858#4892#0" expanded="true" />
+            <element signature="e#5388#5420#0" expanded="true" />
+            <element signature="e#15990#16028#0" expanded="true" />
+            <element signature="e#16087#16124#0" expanded="true" />
+            <element signature="e#16367#16404#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
