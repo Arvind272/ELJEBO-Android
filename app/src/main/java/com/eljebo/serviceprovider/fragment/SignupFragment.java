@@ -212,7 +212,10 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                 if (!checkPermission()) {
                     requestPermission();
                 } else {
-                  //  Snackbar.make(view,"Permission already granted.",Snackbar.LENGTH_LONG).show();
+                    Log.e("getStartTime", "==> " +binding.fromET.getText().toString().trim());
+                    Log.e("getEndTime", "==> " +binding.toET.getText().toString().trim());
+
+                    //  Snackbar.make(view,"Permission already granted.",Snackbar.LENGTH_LONG).show();
                     baseActivity.store.setData("selectedServices", selectedServiceData);
                     if (validate()) {
                         gotoPaymentFragment();
@@ -235,7 +238,8 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
             case R.id.countryET:
                 baseActivity.hideSoftKeyboard();
                 type = Const.COUNTRY;
-                countryDialog = new CountryDialog(baseActivity, countryID, type, this);
+                countryDialog = new CountryDialog(baseActivity,
+                        countryID, type, this);
                 countryDialog.show();
 
                 break;
@@ -547,7 +551,6 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         profileData.stateIds = stateID;
         profileData.cityIds = cityID;
 
-
         Fragment fragment = new PaymentFragment();
         Bundle bundle = new Bundle();
         bundle.putParcelable("signupData", profileData);
@@ -584,8 +587,6 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                                /* Toast toast = Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT);
                                 toast.setGravity(Gravity.CENTER, 0, 0);
                                 toast.show();*/
-
-
 
                                /* Intent intent = new Intent(getActivity(), LoginFragment.class);
                                 startActivity(intent);*/
@@ -695,16 +696,15 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         mTimePicker = new TimePickerDialog(baseActivity, new timeListener(customEditText) {
             @SuppressLint("SetTextI18n")
             @Override
-            public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+            public void onTimeSet(TimePicker timePicker, int selectedHour,
+                                  int selectedMinute) {
                 String am_pm = "";
                 Calendar time = Calendar.getInstance();
                 time.set(Calendar.HOUR_OF_DAY, selectedHour);
                 time.set(Calendar.MINUTE, selectedMinute);
                 customEditText.setText(baseActivity.changeDateFormatFromDate(time.getTime(), "HH:mm"));
-
-
             }
-        }, hour, minute, true);
+        }, hour, minute, false);//true
         mTimePicker.setTitle(getString(R.string.select_time));
         mTimePicker.show();
     }

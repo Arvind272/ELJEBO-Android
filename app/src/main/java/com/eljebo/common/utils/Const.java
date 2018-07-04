@@ -38,6 +38,8 @@ public class Const {
     public static final String API_SERVICE_SEARCH_REGION = "api/service/search-region";
     public static final String API_LOGIN = "login";
 
+    public static final String CHANGE_PASSWORD = "changeUserPassword";
+
     public static String GetTwilioToken = "generateTwilioAceessToken";
     ///Roles
 

@@ -109,7 +109,8 @@ public class OtpFragment extends BaseFragment {
                 .fadeColor(Color.DKGRAY).build();
         acProgressFlower.show();
 
-        StringRequest postRequest = new StringRequest(Request.Method.POST, Const.NEW_BASE_URL
+        StringRequest postRequest = new StringRequest(Request.Method.POST,
+                Const.NEW_BASE_URL
                 + "verifyOtp",
                 new Response.Listener<String>() {
                     @Override

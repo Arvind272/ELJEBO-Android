@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="cc.cloudist.acplibrary:library-1.2.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.2.1.aar/4fadaccd2ad11e8a8d672d26f2772a84/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.2.1.aar/4fadaccd2ad11e8a8d672d26f2772a84/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.2.1.aar/ff20bfa85712ed98aad5d1843585a6fb/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/library-1.2.1.aar/ff20bfa85712ed98aad5d1843585a6fb/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -343,7 +343,9 @@ public class TermsAndServicesFragment extends BaseFragment {
                             if (json.getString("status").equals("1")){
 
                                 String id = json.getString("id");
+                                String token = json.getString("token");
                                 Const.saveData(getActivity(), "loginUserId", id);
+                                Const.saveData(getActivity(), "loginUserToken", token);
 
                                 baseActivity.gotoOtpFragment();
 
@@ -365,7 +367,6 @@ public class TermsAndServicesFragment extends BaseFragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         error.printStackTrace();
-
                         if (acProgressFlower.isShowing()){
                             acProgressFlower.dismiss();
                         }
@@ -414,6 +415,8 @@ public class TermsAndServicesFragment extends BaseFragment {
                 params.put("card_number", profileData.card_number);
                 params.put("card_exp_date", profileData.expiry_month+"/"+profileData.expiry_year);
                 params.put("cvv", profileData.cvv);
+                params.put("start_time", profileData.availability_time_from);
+                params.put("end_time", profileData.availability_time_to);
 
                 Log.e("SignUp", "Params==>> " + params);
 

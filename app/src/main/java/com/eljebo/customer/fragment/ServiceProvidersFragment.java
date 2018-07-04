@@ -1,5 +1,6 @@
 package com.eljebo.customer.fragment;
 
+import android.app.Dialog;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.eljebo.R;
 import com.eljebo.common.data.SubService;
+import com.eljebo.common.dialog.CountryDialog;
 import com.eljebo.common.fragment.BaseFragment;
 import com.eljebo.common.fragment.LoginFragment;
 import com.eljebo.common.utils.Const;
@@ -51,6 +53,9 @@ public class ServiceProvidersFragment extends BaseFragment {
     private FragmentServiceProvidersBinding binding;
     private String selectedSubServiceIds = "";
     private ArrayList<ServiceProviderListBean> serviceProviderListBeans;
+    private Dialog countryDialog;
+    private int type = 0;
+    private int cityID, countryID, stateID;
 
     @Nullable
     @Override
@@ -75,6 +80,8 @@ public class ServiceProvidersFragment extends BaseFragment {
     }
 
     private void initUI() {
+
+        binding.customTextViewGetCountryDialog.setOnClickListener(this);
 
         serviceProviderListBeans = new ArrayList<>();
 
@@ -105,6 +112,20 @@ public class ServiceProvidersFragment extends BaseFragment {
 
     }
 
+    @Override
+    public void onClick(View v) {
+        //super.onClick(v);
+        baseActivity.hideSoftKeyboard();
+        switch (v.getId()){
+            case R.id.customTextViewGetCountryDialog:{
+                baseActivity.hideSoftKeyboard();
+                type = Const.COUNTRY;
+                countryDialog = new CountryDialog(baseActivity, countryID, type, this);
+                countryDialog.show();
+            }
+        }
+    }
+
     public void setClick(int pos) {
         Const.saveData(getActivity(), "getServiceProviderUserId",
                 serviceProviderListBeans.get(pos).getUser_id());
@@ -124,7 +145,8 @@ public class ServiceProvidersFragment extends BaseFragment {
                 .fadeColor(Color.DKGRAY).build();
         acProgressFlower.show();
 
-        StringRequest postRequest = new StringRequest(Request.Method.POST, Const.NEW_BASE_URL
+        StringRequest postRequest = new StringRequest(Request.Method.POST,
+                Const.NEW_BASE_URL
                 + "serviceProviderList",
                 new Response.Listener<String>() {
                     @Override

@@ -26,7 +26,6 @@
             android:textColor="@color/Black"
             android:textSize="@dimen/_25sdp" />
 
-
         <com.eljebo.common.utils.CustomButton
             android:id="@+id/userBT"
             android:layout_width="match_parent"

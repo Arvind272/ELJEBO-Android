@@ -94,7 +94,6 @@ public class PayFragment extends BaseFragment {
         super.onClick(v);
 
         switch (v.getId()) {
-
             case R.id.payBT:
                 gotoServiceProviderDetailFragment();
                 break;

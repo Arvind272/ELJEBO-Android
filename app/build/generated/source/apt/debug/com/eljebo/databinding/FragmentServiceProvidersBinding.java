@@ -14,9 +14,12 @@ public class FragmentServiceProvidersBinding extends android.databinding.ViewDat
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.serviceProviderRV, 1);
+        sViewsWithIds.put(R.id.customTextViewGetCountryDialog, 1);
+        sViewsWithIds.put(R.id.serviceProviderRV, 2);
     }
     // views
+    @NonNull
+    public final com.eljebo.common.utils.CustomTextView customTextViewGetCountryDialog;
     @NonNull
     private final android.widget.LinearLayout mboundView0;
     @NonNull
@@ -28,10 +31,11 @@ public class FragmentServiceProvidersBinding extends android.databinding.ViewDat
 
     public FragmentServiceProvidersBinding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 0);
-        final Object[] bindings = mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds);
+        final Object[] bindings = mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds);
+        this.customTextViewGetCountryDialog = (com.eljebo.common.utils.CustomTextView) bindings[1];
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.serviceProviderRV = (android.support.v7.widget.RecyclerView) bindings[1];
+        this.serviceProviderRV = (android.support.v7.widget.RecyclerView) bindings[2];
         setRootTag(root);
         // listeners
         invalidateAll();

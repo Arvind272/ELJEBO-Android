@@ -23,9 +23,10 @@ import com.eljebo.R;
 import com.eljebo.common.adapter.ServiceAdapter;
 import com.eljebo.common.data.SubService;
 import com.eljebo.common.fragment.BaseFragment;
-import com.eljebo.customer.custom_video_call.VideoCallCustomerActivity;
 import com.eljebo.databinding.FragmentServiceUserDetailBinding;
 import com.eljebo.serviceprovider.activity.MainActivity;
+import com.eljebo.serviceprovider.video_service_call.VideoActivity;
+
 
 /**
  * Created by TOXSL\vinay.goyal on 12/6/18.
@@ -118,6 +119,9 @@ public class ServiceUserDetailFragment extends BaseFragment {
 
                 /*Intent intentVideo = new Intent(getActivity(), VideoCallCustomerActivity.class);
                 startActivity(intentVideo);*/
+
+                Intent intentVideo = new Intent(getActivity(), VideoActivity.class);
+                startActivity(intentVideo);
                 break;
 
             case R.id.checkInCTV:

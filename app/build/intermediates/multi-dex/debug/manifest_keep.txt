@@ -1,3 +1,3 @@
-# Referenced at /home/user1/Documents/ELJEBO-Android/app/build/intermediates/manifests/full/debug/x86_64/AndroidManifest.xml:64
+# Referenced at /home/user1/Documents/ELJEBO-Android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml:60
 -keep class com.eljebo.common.utils.UILApplication { <init>(...); }
 
