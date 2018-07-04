@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.gdacciaro:iosdialog-1.0.2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/iosdialog-1.0.2.aar/8b40f009f2f87972a18fcdd040395a59/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/iosdialog-1.0.2.aar/8b40f009f2f87972a18fcdd040395a59/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.gdacciaro/iosdialog/1.0.2/526ad8e666072d7c80a1f83df59ce52b1f247bd0/iosdialog-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

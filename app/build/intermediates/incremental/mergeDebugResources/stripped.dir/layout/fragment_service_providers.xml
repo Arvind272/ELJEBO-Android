@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                                   
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:orientation="vertical" android:tag="layout/fragment_service_providers_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <com.eljebo.common.utils.CustomTextView
+                android:id="@+id/customTextViewGetCountryDialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/search_edittext_drawable"
+                android:drawableEnd="@mipmap/ic_dwnarw"
+                android:drawablePadding="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_11sdp"
+                android:paddingStart="@dimen/_11sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:text="@string/country"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/search_edittext_drawable"
+                android:drawableEnd="@mipmap/ic_dwnarw"
+                android:drawablePadding="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_11sdp"
+                android:paddingStart="@dimen/_11sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:text="@string/state"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+            <com.eljebo.common.utils.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/search_edittext_drawable"
+                android:drawableEnd="@mipmap/ic_dwnarw"
+                android:drawablePadding="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_11sdp"
+                android:paddingStart="@dimen/_11sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:text="@string/city"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/payment_bg" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/serviceProviderRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+         

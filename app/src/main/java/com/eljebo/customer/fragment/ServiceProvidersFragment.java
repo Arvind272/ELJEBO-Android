@@ -250,4 +250,118 @@ public class ServiceProvidersFragment extends BaseFragment {
         });
     }
 
+    public void getServiceProviderList(final ServiceProvidersFragment serviceProvidersFragment) {
+
+        final ACProgressFlower acProgressFlower = new ACProgressFlower.Builder(getActivity())
+                .direction(ACProgressConstant.DIRECT_CLOCKWISE)
+                .themeColor(Color.WHITE)
+                // .text("Title is here")
+                .fadeColor(Color.DKGRAY).build();
+        acProgressFlower.show();
+
+        StringRequest postRequest = new StringRequest(Request.Method.POST,
+                Const.NEW_BASE_URL
+                        + "serviceProviderList",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            RequestQueue queue = Volley.newRequestQueue(getActivity());
+                            queue.getCache().clear();
+                            serviceProviderListBeans.clear();
+                            Log.e("getServiceProviderListResponse==>>", response);
+                            JSONObject json = new JSONObject(response);
+                            String message = json.getString("message");
+
+                            if (json.getString("status").equals("1")){
+
+                                JSONArray jsonArrData = json.getJSONArray("data");
+                                for (int i=0;i<jsonArrData.length();i++){
+
+                                    JSONObject jsonObjData = jsonArrData.getJSONObject(i);
+
+                                    String user_id = "";
+                                    String name = "";
+                                    String profile_pic = "";
+
+                                    if (!jsonObjData.isNull("user_id")){
+                                        user_id = jsonObjData.getString("user_id");
+                                    }
+                                    if (!jsonObjData.isNull("name")){
+                                        name = jsonObjData.getString("name");
+                                    }
+                                    if (!jsonObjData.isNull("profile_pic")){
+                                        profile_pic = jsonObjData.getString("profile_pic");
+                                    }
+
+
+                                    serviceProviderListBeans.add(new ServiceProviderListBean(user_id,
+                                            name, profile_pic));
+                                }
+
+                                ServiceProvidersAdapter serviceProvidersAdapter = new ServiceProvidersAdapter(
+                                        serviceProvidersFragment, serviceProviderListBeans, getActivity());
+                                binding.serviceProviderRV.setAdapter(serviceProvidersAdapter);
+                                serviceProvidersAdapter.notifyDataSetChanged();
+
+                            } else {
+                            }
+
+                            showToast(""+message);
+                            if (acProgressFlower.isShowing()){
+                                acProgressFlower.dismiss();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            if (acProgressFlower.isShowing()){
+                                acProgressFlower.dismiss();
+                            }
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        error.printStackTrace();
+                        if (acProgressFlower.isShowing()){
+                            acProgressFlower.dismiss();
+                        }
+                    }
+                })
+        {
+            @Override
+            protected Map<String, String> getParams() {
+                //user_id , token , service_ids
+                Map<String, String> params = new HashMap<>();
+                params.put("user_id", Const.loadData(getActivity(), "loginUserId"));
+                params.put("token", Const.loadData(getActivity(), "loginUserToken"));
+
+                Log.e("getUserDetailData", "Params==>> " + params);
+
+                return params;
+            }
+        };
+
+        Volley.newRequestQueue(getActivity()).add(postRequest);
+        Log.e("LOGIN", postRequest.toString());
+        postRequest.setRetryPolicy(new RetryPolicy() {
+            @Override
+            public int getCurrentTimeout() {
+                return 50000;
+            }
+
+            @Override
+            public int getCurrentRetryCount() {
+                return 50000;
+            }
+
+            @Override
+            public void retry(VolleyError error) throws VolleyError {
+
+            }
+        });
+    }
+
+
 }
