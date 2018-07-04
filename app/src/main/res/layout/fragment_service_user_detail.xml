@@ -49,6 +49,7 @@
                     android:textSize="@dimen/_14sp" />
 
                 <com.eljebo.common.utils.CustomTextView
+                    android:id="@+id/customTextViewVideoCallBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawablePadding="@dimen/_5sdp"

@@ -23,6 +23,7 @@ import com.eljebo.R;
 import com.eljebo.common.adapter.ServiceAdapter;
 import com.eljebo.common.data.SubService;
 import com.eljebo.common.fragment.BaseFragment;
+import com.eljebo.customer.custom_video_call.VideoCallCustomerActivity;
 import com.eljebo.databinding.FragmentServiceUserDetailBinding;
 import com.eljebo.serviceprovider.activity.MainActivity;
 
@@ -74,6 +75,7 @@ public class ServiceUserDetailFragment extends BaseFragment {
         binding.timerOnIV.setOnClickListener(this);
         binding.customTextViewCallBtn.setOnClickListener(this);
         binding.customTextViewMsgBtn.setOnClickListener(this);
+        binding.customTextViewVideoCallBtn.setOnClickListener(this);
 
         /*binding.customTextViewCallBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,6 +113,12 @@ public class ServiceUserDetailFragment extends BaseFragment {
         super.onClick(v);
 
         switch (v.getId()) {
+
+            case R.id.customTextViewVideoCallBtn:
+
+                /*Intent intentVideo = new Intent(getActivity(), VideoCallCustomerActivity.class);
+                startActivity(intentVideo);*/
+                break;
 
             case R.id.checkInCTV:
                 gotoCheckInFragment();

@@ -12,17 +12,20 @@ public class FragmentServiceProviderDetailBinding extends android.databinding.Vi
     @Nullable
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
-        sIncludes = new android.databinding.ViewDataBinding.IncludedLayouts(6);
+        sIncludes = new android.databinding.ViewDataBinding.IncludedLayouts(7);
         sIncludes.setIncludes(1, 
             new String[] {"service_detail_layout"},
             new int[] {2},
             new int[] {R.layout.service_detail_layout});
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.startTV, 3);
-        sViewsWithIds.put(R.id.timerOnIV, 4);
-        sViewsWithIds.put(R.id.timerTV, 5);
+        sViewsWithIds.put(R.id.customTextViewVideoCall, 3);
+        sViewsWithIds.put(R.id.startTV, 4);
+        sViewsWithIds.put(R.id.timerOnIV, 5);
+        sViewsWithIds.put(R.id.timerTV, 6);
     }
     // views
+    @NonNull
+    public final com.eljebo.common.utils.CustomTextView customTextViewVideoCall;
     @NonNull
     private final android.widget.ScrollView mboundView0;
     @NonNull
@@ -42,16 +45,17 @@ public class FragmentServiceProviderDetailBinding extends android.databinding.Vi
 
     public FragmentServiceProviderDetailBinding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 1);
-        final Object[] bindings = mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds);
+        final Object[] bindings = mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds);
+        this.customTextViewVideoCall = (com.eljebo.common.utils.CustomTextView) bindings[3];
         this.mboundView0 = (android.widget.ScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView1 = (android.widget.LinearLayout) bindings[1];
         this.mboundView1.setTag(null);
         this.questionsLL = (com.eljebo.databinding.ServiceDetailLayoutBinding) bindings[2];
         setContainedBinding(this.questionsLL);
-        this.startTV = (com.eljebo.common.utils.CustomTextView) bindings[3];
-        this.timerOnIV = (android.widget.ImageView) bindings[4];
-        this.timerTV = (com.eljebo.common.utils.CustomTextView) bindings[5];
+        this.startTV = (com.eljebo.common.utils.CustomTextView) bindings[4];
+        this.timerOnIV = (android.widget.ImageView) bindings[5];
+        this.timerTV = (com.eljebo.common.utils.CustomTextView) bindings[6];
         setRootTag(root);
         // listeners
         invalidateAll();

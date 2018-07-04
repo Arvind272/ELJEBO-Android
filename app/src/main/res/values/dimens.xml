@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
     <dimen name="_1dp">1.00dp</dimen>
     <dimen name="_2dp">2.00dp</dimen>
     <dimen name="_3dp">3.00dp</dimen>

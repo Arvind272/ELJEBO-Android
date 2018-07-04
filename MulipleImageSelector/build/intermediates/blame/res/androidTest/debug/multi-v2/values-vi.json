@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/user1/Documents/eljebo_git/ELJEBO-Android/MulipleImageSelector/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-vi/values-vi.xml",
+            "outputFile": "/home/user1/Documents/ELJEBO-Android/MulipleImageSelector/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-vi/values-vi.xml",
             "map": [
                 {
-                    "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.1.aar/59d0faf1afa091336c9491ba08098a04/res/values-vi/values-vi.xml",
+                    "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.1.aar/835cef0713bb743de60c062555823ad8/res/values-vi/values-vi.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,39 @@
                     }
                 },
                 {
-                    "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.1.aar/17454df6a6478fc47d1b14015920ab2c/res/values-vi/values-vi.xml",
+                    "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.1.aar/8d1abe96c93f994dbf7897e1a6100b3f/res/values-vi/values-vi.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,219,327,436,520,623,742,819,896,980,1084,1193,1294,1399,1513,1618,1775,1874",
+                        "endColumns": "113,107,108,83,102,118,76,76,83,103,108,100,104,113,104,156,98,83",
+                        "endOffsets": "214,322,431,515,618,737,814,891,975,1079,1188,1289,1394,1508,1613,1770,1869,1953"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/home/user1/Documents/eljebo_git/ELJEBO-Android/MulipleImageSelector/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-vi/values-vi.xml",
+            "map": [
+                {
+                    "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.1.aar/835cef0713bb743de60c062555823ad8/res/values-vi/values-vi.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "1958",
+                        "endColumns": "100",
+                        "endOffsets": "2054"
+                    }
+                },
+                {
+                    "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.1.aar/8d1abe96c93f994dbf7897e1a6100b3f/res/values-vi/values-vi.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

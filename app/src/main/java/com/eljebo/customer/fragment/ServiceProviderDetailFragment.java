@@ -1,5 +1,6 @@
 package com.eljebo.customer.fragment;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,6 +15,7 @@ import com.eljebo.common.data.SubService;
 import com.eljebo.common.fragment.BaseFragment;
 import com.eljebo.customer.activity.CustomerMainActivity;
 import com.eljebo.databinding.FragmentServiceProviderDetailBinding;
+import com.eljebo.serviceprovider.video_service_call.VideoActivity;
 
 /**
  * Created by TOXSL\vinay.goyal on 14/6/18.
@@ -47,7 +49,8 @@ public class ServiceProviderDetailFragment extends BaseFragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         binding.questionsLL.servicesRV.setLayoutManager(linearLayoutManager);
         if (baseActivity.store.containValue("selectedServices")) {
-            serviceAdapter = new ServiceAdapter(this, baseActivity.store.<SubService>getData("selectedServices"));
+            serviceAdapter = new ServiceAdapter(this,
+                    baseActivity.store.<SubService>getData("selectedServices"));
             binding.questionsLL.servicesRV.setAdapter(serviceAdapter);
         } else {
             binding.questionsLL.cleanerLL.setVisibility(View.VISIBLE);
@@ -71,6 +74,7 @@ public class ServiceProviderDetailFragment extends BaseFragment {
         binding.questionsLL.certificationLL.setVisibility(View.VISIBLE);
         binding.startTV.setOnClickListener(this);
         binding.timerOnIV.setOnClickListener(this);
+        binding.customTextViewVideoCall.setOnClickListener(this);
     }
 
     @Override
@@ -78,6 +82,14 @@ public class ServiceProviderDetailFragment extends BaseFragment {
         super.onClick(v);
 
         switch (v.getId()) {
+
+            case R.id.customTextViewVideoCall:{
+
+               /* Intent intent = new Intent(getActivity(), VideoActivity.class);
+                startActivity(intent);*/
+
+                break;
+            }
 
             case R.id.startTV:
                 gotoCustomerCheckInFragment();

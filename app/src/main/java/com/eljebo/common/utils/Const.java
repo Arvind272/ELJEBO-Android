@@ -37,6 +37,8 @@ public class Const {
     public static final String API_USER_CUSTOMER_SIGNUP = "api/user/customer-signup";
     public static final String API_SERVICE_SEARCH_REGION = "api/service/search-region";
     public static final String API_LOGIN = "login";
+
+    public static String GetTwilioToken = "generateTwilioAceessToken";
     ///Roles
 
     /*public static final int ROLE_USER = 3;
