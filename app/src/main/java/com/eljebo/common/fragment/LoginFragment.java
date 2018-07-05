@@ -80,6 +80,7 @@ public class LoginFragment extends BaseFragment {
             binding.emailET.setText("");
             binding.passwordET.setText("");
         }
+
         binding.loginBT.setOnClickListener(this);
         binding.forPasswordTV.setOnClickListener(this);
         binding.signUpLL.setOnClickListener(this);
@@ -91,21 +92,25 @@ public class LoginFragment extends BaseFragment {
         switch (v.getId()) {
             case R.id.loginBT:
                 baseActivity.hideSoftKeyboard();
-               // baseActivity.gotoOtpFragment();
+               //baseActivity.gotoOtpFragment();
                 validate();
                 break;
             case R.id.forPasswordTV:
                 baseActivity.hideSoftKeyboard();
-
                 gotoForgotPasswordFragment();
                 break;
+
             case R.id.signUpLL:
                 baseActivity.hideSoftKeyboard();
                 if (role == Const.ROLE_PROVIDER) {
+
                     gotoSignUpFragment();
-                } else {
+
+                }else {
+
                     gotoSignUpCustomer();
                 }
+
                 break;
         }
     }
@@ -136,7 +141,6 @@ public class LoginFragment extends BaseFragment {
         params.put("device_type", "1");
         // params.put("device_name", String.valueOf(Build.MODEL));
         params.put("user_type", "2");
-
         /*Api2Params params = new Api2Params();
         params.put("username", binding.emailET.getText().toString().trim());
         params.put("password", binding.passwordET.getText().toString().trim());
@@ -151,7 +155,6 @@ public class LoginFragment extends BaseFragment {
 
 
     public void doSignUpFromServer() {
-
         StringRequest postRequest = new StringRequest(Request.Method.POST, Const.NEW_BASE_URL
                 + "login",
                 new Response.Listener<String>() {
@@ -176,19 +179,25 @@ public class LoginFragment extends BaseFragment {
                                 Const.saveData(getActivity(), "loginUserToken", token);
 
                                 if (user_type.equals("2")){
+
                                     baseActivity.gotoServiceProviderMainActivity();
-                                } else if (user_type.equals("1")){
+
+                                }else if (user_type.equals("1")){
+
                                     baseActivity.gotoCustomerMainActivity();
+
                                 }
 
-                               // baseActivity.gotoOtpFragment();
-                            } else {
+                                // baseActivity.gotoOtpFragment();
+
+                            }else {
 
                             }
 
                             showToast(""+message);
 
-                        } catch (JSONException e) {
+                        }catch (JSONException e) {
+
                             e.printStackTrace();
                         }
                     }
@@ -199,7 +208,7 @@ public class LoginFragment extends BaseFragment {
                         error.printStackTrace();
                     }
                 })
-        {
+              {
 
             @Override
             protected Map<String, String> getParams() {

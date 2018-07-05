@@ -65,7 +65,8 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
 
     private ArrayList<CountryDialogListDataBean> countryDialogListDataBeans = new ArrayList<>();
 
-    public CountryDialog(@NonNull BaseActivity baseActivity, int id, int type, Fragment fragment) {
+    public CountryDialog(@NonNull BaseActivity baseActivity, int id,
+                         int type, Fragment fragment) {
         super(baseActivity, R.style.animateDialog);
 
         this.baseActivity = baseActivity;
@@ -88,6 +89,7 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
     }
 
     private void init() {
+
         adapterListener = AdapterListener.getInstance();
         adapterListener.setAdapterListener(this);
         InputMethodManager im = (InputMethodManager) baseActivity.getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -151,7 +153,8 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
                 if (binding.searchET.getText().toString().trim().isEmpty()) {
                     hitApi();
                 } else {
-                    hitSearchAPI(Type_Name);
+                    //hitSearchAPI(Type_Name);
+                    hitApi();
                 }
             }
 
@@ -194,7 +197,8 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
     private void hitCountryApi() {
         if (!singleHit) {
             singleHit = true;
-            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_COUNTRY_LIST
+            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_COUNTRY_LIST+
+                    "?keyword=" + binding.searchET.getText().toString().trim()
                     , null, this);
         }
     }
@@ -202,7 +206,9 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
     private void hitStateApi() {
         if (!singleHit) {
             singleHit = true;
-            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_STATE_LIST + "?country_id=" + id,
+            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_STATE_LIST +
+                            "?country_id=" + id+
+                            "&keyword="+binding.searchET.getText().toString().trim(),
                     null, this);
         }
     }
@@ -210,7 +216,9 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
     private void hitCityApi() {
         if (!singleHit) {
             singleHit = true;
-            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_CITY_LIST + "?state_id=" + id,
+            baseActivity.syncManager.sendJsonToServer(Const.API_SERVICE_CITY_LIST +
+                            "?state_id=" + id+
+                            "&keyword="+binding.searchET.getText().toString().trim(),
                     null, this);
         }
     }
@@ -299,7 +307,8 @@ public class CountryDialog extends Dialog implements SyncEventListner, View.OnCl
 
     public void setAdapter() {
         if (countryDialogAdapter == null) {
-            countryDialogAdapter = new CountryDialogAdapter(this, countryDataArrayList, fragment, adapterListener,
+            countryDialogAdapter = new CountryDialogAdapter(this,
+                    countryDataArrayList, fragment, adapterListener,
                     countryDialogListDataBeans);
             binding.signUpRV.setAdapter(countryDialogAdapter);
         } else {

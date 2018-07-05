@@ -48,14 +48,14 @@ public class CustomerMainActivity extends BaseActivity {
                     store.cleanPref();
                     logout();
                     break;
-
-
             }
-            if (frag != null)
+            if(frag != null)
+
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.customer_container, frag)
                         .commit();
             drawer.closeDrawers();
+
         }
     };
     private ImageView profilePicCIV;
@@ -66,7 +66,9 @@ public class CustomerMainActivity extends BaseActivity {
     private TextView titleTV;
 
     private void logout() {
+
         gotoLoginSignUpActivity();
+
     }
 
     @Override
@@ -92,10 +94,11 @@ public class CustomerMainActivity extends BaseActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
 
     }
-
     public void setTitle(String title) {
         if (titleTV != null) {
+
             titleTV.setText(title);
+
         }
     }
 
@@ -110,8 +113,6 @@ public class CustomerMainActivity extends BaseActivity {
                 .commit();
     }
     ////////////////////////////////////////////////////
-
-
     private void init() {
         drawer = (DrawerLayout) findViewById(R.id.drawer);
         LinearLayout headLL = (LinearLayout) findViewById(R.id.headLL);

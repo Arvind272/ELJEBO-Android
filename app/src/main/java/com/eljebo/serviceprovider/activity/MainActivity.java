@@ -51,7 +51,8 @@ public class MainActivity extends BaseActivity {
                     break;
 
             }
-            if (frag != null)
+
+            if(frag != null)
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container, frag)
                         .commit();
@@ -171,6 +172,7 @@ public class MainActivity extends BaseActivity {
             drawerData.name = names[i];
             drawerItems.add(drawerData);
         }
+
         DrawerAdapter drawerAdapter = new DrawerAdapter(this, 0, drawerItems);
         drawerLV.setAdapter(drawerAdapter);
         drawerLV.setOnItemClickListener(seekerDrawerListener);
@@ -200,8 +202,6 @@ public class MainActivity extends BaseActivity {
         if (toggle.onOptionsItemSelected(item)) {
             return true;
         }
-
-
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
@@ -216,9 +216,11 @@ public class MainActivity extends BaseActivity {
         Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.container);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else if (fragment instanceof HomeFragment) {
+
+        }else if (fragment instanceof HomeFragment) {
             backAction();
-        } else {
+
+        }else {
             if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
                 getSupportFragmentManager().popBackStack();
             } else {

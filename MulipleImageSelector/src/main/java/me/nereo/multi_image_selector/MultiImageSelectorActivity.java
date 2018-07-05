@@ -41,7 +41,7 @@ public class MultiImageSelectorActivity extends AppCompatActivity implements Mul
         setContentView(R.layout.activity_default);
         Intent intent = getIntent();
         mDefaultCount = intent.getIntExtra(EXTRA_SELECT_COUNT, 9);
-        int mode = intent.getIntExtra(EXTRA_SELECT_MODE, MODE_MULTI);
+        int mode = intent.getIntExtra(EXTRA_SELECT_MODE, MODE_SINGLE);//MODE_MULTI
         boolean isShow = intent.getBooleanExtra(EXTRA_SHOW_CAMERA, true);
         resultList.clear();
         if(mode == MODE_MULTI && intent.hasExtra(EXTRA_DEFAULT_SELECTED_LIST)) {
@@ -55,7 +55,8 @@ public class MultiImageSelectorActivity extends AppCompatActivity implements Mul
         bundle.putStringArrayList(MultiImageSelectorFragment.EXTRA_DEFAULT_SELECTED_LIST, resultList);
 
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.image_grid, Fragment.instantiate(this, MultiImageSelectorFragment.class.getName(), bundle))
+                .add(R.id.image_grid, Fragment.instantiate(this,
+                        MultiImageSelectorFragment.class.getName(), bundle))
                 .commit();
 
         // 返回按钮

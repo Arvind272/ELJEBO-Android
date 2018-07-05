@@ -9,7 +9,6 @@
         android:orientation="vertical"
         android:padding="@dimen/_10sdp">
 
-
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
@@ -44,7 +43,6 @@
             android:text="@string/service_provider"
             android:textColor="@color/Black"
             android:textSize="@dimen/_18sp" />
-
 
     </LinearLayout>
 

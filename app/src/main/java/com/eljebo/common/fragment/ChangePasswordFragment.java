@@ -101,7 +101,6 @@ public class ChangePasswordFragment extends BaseFragment {
 
 
     public void changePasswordForBothUser() {
-
         final ACProgressFlower acProgressFlower = new ACProgressFlower.Builder(getActivity())
                 .direction(ACProgressConstant.DIRECT_CLOCKWISE)
                 .themeColor(Color.WHITE)
@@ -154,9 +153,7 @@ public class ChangePasswordFragment extends BaseFragment {
 
             @Override
             protected Map<String, String> getParams() {
-
                 //user_id, token, old_password,new_password
-
                 Map<String, String> params = new HashMap<>();
                 params.put("user_id", Const.loadData(getActivity(), "loginUserId"));
                 params.put("token", Const.loadData(getActivity(), "loginUserToken"));

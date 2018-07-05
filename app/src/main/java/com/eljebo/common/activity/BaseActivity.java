@@ -620,6 +620,7 @@ public class BaseActivity extends AppCompatActivity implements SyncEventListner,
         if (alertDialog != null && alertDialog.isShowing()) {
             alertDialog.dismiss();
         }
+
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         View dialogLayout = getLayoutInflater().inflate(R.layout.layout_enable_gps, null);
         alertDialogBuilder.setView(dialogLayout);

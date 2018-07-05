@@ -221,6 +221,7 @@
     <string name="plz_slct_date">Please select date</string>
     <string name="plz_slct_time">Please select time</string>
     <string name="plz_slct_duration">Please enter duration</string>
+    <string name="plz_enter_your_description">Please enter your description</string>
     <string name="description">Description (1000 characters)</string>
     <string name="location_update_failed">Location Update Failed</string>
     <string name="enable_location_service"> Please enable location services from your settings.</string>

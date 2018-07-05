@@ -3,6 +3,7 @@ package com.eljebo.serviceprovider.fragment;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,6 +11,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Location;
 import android.os.Bundle;
@@ -41,6 +43,9 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.androidquery.AQuery;
+import com.androidquery.callback.AjaxCallback;
+import com.androidquery.callback.AjaxStatus;
 import com.eljebo.R;
 import com.eljebo.common.activity.BaseActivity;
 import com.eljebo.common.activity.LoginSignUpActivity;
@@ -78,11 +83,14 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
+import cc.cloudist.acplibrary.ACProgressConstant;
+import cc.cloudist.acplibrary.ACProgressFlower;
 import me.nereo.multi_image_selector.MultiImageSelectorActivity;
 
 
 public class SignupFragment extends BaseFragment implements View.OnClickListener, ImageUtils.ImageSelectCallback, BaseActivity.PermCallback {
     ArrayList<String> imageList = new ArrayList<>();
+    ArrayList<String> selectedImgIds = new ArrayList<>();
     CustomCameraImagesAdapter imagesAdapter;
     private View view;
     private FragmentServiceProviderSignupBinding binding;
@@ -97,7 +105,7 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
     private int REQUEST_GALLERY_CODE = 111;
     String deviceToken = "";
     private static final int PERMISSION_REQUEST_CODE = 1;
-    Bitmap bitmap;
+    private AQuery aq;
 
     @Nullable
     @Override
@@ -134,6 +142,7 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
     }
 
     private void initUI() {
+        aq = new AQuery(getActivity());
         hitServicesApi();
         setServiceAdapter();
         binding.selectedServiceRV.setLayoutManager(new LinearLayoutManager(baseActivity));
@@ -266,7 +275,11 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                 break;
 
             case R.id.uploadCertificationRL:
-                if (baseActivity.checkPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, Const.REQUEST_CODE, this)) {
+                if (baseActivity.checkPermissions(new String[]{
+                        Manifest.permission.CAMERA,
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        Const.REQUEST_CODE, this)) {
                     if (imageList.size() < 4) {
                         showChooseDialog();
                     } else {
@@ -279,7 +292,6 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                 baseActivity.hideSoftKeyboard();
                 openClock(binding.toET);
                 break;
-
             case R.id.fromET:
                 baseActivity.hideSoftKeyboard();
                 openClock(binding.fromET);
@@ -343,7 +355,10 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                         selectMultipleImagesFromGallery();
                         break;
                     case 1:
-                        ImageUtils.ImageSelect.Builder builder = new ImageUtils.ImageSelect.Builder(baseActivity, SignupFragment.this, Const.REQUEST_CODE);
+                        ImageUtils.ImageSelect.Builder builder = new
+                                ImageUtils.ImageSelect.Builder(baseActivity,
+                                SignupFragment.this,
+                                Const.REQUEST_CODE);
                         builder.onlyCamera(true).crop(false).start();
                         break;
 
@@ -362,7 +377,8 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         Intent intent = new Intent(baseActivity, MultiImageSelectorActivity.class);
         intent.putExtra(MultiImageSelectorActivity.EXTRA_SHOW_CAMERA, false);
         intent.putExtra(MultiImageSelectorActivity.EXTRA_SELECT_COUNT, 4);
-        intent.putExtra(MultiImageSelectorActivity.EXTRA_SELECT_MODE, MultiImageSelectorActivity.MODE_MULTI);
+        intent.putExtra(MultiImageSelectorActivity.EXTRA_SELECT_MODE,
+                MultiImageSelectorActivity.MODE_SINGLE);//MODE_MULTI
         startActivityForResult(intent, REQUEST_GALLERY_CODE);
     }
 
@@ -467,10 +483,12 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_GALLERY_CODE) {
             try {
-                for (int i = 0; i < data.getStringArrayListExtra(MultiImageSelectorActivity.EXTRA_RESULT).size(); i++) {
+                for (int i = 0; i < data.getStringArrayListExtra(
+                        MultiImageSelectorActivity.EXTRA_RESULT).size(); i++) {
                     if (imageList.size() < 4) {
                         imageList.add(i,
-                                data.getStringArrayListExtra(MultiImageSelectorActivity.EXTRA_RESULT).get(i));
+                                data.getStringArrayListExtra(
+                                        MultiImageSelectorActivity.EXTRA_RESULT).get(i));
                     } else {
                         showToast(baseActivity.getString(R.string.max_image_limit));
                     }
@@ -502,19 +520,33 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
 
     private void setImageAdapter() {
         binding.imageRV.setVisibility(View.VISIBLE);
-
-        Log.e("imageList", "imageList==> " + imageList);
-
+        Log.e("imageList-->>", "imageList==> " + imageList);
         ArrayList<String> finalSelectedCertiImage = new ArrayList<>();
 
         if (imagesAdapter == null) {
             imagesAdapter = new CustomCameraImagesAdapter(baseActivity, imageList,
-                    this);
+                    this, selectedImgIds);
             binding.imageRV.setAdapter(imagesAdapter);
         } else {
             imagesAdapter.notifyDataSetChanged();
         }
-       // imageUploadToServer(imageList);
+
+        String strGetSingleImgUrl = "";
+
+        try {
+            for (int i=0;i<imageList.size();i++){
+                if (imageList.size()-1==i){
+                    strGetSingleImgUrl = imageList.get(i);
+                }
+            }
+        }catch (ArrayIndexOutOfBoundsException e){
+            e.printStackTrace();
+        }
+
+        Log.e("imageList-->>", "strGetSingleImgUrl==> " + strGetSingleImgUrl);
+
+       // imageUploadToServer(strGetSingleImgUrl);
+        uploadImageToServer(strGetSingleImgUrl);
     }
 
 
@@ -525,6 +557,16 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
             gender = 2;
         } else if (binding.otherRB.isChecked()) {
             gender = 0;
+        }
+
+        String strSelectedIds = "";
+        for (int i=0;i<selectedImgIds.size();i++){
+            Log.e("imageList-->>", "test==> " + selectedImgIds.get(i));
+            if (i==0){
+                strSelectedIds = strSelectedIds+selectedImgIds.get(i);
+            }else {
+                strSelectedIds = strSelectedIds+","+selectedImgIds.get(i);
+            }
         }
 
         ProfileData profileData = new ProfileData();
@@ -540,6 +582,7 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         profileData.city = binding.cityET.getText().toString().trim();
         profileData.availability_time_from = binding.fromET.getText().toString().trim();
         profileData.availability_time_to = binding.toET.getText().toString().trim();
+        profileData.description = binding.descriptionET.getText().toString().trim();
         profileData.zipcode = binding.zipCodeET.getText().toString().trim();
         profileData.gender = gender;
         profileData.city_state = binding.stateET.getText().toString().trim();
@@ -551,6 +594,7 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         profileData.countryIds = countryID;
         profileData.stateIds = stateID;
         profileData.cityIds = cityID;
+        profileData.selectedCertificateIds = strSelectedIds;
 
         Fragment fragment = new PaymentFragment();
         Bundle bundle = new Bundle();
@@ -562,130 +606,6 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                 .replace(R.id.login_frame, fragment)
                 .addToBackStack(null)
                 .commit();
-
-       // doSignUpFromServer();
-
-    }
-
-    public void doSignUpFromServer() {
-
-        StringRequest postRequest = new StringRequest(Request.Method.POST, Const.NEW_BASE_URL
-                + "serviceProviderSignup",
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-
-
-                        try {
-                            RequestQueue queue = Volley.newRequestQueue(getActivity());
-                            queue.getCache().clear();
-                            Log.e("SignUpResponse==>>", response);
-                            JSONObject json = new JSONObject(response);
-                            String message = json.getString("message");
-
-                            if (json.getString("status").equals("1")){
-
-                               /* Toast toast = Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.CENTER, 0, 0);
-                                toast.show();*/
-
-                               /* Intent intent = new Intent(getActivity(), LoginFragment.class);
-                                startActivity(intent);*/
-
-                                Fragment fragment = new LoginFragment();
-                                Bundle bundle = new Bundle();
-                                bundle.putInt("role", Const.ROLE_PROVIDER);
-                                store.setInt("role", Const.ROLE_PROVIDER);
-                                fragment.setArguments(bundle);
-                                baseActivity.getSupportFragmentManager()
-                                        .beginTransaction()
-                                        .replace(R.id.login_frame, fragment)
-                                        .addToBackStack(null)
-                                        .commit();
-
-                            } else {
-                               /* Toast toast = Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.CENTER, 0, 0);
-                                toast.show();*/
-                            }
-
-                            showToast(""+message);
-
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        error.printStackTrace();
-                    }
-        })
-        {
-
-            @Override
-            protected Map<String, String> getParams() {
-
-                /*firstname , lastname,email, password, device_type, device_token, username ,
-                        gender('0', '1', '2')1-Male, 2-Female,0-Other,
-                        country_id, country_id, address, address2, state_id, city_id, latitude, longitude,
-                        zip_code, mobile, security_que_ans, certificate_ids,
-                        sub_category(in josn value with 'sub_service_id' , 'charge_amount') ,  education*/
-
-                String refreshedToken = baseActivity.getUniqueDeviceId();
-                Log.e("SignUp", "refreshedToken==>> " + refreshedToken);
-
-                Map<String, String> params = new HashMap<>();
-                params.put("firstname", binding.firstNameET.getText().toString().trim());
-                params.put("lastname", binding.lastNameET.getText().toString().trim());
-                params.put("email", binding.emailET.getText().toString().trim());
-                params.put("password", binding.passwordET.getText().toString().trim());
-                params.put("device_type", "1");
-                params.put("device_token", refreshedToken);
-                params.put("username", binding.userNameET.getText().toString().trim());
-                params.put("gender", String.valueOf(gender));
-
-                params.put("country_id", String.valueOf(countryID));
-                params.put("address", binding.addressET.getText().toString().trim());
-                params.put("address2", binding.addressTwoET.getText().toString().trim());
-                params.put("state_id", String.valueOf(stateID));
-                params.put("city_id", String.valueOf(cityID));
-                params.put("latitude", "22.54654");
-                params.put("longitude", "75.54464");
-                params.put("zip_code", binding.zipCodeET.getText().toString().trim());
-                params.put("mobile", binding.phoneNumberET.getText().toString().trim());
-                params.put("security_que_ans", getSecurityQueJson().toString());
-                params.put("certificate_ids", "");//getImageJSON().toString()
-                params.put("sub_category", getServicesJson().toString());
-                params.put("education", getEducationData().toLowerCase());
-
-                Log.e("SignUp", "Params==>> " + params);
-
-                return params;
-            }
-
-        };
-
-        Volley.newRequestQueue(getActivity()).add(postRequest);
-        Log.e("LOGIN", postRequest.toString());
-        postRequest.setRetryPolicy(new RetryPolicy() {
-                                       @Override
-                                       public int getCurrentTimeout() {
-                                           return 50000;
-                                       }
-
-                                       @Override
-                                       public int getCurrentRetryCount() {
-                                           return 50000;
-                                       }
-
-                                       @Override
-                                       public void retry(VolleyError error) throws VolleyError {
-
-                                       }
-                                   });
     }
 
     private void openClock(CustomEditText customEditText) {
@@ -803,15 +723,17 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
             showToast(getString(R.string.please_select_education));
         } else if (binding.certificatesET.getText().toString().trim().isEmpty()) {
             showToast(baseActivity.getString(R.string.plz_enter_crtification_license));
-        } else if (selectedServiceData.size() == 0) {
+        } else if (selectedServiceData.size() == 0) {//descriptionET
             showToast(baseActivity.getString(R.string.please_select_atleast_one_service));
         } else if (isServicePriceAdded()) {
             showToast(baseActivity.getString(R.string.please_enter_selected_service_price));
+        } else if (binding.descriptionET.getText().toString().trim().isEmpty()) {//descriptionET
+            showToast(baseActivity.getString(R.string.plz_enter_your_description));
         } else if (binding.toET.getText().toString().trim().isEmpty()) {
             showToast(baseActivity.getString(R.string.please_enter_time));
         } else if (binding.fromET.getText().toString().trim().isEmpty()) {
             showToast(baseActivity.getString(R.string.please_enter_from_time));
-        } else if (imageList.size() == 0) {
+        } else if (selectedImgIds.size() == 0) {
             showToast(getString(R.string.plz_upload_image));
         } else {
             return true;
@@ -846,7 +768,7 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                     serviceDatas.add(serviceData);
                 }
                 setServiceAdapter();
-               /* } else {
+                /* } else {
                     baseActivity.showToastOne(jsonObject.getString("error"));
                 }*/
             }
@@ -902,11 +824,8 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
     }
 
     private JSONArray getSecurityQueJson() {
-
-
         try {
             JSONArray complete_json = new JSONArray();
-
             JSONObject object = new JSONObject();
             object.put("question", binding.questionsLL.que1ET.getText().toString().trim());
             object.put("answer", binding.questionsLL.ans1ET.getText().toString().trim());
@@ -919,10 +838,9 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
             object2.put("question", binding.questionsLL.ques3ET.getText().toString().trim());
             object2.put("answer", binding.questionsLL.ans3ET.getText().toString().trim());
             complete_json.put(object2);
-
-
             return complete_json;
-        } catch (Exception e) {
+
+        }catch (Exception e) {
             e.printStackTrace();
         }
         return null;
@@ -937,22 +855,58 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         }
     }
 
-    public void mulitImageForLoop(){
-        for (int i=0;i<imageList.size();i++){
 
-        }
+    public void uploadImageToServer(final String strGetSingleImgUrl) {
+
+        File file = new File(strGetSingleImgUrl);
+        Map<String, Object> params = new HashMap<>();
+        params.put("user_type", "2");
+        params.put("image_name", file);
+
+        Log.e("UploadImage", "Params==>> " + params);
+
+        final ProgressDialog pd = new ProgressDialog(getActivity());
+        pd.setMessage("Loading...");
+        pd.setCanceledOnTouchOutside(false);
+      //  aq.
+
+        aq.progress(pd).ajax(Const.NEW_BASE_URL+"uploadImage",
+                params, JSONObject.class, new AjaxCallback<JSONObject>(){
+
+
+                    @Override
+                    public void callback(String url, JSONObject object, AjaxStatus status) {
+                        //super.callback(url, object, status);
+
+                        Log.e("UploadImageRes==> ", url + " ==> " +object);
+                        if (object != null) {
+                            Log.e("UploadImage>2>>", object.toString());
+                            try {
+                                if (object.getString("status").equals("1")) {
+
+                                    if (!object.isNull("image_id")){
+                                        selectedImgIds.add(""+object.getString("image_id"));
+                                    }
+                                } else {
+
+                                }
+                            } catch (Exception e) {
+                            }
+
+                            if (pd.isShowing()){
+                                pd.dismiss();
+                            }
+                        }
+                    }
+                });
     }
 
-    public void imageUploadToServer(final ArrayList<String> imageList){
+    public void imageUploadToServer(final String strGetSingleImgUrl){
 
-
-        Log.e("imageList", "imageList==>>>> " +imageList);
-
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        /*ByteArrayOutputStream baos = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
         byte[] imageBytes = baos.toByteArray();
-        final String imageString = Base64.encodeToString(imageBytes, Base64.DEFAULT);
-
+        final String imageString = Base64.encodeToString(imageBytes, Base64.DEFAULT);*/
 
         StringRequest postRequest = new StringRequest(Request.Method.POST,
                 Const.NEW_BASE_URL
@@ -968,12 +922,12 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                             String message = json.getString("message");
                             if (json.getString("status").equals("1")){
 
-                            } else {
-                            }
+                            }else {
 
+                            }
                            // showToast(""+message);
 
-                        } catch (JSONException e) {
+                        }catch (JSONException e) {
                             e.printStackTrace();
                         }
                     }
@@ -984,19 +938,21 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
                         error.printStackTrace();
                     }
                 })
-        {
 
+        {
             @Override
             protected Map<String, String> getParams() {
-                /*user_id, token, user_type,image_name*/
+                /*user_type,image_name*/
                 Map<String, String> params = new HashMap<>();
                 params.put("user_type", "2");
-                params.put("image_name", "");
+                params.put("image_name", new File(strGetSingleImgUrl).toString());
+                //new File(strGetSingleImgUrl).toString()
 
                 Log.e("UploadImage", "Params==>> " + params);
                 return params;
             }
         };
+
         Volley.newRequestQueue(getActivity()).add(postRequest);
         Log.e("UploadImage", postRequest.toString());
         postRequest.setRetryPolicy(new RetryPolicy() {
@@ -1010,9 +966,8 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
             }
             @Override
             public void retry(VolleyError error) throws VolleyError {
+
             }
-        });
-    }
-
-
-}
+         });
+      }
+     }

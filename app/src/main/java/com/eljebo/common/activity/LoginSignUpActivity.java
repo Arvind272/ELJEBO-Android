@@ -29,9 +29,10 @@ public class LoginSignUpActivity extends BaseActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
         setToolbar("", false);
+
+
         gotoRoleSelectionFragment();
     }
-
 
     private void gotoRoleSelectionFragment() {
         getSupportFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
@@ -51,12 +52,17 @@ public class LoginSignUpActivity extends BaseActivity {
 
         if (enable) {
             toolbarTB.setVisibility(View.VISIBLE);
-        } else {
+
+        }else {
+
             toolbarTB.setVisibility(View.GONE);
         }
+
         titleTV.setText(title);
+
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     @Override

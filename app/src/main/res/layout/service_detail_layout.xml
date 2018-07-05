@@ -50,6 +50,7 @@
                     android:text="@string/_123_lorem_ipsum_amet_lorem_ipsum_usa_n172201"
                     android:textColor="@color/Gray"
                     android:textSize="@dimen/_13sp" />
+
                 <LinearLayout
                     android:id="@+id/availabilityLL"
                     android:layout_width="match_parent"
@@ -67,6 +68,7 @@
                         android:textSize="@dimen/_13sp" />
 
                     <com.eljebo.common.utils.CustomTextView
+                        android:id="@+id/starttimeendtime"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_1sdp"
@@ -77,10 +79,7 @@
                         android:textSize="@dimen/_13sp" />
 
                 </LinearLayout>
-
-
-
-            </LinearLayout>
+                </LinearLayout>
         </LinearLayout>
 
 

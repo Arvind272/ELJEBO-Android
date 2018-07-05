@@ -16,12 +16,12 @@
         "source": "/home/user1/Documents/ELJEBO-Android/app/src/main/res/layout/fragment_customer_signup.xml"
     },
     {
-        "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_pay.xml",
-        "source": "/home/user1/Documents/ELJEBO-Android/app/src/main/res/layout/fragment_pay.xml"
-    },
-    {
         "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_customer_profile.xml",
         "source": "/home/user1/Documents/ELJEBO-Android/app/src/main/res/layout/fragment_customer_profile.xml"
+    },
+    {
+        "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_pay.xml",
+        "source": "/home/user1/Documents/ELJEBO-Android/app/src/main/res/layout/fragment_pay.xml"
     },
     {
         "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_service_providers.xml",

@@ -14,8 +14,8 @@ public final class R {
     }
     public static final class id {
         public static final int balanced = 0x7f090031;
-        public static final int fill = 0x7f0900ba;
-        public static final int fit = 0x7f0900be;
+        public static final int fill = 0x7f0900bd;
+        public static final int fit = 0x7f0900c1;
     }
     public static final class string {
         public static final int capturer_preview_content_description = 0x7f10003f;

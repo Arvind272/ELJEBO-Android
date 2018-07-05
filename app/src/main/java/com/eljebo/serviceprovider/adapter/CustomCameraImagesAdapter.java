@@ -27,12 +27,15 @@ public class CustomCameraImagesAdapter extends RecyclerView.Adapter<CustomCamera
     private BaseActivity baseActivity;
     private ArrayList<String> datas;
     private Fragment fragment;
+    private ArrayList<String> selectedImgIds;
 
-    public CustomCameraImagesAdapter(BaseActivity baseActivity, ArrayList<String> datas, BaseFragment fragment) {
+    public CustomCameraImagesAdapter(BaseActivity baseActivity,
+                                     ArrayList<String> datas, BaseFragment fragment,
+                                     ArrayList<String> selectedImgIds) {
         this.baseActivity = baseActivity;
         this.datas = datas;
-
         this.fragment = fragment;
+        this.selectedImgIds = selectedImgIds;
 
     }
 
@@ -59,8 +62,8 @@ public class CustomCameraImagesAdapter extends RecyclerView.Adapter<CustomCamera
             public void onClick(View v) {
                 int pos = (int) v.getTag();
                 datas.remove(pos);
+                selectedImgIds.remove(pos);
                 notifyDataSetChanged();
-
                 ((SignupFragment) fragment).datadeleted();
             }
         });

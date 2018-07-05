@@ -408,7 +408,7 @@ public class TermsAndServicesFragment extends BaseFragment {
                 params.put("zip_code", profileData.zipcode);
                 params.put("mobile", profileData.contact_no);
                 params.put("security_que_ans", profileData.security_question.toString());
-                params.put("certificate_ids", "");//profileData.multiImage
+                params.put("certificate_ids", profileData.selectedCertificateIds);//profileData.multiImage
                 params.put("sub_category", profileData.sub_services.toString());
                 params.put("education", profileData.education_level);
                 params.put("name_of_card", profileData.cardHolderName);
@@ -417,6 +417,8 @@ public class TermsAndServicesFragment extends BaseFragment {
                 params.put("cvv", profileData.cvv);
                 params.put("start_time", profileData.availability_time_from);
                 params.put("end_time", profileData.availability_time_to);
+                params.put("description", profileData.description);
+                params.put("license", profileData.certification);
 
                 Log.e("SignUp", "Params==>> " + params);
 

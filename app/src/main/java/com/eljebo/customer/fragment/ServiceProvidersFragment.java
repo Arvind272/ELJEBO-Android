@@ -212,18 +212,17 @@ public class ServiceProvidersFragment extends BaseFragment {
                                         profile_pic = jsonObjData.getString("profile_pic");
                                     }
 
-
                                     serviceProviderListBeans.add(new ServiceProviderListBean(user_id,
                                             name, profile_pic));
                                 }
 
-                                ServiceProvidersAdapter serviceProvidersAdapter = new ServiceProvidersAdapter(
-                                        serviceProvidersFragment, serviceProviderListBeans, getActivity());
-                                binding.serviceProviderRV.setAdapter(serviceProvidersAdapter);
-                                serviceProvidersAdapter.notifyDataSetChanged();
-
                             } else {
                             }
+
+                            ServiceProvidersAdapter serviceProvidersAdapter = new ServiceProvidersAdapter(
+                                    serviceProvidersFragment, serviceProviderListBeans, getActivity());
+                            binding.serviceProviderRV.setAdapter(serviceProvidersAdapter);
+                            serviceProvidersAdapter.notifyDataSetChanged();
 
                             showToast(""+message);
                             if (acProgressFlower.isShowing()){
@@ -256,9 +255,9 @@ public class ServiceProvidersFragment extends BaseFragment {
                 params.put("token", Const.loadData(getActivity(), "loginUserToken"));
                 params.put("service_ids", selectedSubServiceIds);
 
-               /* params.put("service_ids", String.valueOf(1));
-                params.put("service_ids", selectedSubServiceIds);
-                params.put("service_ids", selectedSubServiceIds);*/
+                params.put("country_id", String.valueOf(countryID));
+                params.put("state_id", String.valueOf(stateID));
+                params.put("city_id", String.valueOf(cityID));
 
                 Log.e("getServiceProviderList", "Params==>> " + params);
 
@@ -312,15 +311,22 @@ public class ServiceProvidersFragment extends BaseFragment {
                             if (json.getString("status").equals("1")){
 
                                 JSONObject jsonObjData = json.getJSONObject("data");
-                               // String
 
                                 String country_id =jsonObjData.getString("country_id");
                                 String state_id =jsonObjData.getString("state_id");
                                 String city_id =jsonObjData.getString("city_id");
 
+                                String country_name =jsonObjData.getString("country_name");
+                                String state_name =jsonObjData.getString("state_name");
+                                String city_name =jsonObjData.getString("city_name");
+
                                 countryID = Integer.parseInt(country_id);
                                 stateID = Integer.parseInt(state_id);
                                 cityID = Integer.parseInt(city_id);
+
+                                binding.customTextViewGetCountryDialog.setText(""+country_name);
+                                binding.customTextViewGetStateDialog.setText(""+state_name);
+                                binding.customTextViewGetCityDialog.setText(""+city_name);
 
                                 getServiceProviderList(serviceProvidersFragment);
 
@@ -416,6 +422,9 @@ public class ServiceProvidersFragment extends BaseFragment {
             binding.customTextViewGetCityDialog.setText(title);
             cityID = id;
         }
+
+
+        getServiceProviderList(this);
     }
 
 

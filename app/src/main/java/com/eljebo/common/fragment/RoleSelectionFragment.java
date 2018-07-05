@@ -44,6 +44,7 @@ public class RoleSelectionFragment extends BaseFragment {
         initUI();
     }
 
+
     private void initUI() {
         String text = getString(R.string.welcome_to) + " <font color=#F81617>Eljebo!</font>";
         binding.welcomeTV.setText(Html.fromHtml(text));

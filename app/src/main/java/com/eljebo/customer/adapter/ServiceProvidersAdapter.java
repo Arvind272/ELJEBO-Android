@@ -50,11 +50,13 @@ public class ServiceProvidersAdapter extends RecyclerView.Adapter<
     public void onBindViewHolder(final ViewHolder holder, int position) {
 
         holder.binding.serviceProviderRL.setTag(position);
+
         holder.binding.serviceProviderRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int pos = (int) view.getTag();
                 serviceProvidersFragment.setClick(pos);
+
             }
         });
 

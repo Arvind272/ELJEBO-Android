@@ -35,6 +35,8 @@ public class ProfileData implements Parcelable {
     public String availability_time_from;
     public String availability_time_to;
     public String zipcode;
+    public String description;
+    public String selectedCertificateIds;
     public int gender;
     public String city_state;
     public JSONArray security_question;
@@ -69,6 +71,7 @@ public class ProfileData implements Parcelable {
         availability_time_from = in.readString();
         availability_time_to = in.readString();
         zipcode = in.readString();
+        description = in.readString();
         gender = in.readInt();
         city_state = in.readString();
         education_level = in.readString();
@@ -78,6 +81,7 @@ public class ProfileData implements Parcelable {
         countryIds = in.readInt();
         stateIds = in.readInt();
         cityIds = in.readInt();
+        selectedCertificateIds = in.readString();
     }
 
     public ProfileData() {
@@ -104,6 +108,7 @@ public class ProfileData implements Parcelable {
         parcel.writeString(availability_time_from);
         parcel.writeString(availability_time_to);
         parcel.writeString(zipcode);
+        parcel.writeString(description);
         parcel.writeString(certification);
         parcel.writeInt(gender);
         parcel.writeInt(roleId);
@@ -113,5 +118,6 @@ public class ProfileData implements Parcelable {
         parcel.writeInt(countryIds);
         parcel.writeInt(stateIds);
         parcel.writeInt(cityIds);
+        parcel.writeString(selectedCertificateIds);
     }
 }

@@ -193,7 +193,8 @@ public class SyncManager implements SyncEventListner {
         return false;
     }
 
-    public boolean sendJsonToServer(String url, String object, SyncEventListner syncEventListner) {
+    public boolean sendJsonToServer(String url, String object,
+                                    SyncEventListner syncEventListner) {
         String completeUrl = getUrl(url);
         if (isNetworkAvailable()) {
             log("sendToServer==>>> " + completeUrl + " params = " + object);
@@ -318,13 +319,18 @@ public class SyncManager implements SyncEventListner {
         getRequestQueue().add(multipartRequest);
     }
 
-    private void sendStringRequest(SyncEventListner syncEventListner, final String params, String completeUrl) {
+    private void sendStringRequest(SyncEventListner syncEventListner,
+                                   final String params, String completeUrl) {
         if (syncEventListner == null) {
             syncEventListner = this;
         }
         syncEventListner.onSyncStart();
-        StringRequest stringRequest = new StringRequest(params == null ? Request.Method.GET :
-                Request.Method.GET, completeUrl, new onVolleyResponse(syncEventListner) {
+
+        StringRequest stringRequest = new StringRequest(params == null ?
+                Request.Method.GET :
+                Request.Method.GET,
+                completeUrl,
+                new onVolleyResponse(syncEventListner) {
             @Override
             public void onResponse(String response) {
                 syncEventListner.onSyncFinish();
@@ -332,11 +338,17 @@ public class SyncManager implements SyncEventListner {
                     try {
                         if (!validateResponse(response, syncEventListner)) return;
                         JSONObject jsonObject = new JSONObject(response);
+
+                        Log.e("getListingData", "==> " +jsonObject);
+
                         log(jsonObject.toString());
-                        if (!isValidateDateCheck(jsonObject, syncEventListner)) return;
-                        syncEventListner.onSyncSuccess(jsonObject.optString("controller"),
+                        if (!isValidateDateCheck(jsonObject, syncEventListner))
+                            return;
+                        syncEventListner.onSyncSuccess(
+                                jsonObject.optString("controller"),
                                 jsonObject.optString("action"),
-                                jsonObject.optString("status").equalsIgnoreCase("OK"),
+                                jsonObject.optString("status").
+                                        equalsIgnoreCase("OK"),
                                 jsonObject);
                     } catch (JSONException e) {
                         log("Error parsing Response >>>>>> " + e + " \n" + response);

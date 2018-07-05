@@ -41,6 +41,7 @@ import com.eljebo.common.data.SubService;
 import com.eljebo.common.fragment.BaseFragment;
 import com.eljebo.common.utils.Const;
 import com.eljebo.common.utils.CustomEditText;
+import com.eljebo.common.utils.First_Char_Capital;
 import com.eljebo.common.utils.GoogleApisHandle;
 import com.eljebo.customer.activity.CustomerMainActivity;
 import com.eljebo.customer.adapter.ServiceProvidersAdapter;
@@ -61,7 +62,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -100,7 +104,7 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
 
             binding = DataBindingUtil.inflate(inflater, R.layout.fragment_service_provider_location, container, false);
 
-        } catch (Exception e) {
+        }catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -117,16 +121,19 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
 
         getServiceProviderUserId = Const.loadData(getActivity(), "getServiceProviderUserId");
 
-        if (baseActivity.store.containValue("selectedServices")) {
+        if(baseActivity.store.containValue("selectedServices")) {
             serviceAdapter = new ServiceAdapter(this,
                     baseActivity.store.<SubService>getData("selectedServices"));
             binding.questionsLL.servicesRV.setAdapter(serviceAdapter);
-        } else {
+
+        }else{
+
             binding.questionsLL.cleanerLL.setVisibility(View.VISIBLE);
         }
+
         baseActivity.hideSoftKeyboard();
         binding.questionsLL.availabilityLL.setVisibility(View.VISIBLE);
-       // ((CustomerMainActivity) baseActivity).setTitle(getString(R.string.jack_thomas));
+        //((CustomerMainActivity) baseActivity).setTitle(getString(R.string.jack_thomas));
         getServiceProviderDetails();
         if (baseActivity.checkPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                 11, this)) {
@@ -235,58 +242,101 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
 
                                     String fullAddressHere = "";
 
+                                    String description="";
+
                                     if (!jsonObjData.isNull("name")){
                                         name = jsonObjData.getString("name");
-                                        binding.questionsLL.customTextViewProName.setText(""+name);
+                                        binding.questionsLL.customTextViewProName.
+                                                setText(First_Char_Capital.capitalizeString(""+name));
                                         ((CustomerMainActivity) baseActivity).setTitle(""+name);
+
                                     }
-                                    if (!jsonObjData.isNull("gender")){
+
+                                    if(!jsonObjData.isNull("gender")){
+
                                         gender = jsonObjData.getString("gender");
                                     }
-                                    if (!jsonObjData.isNull("address")){
+
+                                if(!jsonObjData.isNull("address")){
                                         address = jsonObjData.getString("address");
                                         fullAddressHere = address;
                                     }
 
-                                    if (!jsonObjData.isNull("address2")){
+                                if (!jsonObjData.isNull("address2")){
                                         address2 = jsonObjData.getString("address2");
-
                                         fullAddressHere = fullAddressHere +" " +address2;
-
                                     }
+
                                     if (!jsonObjData.isNull("latitude")){
                                         latitude = jsonObjData.getString("latitude");
                                     }
+
                                     if (!jsonObjData.isNull("longitude")){
                                         longitude = jsonObjData.getString("longitude");
                                     }
+
                                     if (!jsonObjData.isNull("zip_code")){
                                         zip_code = jsonObjData.getString("zip_code");
                                     }
                                     if (!jsonObjData.isNull("start_time")){
+
                                         start_time = jsonObjData.getString("start_time");
                                     }
+
                                     if (!jsonObjData.isNull("end_time")){
+
                                         end_time = jsonObjData.getString("end_time");
                                     }
-                                    if (!jsonObjData.isNull("city")){
+
+
+                                String time = start_time;
+
+                                SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss");
+                                SimpleDateFormat sdfs = new SimpleDateFormat("hh:mm:aa");
+                                Date dt;
+
+                                try {
+                                    dt = sdfs.parse(time);
+                                    Log.e("startdate",""+dt);
+
+                                }catch(ParseException e) {
+                                    e.printStackTrace();
+                                }
+
+
+                                String timeend = end_time;
+
+                                SimpleDateFormat sdff = new SimpleDateFormat("hh:mm:ss");
+                                SimpleDateFormat sdffs = new SimpleDateFormat("hh:mm:aa");
+                                Date dtend;
+
+                                try {
+                                    dtend = sdffs.parse(timeend);
+                                    Log.e("enddate",""+dtend);
+                                }catch(ParseException e) {
+                                    e.printStackTrace();
+                                }
+
+                                binding.questionsLL.starttimeendtime.setText(start_time+"-"+end_time);
+                                if (!jsonObjData.isNull("city")){
                                         city = jsonObjData.getString("city");
                                         fullAddressHere = fullAddressHere +" "+city;
                                     }
-                                    if (!jsonObjData.isNull("state")){
+                                if (!jsonObjData.isNull("state")){
                                         state = jsonObjData.getString("state");
                                         fullAddressHere = fullAddressHere +" "+state;
                                     }
-                                    if (!jsonObjData.isNull("country")){
+
+                                if(!jsonObjData.isNull("country")){
                                         country = jsonObjData.getString("country");
                                         fullAddressHere = fullAddressHere +" "+country;
                                     }
 
-                                    binding.questionsLL.customTextViewAddress.setText(""+fullAddressHere);
+                                    binding.questionsLL.customTextViewAddress.setText(
+                                            First_Char_Capital.capitalizeString(""+fullAddressHere));
 
-                                    if (!jsonObjData.isNull("profile_pic")){
+                                if(!jsonObjData.isNull("profile_pic")){
                                         profile_pic = jsonObjData.getString("profile_pic");
-
                                         Picasso.with(getActivity())
                                                 .load(profile_pic)
                                                 .placeholder(R.mipmap.ic_pic_home)
@@ -294,9 +344,19 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
                                                 .into(binding.questionsLL.mealImageOrder);
                                     }
 
-                                initUI();
+                                //description
+                                if (!jsonObjData.isNull("description")){
+                                    description = jsonObjData.getString("description");
+                                    binding.questionsLL.descriptionET.setText(""+description);
+                                    ((CustomerMainActivity) baseActivity).setTitle(""+description);
 
-                            } else {
+                                    }
+
+
+                                    initUI();
+
+                            }else{
+
                             }
 
                             showToast(""+message);

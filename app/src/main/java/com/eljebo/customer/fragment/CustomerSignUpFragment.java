@@ -32,7 +32,6 @@ import com.eljebo.databinding.FragmentCustomerSignupBinding;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocomplete;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 

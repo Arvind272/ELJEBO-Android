@@ -101,14 +101,12 @@ public class OtpFragment extends BaseFragment {
 
 
     public void doOtpServiceHit() {
-
         final ACProgressFlower acProgressFlower = new ACProgressFlower.Builder(getActivity())
                 .direction(ACProgressConstant.DIRECT_CLOCKWISE)
                 .themeColor(Color.WHITE)
                 // .text("Title is here")
                 .fadeColor(Color.DKGRAY).build();
         acProgressFlower.show();
-
         StringRequest postRequest = new StringRequest(Request.Method.POST,
                 Const.NEW_BASE_URL
                 + "verifyOtp",
@@ -132,7 +130,8 @@ public class OtpFragment extends BaseFragment {
 
                                 acProgressFlower.dismiss();
                             }
-                        } catch (JSONException e) {
+
+                        }catch (JSONException e) {
                             e.printStackTrace();
                             if (acProgressFlower.isShowing()){
                                 acProgressFlower.dismiss();
@@ -154,19 +153,16 @@ public class OtpFragment extends BaseFragment {
 
             @Override
             protected Map<String, String> getParams() {
-
                 //otp ,user_id
 
                 Map<String, String> params = new HashMap<>();
                 params.put("otp", binding.codeET.getText().toString().trim());
                 params.put("user_id", Const.loadData(getActivity(), "loginUserId"));
-
                 Log.e("Otp", "Params==>> " + params);
 
                 return params;
             }
         };
-
         Volley.newRequestQueue(getActivity()).add(postRequest);
         Log.e("LOGIN", postRequest.toString());
         postRequest.setRetryPolicy(new RetryPolicy() {

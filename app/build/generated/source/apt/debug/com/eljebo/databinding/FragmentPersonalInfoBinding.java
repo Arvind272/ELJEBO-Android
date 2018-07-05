@@ -15,9 +15,18 @@ public class FragmentPersonalInfoBinding extends android.databinding.ViewDataBin
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.nameET, 1);
-        sViewsWithIds.put(R.id.saveBT, 2);
+        sViewsWithIds.put(R.id.customEditTextEmail, 2);
+        sViewsWithIds.put(R.id.customEditTextMobile, 3);
+        sViewsWithIds.put(R.id.customEditTextAddress, 4);
+        sViewsWithIds.put(R.id.saveBT, 5);
     }
     // views
+    @NonNull
+    public final com.eljebo.common.utils.CustomEditText customEditTextAddress;
+    @NonNull
+    public final com.eljebo.common.utils.CustomEditText customEditTextEmail;
+    @NonNull
+    public final com.eljebo.common.utils.CustomEditText customEditTextMobile;
     @NonNull
     private final android.widget.LinearLayout mboundView0;
     @NonNull
@@ -31,11 +40,14 @@ public class FragmentPersonalInfoBinding extends android.databinding.ViewDataBin
 
     public FragmentPersonalInfoBinding(@NonNull android.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         super(bindingComponent, root, 0);
-        final Object[] bindings = mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds);
+        final Object[] bindings = mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds);
+        this.customEditTextAddress = (com.eljebo.common.utils.CustomEditText) bindings[4];
+        this.customEditTextEmail = (com.eljebo.common.utils.CustomEditText) bindings[2];
+        this.customEditTextMobile = (com.eljebo.common.utils.CustomEditText) bindings[3];
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.nameET = (com.eljebo.common.utils.CustomEditText) bindings[1];
-        this.saveBT = (com.eljebo.common.utils.CustomButton) bindings[2];
+        this.saveBT = (com.eljebo.common.utils.CustomButton) bindings[5];
         setRootTag(root);
         // listeners
         invalidateAll();

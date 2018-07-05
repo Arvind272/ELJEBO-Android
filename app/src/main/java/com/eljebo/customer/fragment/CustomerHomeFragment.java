@@ -40,8 +40,7 @@ public class CustomerHomeFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-        if (view != null) {
+        if(view != null) {
             return view;
         } else {
             binding = DataBindingUtil.inflate(inflater, R.layout.fragment_customer_home, container, false);
@@ -73,15 +72,22 @@ public class CustomerHomeFragment extends BaseFragment {
                 baseActivity.hideSoftKeyboard();
                 baseActivity.store.setData("selectedServices", selectedServiceData);
                 Log.e("selectedServices", "selectedServices==> " +selectedServiceData.size());
+
                 for (int i=0;i<selectedServiceData.size();i++){
+
                     Log.e("selectedServices", "item==> " +selectedServiceData.get(i).id);
+
                 }
-                if (selectedServiceData.size()>0){
+
+                if(selectedServiceData.size()>0){
+
                     gotoServiceProviderFragment();
-                } else {
-                    Toast.makeText(getActivity(), "Please select at least one service",
-                            Toast.LENGTH_SHORT).show();
+
+                }else {
+
+                    Toast.makeText(getActivity(), "Please select at least one service",Toast.LENGTH_SHORT).show();
                 }
+
                 break;
         }
     }

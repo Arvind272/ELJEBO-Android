@@ -26,6 +26,7 @@
             android:textSize="@dimen/_14sp" />
 
         <com.eljebo.common.utils.CustomEditText
+            android:id="@+id/customEditTextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
@@ -41,6 +42,7 @@
             android:textSize="@dimen/_14sp" />
 
         <com.eljebo.common.utils.CustomEditText
+            android:id="@+id/customEditTextMobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
@@ -56,6 +58,7 @@
             android:textSize="@dimen/_14sp" />
 
         <com.eljebo.common.utils.CustomEditText
+            android:id="@+id/customEditTextAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_5sdp"
