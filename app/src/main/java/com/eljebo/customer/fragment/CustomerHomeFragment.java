@@ -74,17 +74,12 @@ public class CustomerHomeFragment extends BaseFragment {
                 Log.e("selectedServices", "selectedServices==> " +selectedServiceData.size());
 
                 for (int i=0;i<selectedServiceData.size();i++){
-
                     Log.e("selectedServices", "item==> " +selectedServiceData.get(i).id);
-
                 }
 
                 if(selectedServiceData.size()>0){
-
                     gotoServiceProviderFragment();
-
                 }else {
-
                     Toast.makeText(getActivity(), "Please select at least one service",Toast.LENGTH_SHORT).show();
                 }
 
@@ -146,7 +141,8 @@ public class CustomerHomeFragment extends BaseFragment {
     }
 
     private void setServiceAdapter() {
-        ExpandableServiceAdapter adapter = new ExpandableServiceAdapter(baseActivity, serviceDatas, this);
+        ExpandableServiceAdapter adapter = new ExpandableServiceAdapter(baseActivity,
+                serviceDatas, this);
         binding.servicesELV.setAdapter(adapter);
     }
 

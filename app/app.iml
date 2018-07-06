@@ -152,6 +152,7 @@
     <orderEntry type="library" name="com.facebook.android:facebook-android-sdk-4.14.0" level="project" />
     <orderEntry type="library" name="com.android.support:customtabs-23.4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="junit:junit:4.12@jar" level="project" />
+    <orderEntry type="library" name="ch.acra:acra-4.9.2" level="project" />
     <orderEntry type="library" name="android.arch.core:common:1.1.0@jar" level="project" />
     <orderEntry type="library" name="io.card:android-sdk-5.5.1" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-analytics-10.2.6" level="project" />

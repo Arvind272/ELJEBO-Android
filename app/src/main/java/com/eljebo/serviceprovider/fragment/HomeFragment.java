@@ -44,7 +44,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
  * Created by TOXSL\himanshu.gulati on 12/6/18.
  */
 
-public class HomeFragment extends BaseFragment implements BaseActivity.PermCallback, LocationListener, GoogleMap.OnMarkerClickListener, GoogleMap.OnInfoWindowClickListener {
+public class HomeFragment extends BaseFragment implements
+        BaseActivity.PermCallback, LocationListener, GoogleMap.OnMarkerClickListener, GoogleMap.OnInfoWindowClickListener {
     private View view;
     private FragmentHomeBinding binding;
     private GoogleMap googleMap;
@@ -143,9 +144,11 @@ public class HomeFragment extends BaseFragment implements BaseActivity.PermCallb
     }
 
     private void initializeMap() {
-        mLocationManager = (LocationManager) baseActivity.getSystemService(Context.LOCATION_SERVICE);
+        mLocationManager = (LocationManager) baseActivity.
+                getSystemService(Context.LOCATION_SERVICE);
         if (googleMap == null) {
-            SupportMapFragment map = ((SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map));
+            SupportMapFragment map = ((SupportMapFragment)
+                    getChildFragmentManager().findFragmentById(R.id.map));
             map.getMapAsync(new OnMapReadyCallback() {
                 @Override
                 public void onMapReady(GoogleMap googleMap) {
@@ -157,7 +160,8 @@ public class HomeFragment extends BaseFragment implements BaseActivity.PermCallb
                         return;
                     }
                     HomeFragment.this.googleMap = googleMap;
-                    current_location = GoogleApisHandle.getInstance(baseActivity).getLastKnownLocation(baseActivity);
+                    current_location = GoogleApisHandle.getInstance(baseActivity).
+                            getLastKnownLocation(baseActivity);
 
                     initializeMap();
                 }

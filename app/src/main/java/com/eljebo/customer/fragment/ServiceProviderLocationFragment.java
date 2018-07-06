@@ -64,6 +64,7 @@ import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -76,7 +77,8 @@ import cc.cloudist.acplibrary.ACProgressFlower;
  * Created by TOXSL\vinay.goyal on 14/6/18.
  */
 
-public class ServiceProviderLocationFragment extends BaseFragment implements BaseActivity.PermCallback, LocationListener {
+public class ServiceProviderLocationFragment extends BaseFragment implements
+        BaseActivity.PermCallback, LocationListener {
 
     private View view;
     private FragmentServiceProviderLocationBinding binding;
@@ -91,6 +93,8 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
 
     String latitude = "";
     String longitude = "";
+
+    private ArrayList<SubService> selectedServiceData = new ArrayList<>();
 
     @Nullable
     @Override
@@ -121,15 +125,7 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
 
         getServiceProviderUserId = Const.loadData(getActivity(), "getServiceProviderUserId");
 
-        if(baseActivity.store.containValue("selectedServices")) {
-            serviceAdapter = new ServiceAdapter(this,
-                    baseActivity.store.<SubService>getData("selectedServices"));
-            binding.questionsLL.servicesRV.setAdapter(serviceAdapter);
 
-        }else{
-
-            binding.questionsLL.cleanerLL.setVisibility(View.VISIBLE);
-        }
 
         baseActivity.hideSoftKeyboard();
         binding.questionsLL.availabilityLL.setVisibility(View.VISIBLE);
@@ -199,6 +195,20 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
                 .commit();
     }
 
+    public void setAdapterService(){
+
+        if(baseActivity.store.containValue("selectedServices")) {
+            serviceAdapter = new ServiceAdapter(this,
+                    baseActivity.store.<SubService>getData(
+                            "selectedServices"));
+            binding.questionsLL.servicesRV.setAdapter(serviceAdapter);
+
+        }else{
+
+            binding.questionsLL.cleanerLL.setVisibility(View.VISIBLE);
+        }
+
+    }
 
     public void getServiceProviderDetails() {
 
@@ -353,7 +363,28 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
                                     }
 
 
-                                    initUI();
+
+                                    JSONArray jsonArrSubService = jsonObjData.getJSONArray("service_data");
+                                for (int i=0;i<jsonArrSubService.length();i++){
+
+                                    JSONObject jsonObjService = jsonArrSubService.getJSONObject(i);
+
+                                    String charge = jsonObjService.getString("charge");
+                                    String service_id = jsonObjService.getString("service_id");
+                                    String service_name = jsonObjService.getString("service_name");
+
+                                    SubService service = new SubService();
+                                    service.id = Integer.parseInt(""+service_id);
+                                    service.title = service_name;
+                                    service.price = charge;
+                                    selectedServiceData.add(service);
+                                }
+
+                                baseActivity.store.setData("selectedServices", selectedServiceData);
+
+                                setAdapterService();
+
+                                initUI();
 
                             }else{
 
@@ -468,7 +499,8 @@ public class ServiceProviderLocationFragment extends BaseFragment implements Bas
             if (mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 if (count < 5) {
                     count++;
-                    current_location = GoogleApisHandle.getInstance(baseActivity).getLastKnownLocation(baseActivity);
+                    current_location = GoogleApisHandle.getInstance(baseActivity).
+                            getLastKnownLocation(baseActivity);
                     onLocationChanged(current_location);
                 } else
                     baseActivity.buildAlertMessageNoGps();

@@ -14,6 +14,7 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -106,6 +107,10 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
     String deviceToken = "";
     private static final int PERMISSION_REQUEST_CODE = 1;
     private AQuery aq;
+    Location current_location;
+
+    private LocationManager mLocationManager;
+    private int count = 0;
 
     @Nullable
     @Override
@@ -132,7 +137,6 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         Log.e("deviceToken", "deviceToken==> " +deviceToken);*/
 
 
-
         initUI();
     }
 
@@ -142,6 +146,7 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
     }
 
     private void initUI() {
+
         aq = new AQuery(getActivity());
         hitServicesApi();
         setServiceAdapter();
@@ -183,7 +188,6 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
         });
     }
 
-
     //set selected service data on service charge amount
     private void setSelectedServiceAdapter() {
         binding.selectedServiceRV.setVisibility(View.VISIBLE);
@@ -218,14 +222,12 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
             case R.id.nextBT:
 
                 baseActivity.hideSoftKeyboard();
+
                 if (!checkPermission()) {
                     requestPermission();
                 } else {
-                    Log.e("getStartTime", "==> " +binding.fromET.getText().toString().trim());
-                    Log.e("getEndTime", "==> " +binding.toET.getText().toString().trim());
-
-                    //  Snackbar.make(view,"Permission already granted.",Snackbar.LENGTH_LONG).show();
-                    baseActivity.store.setData("selectedServices", selectedServiceData);
+                    baseActivity.store.setData("selectedServices",
+                            selectedServiceData);
                     if (validate()) {
                         gotoPaymentFragment();
                     } else {
@@ -316,14 +318,33 @@ public class SignupFragment extends BaseFragment implements View.OnClickListener
 
     private void requestPermission(){
 
-        if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),Manifest.permission.ACCESS_FINE_LOCATION)){
+        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.
+                ACCESS_FINE_LOCATION) != PackageManager.
+                PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                        getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
 
-            Toast.makeText(getActivity(),"GPS permission allows us to access location data. Please allow in App Settings for additional functionality.",Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(),"GPS permission allows us to access " +
+                    "location data. Please allow in App Settings for additional " +
+                    "functionality.",Toast.LENGTH_LONG).show();
+            return;
+        }else{
+            // Write you code here if permission already given.
+        }
 
+        /*if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
+                Manifest.permission.ACCESS_FINE_LOCATION)){
+            Toast.makeText(getActivity(),"GPS permission allows us to access " +
+                    "location data. Please allow in App Settings for additional " +
+                    "functionality.",Toast.LENGTH_LONG).show();
         } else {
 
-            ActivityCompat.requestPermissions(getActivity(),new String[]{Manifest.permission.ACCESS_FINE_LOCATION},PERMISSION_REQUEST_CODE);
-        }
+            ActivityCompat.requestPermissions(getActivity(),new String[]
+                    {Manifest.permission.ACCESS_FINE_LOCATION},
+                    PERMISSION_REQUEST_CODE);
+        }*/
     }
 
     @Override

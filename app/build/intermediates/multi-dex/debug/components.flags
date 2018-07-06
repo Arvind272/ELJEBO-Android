@@ -4,6 +4,7 @@
 -injars /home/user1/Documents/Android_studio/android-studio/gradle/m2repository/com/android/databinding/baseLibrary/3.0.1/baseLibrary-3.0.1.jar(**.class)
 -injars /home/user1/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f71990b410c8a7d5372b248b70e2e623/jars/classes.jar(**.class)
 -injars /home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/jars/classes.jar(**.class)
+-injars /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/jars/classes.jar(**.class)
 -injars /home/user1/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/562176e0da271abb3cb6163444b6b847/jars/classes.jar(**.class)
 -injars /home/user1/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/b8cca8b7c48d40f1029d5bf5129df01a/jars/classes.jar(**.class)
 -injars /home/user1/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.6.aar/47eb75cab88046d753ed5d96ca2632aa/jars/classes.jar(**.class)

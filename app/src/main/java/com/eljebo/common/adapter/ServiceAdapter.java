@@ -2,6 +2,7 @@ package com.eljebo.common.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -37,6 +38,7 @@ public class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
 
         holder.binding.serviceName.setText(selectedServices.get(position).title);
+        Log.e("getServicePrice", "==> " +selectedServices.get(position).price);
         if (selectedServices.get(position).price.isEmpty()) {
             holder.binding.serviceChargeTV.setText("$0");
         } else {

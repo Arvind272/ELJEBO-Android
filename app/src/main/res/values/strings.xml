@@ -233,6 +233,8 @@
 
     <string name="room_status">status</string>
 
+    <string name="crash_toast_text">Something Wrong!</string>
+
     <plurals name="duration">
         <item quantity="one">%d min</item>
         <item quantity="many">%d mins</item>

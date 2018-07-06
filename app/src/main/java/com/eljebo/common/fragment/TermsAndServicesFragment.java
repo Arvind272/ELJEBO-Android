@@ -1,10 +1,17 @@
 package com.eljebo.common.fragment;
 
+import android.Manifest;
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -24,12 +31,15 @@ import com.eljebo.common.data.ProfileData;
 import com.eljebo.common.utils.Const;
 import com.eljebo.common.utils.GoogleApisHandle;
 import com.eljebo.databinding.FragmentTermsBinding;
+import com.eljebo.serviceprovider.fragment.HomeFragment;
 import com.toxsl.volley.toolbox.RequestParams;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import cc.cloudist.acplibrary.ACProgressConstant;
@@ -44,9 +54,15 @@ public class TermsAndServicesFragment extends BaseFragment {
     private FragmentTermsBinding binding;
     Location current_location;
 
+    private LocationManager mLocationManager;
+    private int count = 0;
+    ProfileData profileData;
+    String lat = "0.0", longitute = "0.0";
+
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup
+            container, @Nullable Bundle savedInstanceState) {
         if (view != null) {
             return view;
         } else {
@@ -62,14 +78,46 @@ public class TermsAndServicesFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
         this.view = view;
         baseActivity.hideSoftKeyboard();
-        ((LoginSignUpActivity) baseActivity).setToolbar(getString(R.string.terms_conditions), true);
+        ((LoginSignUpActivity) baseActivity).
+                setToolbar(getString(R.string.terms_conditions), true);
         initUI();
 
     }
 
     private void initUI() {
+
+        profileData = getArguments().getParcelable("signupData");
+
+        getLocationFromAddress(profileData.address);
+
         binding.goBT.setOnClickListener(this);
-        current_location = new GoogleApisHandle().getLastKnownLocation(baseActivity);
+
+        /*if (ActivityCompat.checkSelfPermission(baseActivity,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }*/
+
+        //current_location = GoogleApisHandle.getInstance(baseActivity).getLastKnownLocation(baseActivity);
+
+
+        /*if (mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            if (count < 5) {
+                count++;
+                current_location = GoogleApisHandle.getInstance(baseActivity).
+                        getLastKnownLocation(baseActivity);
+            } else
+                baseActivity.buildAlertMessageNoGps();
+        } else
+            baseActivity.buildAlertMessageNoGps();
+
+        if (ActivityCompat.checkSelfPermission(baseActivity,
+                Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }*/
+
+//        current_location = new GoogleApisHandle().getLastKnownLocation(baseActivity);
     }
 
 
@@ -197,6 +245,29 @@ public class TermsAndServicesFragment extends BaseFragment {
         }
     }
 
+    public void getLocationFromAddress(String strAddress){
+
+        if (!strAddress.equals("")){
+
+            Geocoder coder = new Geocoder(getActivity());
+            List<Address> address;
+            try {
+                address = coder.getFromLocationName(strAddress,5);
+                if (address==null) {
+                }
+                Address location=address.get(0);
+                lat = ""+location.getLatitude();
+                longitute = ""+location.getLongitude();
+
+            } catch (NumberFormatException e){
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
     public void doSignUpFromServerCustomer() {
 
         final ACProgressFlower acProgressFlower = new ACProgressFlower.Builder(getActivity())
@@ -262,7 +333,6 @@ public class TermsAndServicesFragment extends BaseFragment {
                  mobile, security_que_ans, certificate_ids , name_of_card,  card_number,
                   card_exp_date, cvv*/
 
-                ProfileData profileData = getArguments().getParcelable("signupData");
                 String refreshedToken = baseActivity.getUniqueDeviceId();
                 Log.e("SignUp", "refreshedToken==>> " + refreshedToken);
 
@@ -280,8 +350,8 @@ public class TermsAndServicesFragment extends BaseFragment {
                 params.put("address2", profileData.address_two);
                 params.put("state_id", String.valueOf(profileData.stateIds));
                 params.put("city_id", String.valueOf(profileData.cityIds));
-                params.put("latitude", String.valueOf(current_location.getLatitude()));
-                params.put("longitude", String.valueOf(current_location.getLongitude()));
+                params.put("latitude", lat);
+                params.put("longitude", longitute);
                 params.put("zip_code", profileData.zipcode);
                 params.put("mobile", profileData.contact_no);
                 params.put("security_que_ans", profileData.security_question.toString());
@@ -403,8 +473,8 @@ public class TermsAndServicesFragment extends BaseFragment {
                 params.put("address2", profileData.address_two);
                 params.put("state_id", String.valueOf(profileData.stateIds));
                 params.put("city_id", String.valueOf(profileData.cityIds));
-                params.put("latitude", String.valueOf(current_location.getLatitude()));
-                params.put("longitude", String.valueOf(current_location.getLongitude()));
+                params.put("latitude", lat);
+                params.put("longitude", longitute);
                 params.put("zip_code", profileData.zipcode);
                 params.put("mobile", profileData.contact_no);
                 params.put("security_que_ans", profileData.security_question.toString());

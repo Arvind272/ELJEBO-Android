@@ -19,6 +19,7 @@ MERGED from [com.android.databinding:adapters:1.3.1] /home/user1/.gradle/caches/
 MERGED from [com.android.databinding:library:1.3.1] /home/user1/.gradle/caches/transforms-1/files-1.1/library-1.3.1.aar/b3c698ff8588209b21bd2ee021be5b63/AndroidManifest.xml:17:1-26:12
 MERGED from [com.android.support:design:27.1.1] /home/user1/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f71990b410c8a7d5372b248b70e2e623/AndroidManifest.xml:17:1-22:12
 MERGED from [com.facebook.android:facebook-android-sdk:4.14.0] /home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/AndroidManifest.xml:21:1-39:12
+MERGED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:10:6-44:12
 MERGED from [com.google.firebase:firebase-messaging:10.2.6] /home/user1/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/562176e0da271abb3cb6163444b6b847/AndroidManifest.xml:16:1-30:12
 MERGED from [com.google.android.gms:play-services-auth:10.2.6] /home/user1/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/b8cca8b7c48d40f1029d5bf5129df01a/AndroidManifest.xml:16:1-26:12
 MERGED from [com.google.android.gms:play-services-location:10.2.6] /home/user1/.gradle/caches/transforms-1/files-1.1/play-services-location-10.2.6.aar/47eb75cab88046d753ed5d96ca2632aa/AndroidManifest.xml:2:1-5:12
@@ -241,6 +242,8 @@ application
 ADDED from /home/user1/Documents/ELJEBO-Android/app/src/main/AndroidManifest.xml:49:5-137:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.14.0] /home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/AndroidManifest.xml:28:5-37:19
 MERGED from [com.facebook.android:facebook-android-sdk:4.14.0] /home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/AndroidManifest.xml:28:5-37:19
+MERGED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:39:5-43:19
+MERGED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:39:5-43:19
 MERGED from [com.google.firebase:firebase-messaging:10.2.6] /home/user1/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/562176e0da271abb3cb6163444b6b847/AndroidManifest.xml:19:5-29:19
 MERGED from [com.google.firebase:firebase-messaging:10.2.6] /home/user1/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/562176e0da271abb3cb6163444b6b847/AndroidManifest.xml:19:5-29:19
 MERGED from [com.google.android.gms:play-services-auth:10.2.6] /home/user1/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/b8cca8b7c48d40f1029d5bf5129df01a/AndroidManifest.xml:19:5-25:19
@@ -423,6 +426,8 @@ MERGED from [com.android.support:design:27.1.1] /home/user1/.gradle/caches/trans
 MERGED from [com.android.support:design:27.1.1] /home/user1/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/f71990b410c8a7d5372b248b70e2e623/AndroidManifest.xml:20:5-44
 MERGED from [com.facebook.android:facebook-android-sdk:4.14.0] /home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-android-sdk:4.14.0] /home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/AndroidManifest.xml:24:5-26:41
+MERGED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:37:5-42
+MERGED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:37:5-42
 MERGED from [com.google.firebase:firebase-messaging:10.2.6] /home/user1/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/562176e0da271abb3cb6163444b6b847/AndroidManifest.xml:17:5-43
 MERGED from [com.google.firebase:firebase-messaging:10.2.6] /home/user1/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/562176e0da271abb3cb6163444b6b847/AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-auth:10.2.6] /home/user1/.gradle/caches/transforms-1/files-1.1/play-services-auth-10.2.6.aar/b8cca8b7c48d40f1029d5bf5129df01a/AndroidManifest.xml:17:5-43
@@ -551,6 +556,28 @@ ADDED from [com.facebook.android:facebook-android-sdk:4.14.0] /home/user1/.gradl
 		ADDED from [com.facebook.android:facebook-android-sdk:4.14.0] /home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/AndroidManifest.xml:35:13-36
 	android:name
 		ADDED from [com.facebook.android:facebook-android-sdk:4.14.0] /home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/AndroidManifest.xml:34:13-58
+activity#org.acra.dialog.CrashReportDialog
+ADDED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:40:9-241
+	android:process
+		ADDED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:40:172-195
+	android:excludeFromRecents
+		ADDED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:40:19-52
+	android:launchMode
+		ADDED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:40:87-122
+	android:theme
+		ADDED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:40:196-239
+	android:finishOnTaskLaunch
+		ADDED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:40:53-86
+	android:name
+		ADDED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:40:123-171
+service#org.acra.sender.SenderService
+ADDED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:42:9-113
+	android:process
+		ADDED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:42:88-111
+	android:exported
+		ADDED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:42:18-42
+	android:name
+		ADDED from [ch.acra:acra:4.9.2] /home/user1/.gradle/caches/transforms-1/files-1.1/acra-4.9.2.aar/f88f18504bb1e372313b64f05f15f878/AndroidManifest.xml:42:43-87
 service#com.google.firebase.messaging.FirebaseMessagingService
 ADDED from [com.google.firebase:firebase-messaging:10.2.6] /home/user1/.gradle/caches/transforms-1/files-1.1/firebase-messaging-10.2.6.aar/562176e0da271abb3cb6163444b6b847/AndroidManifest.xml:23:9-27:19
 	android:exported

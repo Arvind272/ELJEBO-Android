@@ -100,12 +100,12 @@
         "source": "/home/user1/Documents/ELJEBO-Android/MulipleImageSelector/build/intermediates/bundles/debug/res/drawable-xxhdpi-v4/default_check.png"
     },
     {
-        "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4_btn_selected.png.flat",
-        "source": "/home/user1/Documents/ELJEBO-Android/MulipleImageSelector/build/intermediates/bundles/debug/res/drawable-xxhdpi-v4/btn_selected.png"
-    },
-    {
         "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/drawable_common_google_signin_btn_text_disabled.xml.flat",
         "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.6.aar/57c84ab41bef73b58813011b9ae50581/res/drawable/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/drawable-xxhdpi-v4_btn_selected.png.flat",
+        "source": "/home/user1/Documents/ELJEBO-Android/MulipleImageSelector/build/intermediates/bundles/debug/res/drawable-xxhdpi-v4/btn_selected.png"
     },
     {
         "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4_abc_ic_star_half_black_16dp.png.flat",
@@ -140,16 +140,16 @@
         "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/res/drawable-mdpi-v4/com_facebook_tooltip_black_background.9.png"
     },
     {
-        "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/drawable_com_facebook_button_icon.xml.flat",
-        "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/res/drawable/com_facebook_button_icon.xml"
+        "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/drawable_abc_btn_colored_material.xml.flat",
+        "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/35e9bc64bbff691c0aa42cc2331b6a5b/res/drawable/abc_btn_colored_material.xml"
     },
     {
         "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/color_common_google_signin_btn_text_light.xml.flat",
         "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.6.aar/57c84ab41bef73b58813011b9ae50581/res/color/common_google_signin_btn_text_light.xml"
     },
     {
-        "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/drawable_abc_btn_colored_material.xml.flat",
-        "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/35e9bc64bbff691c0aa42cc2331b6a5b/res/drawable/abc_btn_colored_material.xml"
+        "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/drawable_com_facebook_button_icon.xml.flat",
+        "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/res/drawable/com_facebook_button_icon.xml"
     },
     {
         "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/drawable-mdpi-v4_com_facebook_profile_picture_blank_square.png.flat",
@@ -232,16 +232,16 @@
         "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/d554a0e06c23282e199346dd442d5930/res/layout/notification_media_cancel_action.xml"
     },
     {
-        "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/layout_abc_dialog_title_material.xml.flat",
-        "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/35e9bc64bbff691c0aa42cc2331b6a5b/res/layout/abc_dialog_title_material.xml"
+        "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/layout_messenger_button_send_white_large.xml.flat",
+        "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/res/layout/messenger_button_send_white_large.xml"
     },
     {
         "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/drawable_messenger_button_white_bg_round.xml.flat",
         "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/res/drawable/messenger_button_white_bg_round.xml"
     },
     {
-        "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/layout_messenger_button_send_white_large.xml.flat",
-        "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.14.0.aar/3df8c1d768371fb7c0873c3fa3b74b02/res/layout/messenger_button_send_white_large.xml"
+        "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/layout_abc_dialog_title_material.xml.flat",
+        "source": "/home/user1/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/35e9bc64bbff691c0aa42cc2331b6a5b/res/layout/abc_dialog_title_material.xml"
     },
     {
         "merged": "/home/user1/Documents/ELJEBO-Android/app/build/intermediates/res/merged/androidTest/debug/layout-sw600dp-v13_design_layout_snackbar.xml.flat",

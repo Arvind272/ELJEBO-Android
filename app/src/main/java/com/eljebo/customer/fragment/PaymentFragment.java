@@ -43,7 +43,8 @@ public class PaymentFragment extends BaseFragment {
 
         this.view = view;
         baseActivity.hideSoftKeyboard();
-        ((LoginSignUpActivity) baseActivity).setToolbar(getString(R.string.payments), true);
+        ((LoginSignUpActivity) baseActivity).setToolbar(getString(R.string.payments),
+                true);
         initUI();
     }
 

@@ -1,12 +1,18 @@
 package com.eljebo.customer.fragment;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.graphics.Typeface;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
@@ -28,7 +34,10 @@ import com.eljebo.common.data.ProfileData;
 import com.eljebo.common.dialog.CountryDialog;
 import com.eljebo.common.fragment.BaseFragment;
 import com.eljebo.common.utils.Const;
+import com.eljebo.common.utils.GoogleApisHandle;
+import com.eljebo.common.utils.MarshMallowPermission;
 import com.eljebo.databinding.FragmentCustomerSignupBinding;
+import com.eljebo.serviceprovider.fragment.HomeFragment;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocomplete;
@@ -47,6 +56,7 @@ public class CustomerSignUpFragment extends BaseFragment {
     private int type = 0;
     private Dialog countryDialog;
     private static final int PERMISSION_REQUEST_CODE = 1;
+    private MarshMallowPermission marshMallowPermission;
 
     @Nullable
     @Override
@@ -76,6 +86,23 @@ public class CustomerSignUpFragment extends BaseFragment {
 
     private void initUI() {
 
+        marshMallowPermission = new MarshMallowPermission(getActivity());
+      //  current_location = GoogleApisHandle.getInstance(baseActivity).getLastKnownLocation(baseActivity);
+
+       // initUI();
+
+       /* if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            // Check Permission for device location unable or not
+            if (marshMallowPermission.checkPermissionForLocation() != true) {
+                marshMallowPermission.requestPermissionForLocation();
+            } else {
+                checkLocation();
+            }
+        } else {
+            checkLocation();
+
+        }*/
+
         binding.maleRB.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "fonts/unicodearialr.ttf"));
         binding.femaleRB.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "fonts/unicodearialr.ttf"));
         binding.otherRB.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "fonts/unicodearialr.ttf"));
@@ -89,6 +116,52 @@ public class CustomerSignUpFragment extends BaseFragment {
         binding.stateET.setOnClickListener(this);
         binding.countryET.setOnClickListener(this);
         binding.addressET.setOnClickListener(this);
+    }
+
+    public void checkLocation() {
+        LocationManager lm = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+        boolean gps_enabled = false;
+        boolean network_enabled = false;
+
+        try {
+            gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        } catch (Exception ex) {
+
+            Log.d("Gps not available", ex.getMessage());
+        }
+
+        try {
+            network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        } catch (Exception ex) {
+            Log.d("Network provider errr", ex.getMessage());
+        }
+
+        if (!gps_enabled && !network_enabled) {
+            // notify user
+            AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
+            dialog.setMessage("Location Services Not Enabled");
+            dialog.setPositiveButton("Location Settings", new
+                    DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                    // TODO Auto-generated method stub
+                    Intent myIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    startActivity(myIntent);
+                    //get gps
+                }
+            });
+            dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface paramDialogInterface, int paramInt) {
+                    // TODO Auto-generated method stub
+
+                }
+            });
+            dialog.show();
+        } else {
+            //startService(new Intent(LoginActivity.this, MyService.class));
+        }
     }
 
     @Override

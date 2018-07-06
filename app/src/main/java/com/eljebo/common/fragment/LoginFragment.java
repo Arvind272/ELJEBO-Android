@@ -26,6 +26,7 @@ import com.eljebo.common.data.ProfileData;
 import com.eljebo.common.utils.Api2Params;
 import com.eljebo.common.utils.Const;
 import com.eljebo.customer.fragment.CustomerSignUpFragment;
+import com.eljebo.customer.fragment.PaymentFragment;
 import com.eljebo.databinding.FragmentLoginBinding;
 import com.eljebo.serviceprovider.fragment.SignupFragment;
 import com.google.gson.Gson;
@@ -279,6 +280,8 @@ public class LoginFragment extends BaseFragment {
     }
 
     private void gotoSignUpFragment() {
+        //SignupFragment//PaymentFragment
+
         baseActivity.getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.login_frame, new SignupFragment())

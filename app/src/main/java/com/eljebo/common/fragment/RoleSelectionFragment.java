@@ -1,8 +1,11 @@
 package com.eljebo.common.fragment;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.text.Html;
 import android.view.LayoutInflater;
@@ -41,15 +44,16 @@ public class RoleSelectionFragment extends BaseFragment {
         this.view = view;
         baseActivity.hideSoftKeyboard();
         ((LoginSignUpActivity) baseActivity).setToolbar("", false);
+
         initUI();
     }
-
 
     private void initUI() {
         String text = getString(R.string.welcome_to) + " <font color=#F81617>Eljebo!</font>";
         binding.welcomeTV.setText(Html.fromHtml(text));
         binding.userBT.setOnClickListener(this);
         binding.serviceProviderBT.setOnClickListener(this);
+
     }
 
 
